@@ -5,33 +5,23 @@ import java.util.Objects;
 
 public class Employee {
     int id;
-    String name;
-    double salary;
+    String firstName;
+    String lastName;
     Date hireDate;
-    Employee manager;
     Department department;
     Job job;
-
-    public Employee(int id, String name, double salary, Date hireDate, Employee manager, Department department, Job job) {
-        this.id = id;
-        this.name = name;
-        this.salary = salary;
-        this.hireDate = hireDate;
-        this.manager = manager;
-        this.department = department;
-        this.job = job;
-    }
+    double salary;
 
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", salary=" + salary +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", hireDate=" + hireDate +
-                ", manager=" + manager +
                 ", department=" + department +
                 ", job=" + job +
+                ", salary=" + salary +
                 '}';
     }
 
@@ -40,12 +30,12 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return id == employee.id && Double.compare(employee.salary, salary) == 0 && name.equals(employee.name) && hireDate.equals(employee.hireDate) && Objects.equals(manager, employee.manager) && Objects.equals(department, employee.department) && job.equals(employee.job);
+        return id == employee.id && Double.compare(employee.salary, salary) == 0 && firstName.equals(employee.firstName) && lastName.equals(employee.lastName) && hireDate.equals(employee.hireDate) && Objects.equals(department, employee.department) && Objects.equals(job, employee.job);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, salary, hireDate, manager, department, job);
+        return Objects.hash(id, firstName, lastName, hireDate, department, job, salary);
     }
 
     public int getId() {
@@ -56,20 +46,20 @@ public class Employee {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public double getSalary() {
-        return salary;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Date getHireDate() {
@@ -78,14 +68,6 @@ public class Employee {
 
     public void setHireDate(Date hireDate) {
         this.hireDate = hireDate;
-    }
-
-    public Employee getManager() {
-        return manager;
-    }
-
-    public void setManager(Employee manager) {
-        this.manager = manager;
     }
 
     public Department getDepartment() {
@@ -102,5 +84,23 @@ public class Employee {
 
     public void setJob(Job job) {
         this.job = job;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public Employee(int id, String firstName, String lastName, Date hireDate, Department department, Job job, double salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.hireDate = hireDate;
+        this.department = department;
+        this.job = job;
+        this.salary = salary;
     }
 }
