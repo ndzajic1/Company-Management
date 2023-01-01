@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="new employees class design">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/Department.java" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="new jobs class design">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672525545446</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new departments class design">
+      <created>1672526106512</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672526106512</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new jobs class design">
+      <created>1672528063659</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672528063659</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +109,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="db test" />
     <MESSAGE value="new employees class design" />
-    <option name="LAST_COMMIT_MESSAGE" value="new employees class design" />
+    <MESSAGE value="new departments class design" />
+    <MESSAGE value="new jobs class design" />
+    <option name="LAST_COMMIT_MESSAGE" value="new jobs class design" />
   </component>
 </project>
