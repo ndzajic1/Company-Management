@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr;
 
 import java.util.Objects;
 
-public class Department {
+public class Department implements Idable {
     int id;
     String name;
     String location;

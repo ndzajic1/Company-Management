@@ -3,7 +3,7 @@ package ba.unsa.etf.rpr;
 import java.util.Date;
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Idable {
     int id;
     String firstName;
     String lastName;

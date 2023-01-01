@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr;
 
 import java.util.Objects;
 
-public class Job {
+public class Job implements Idable {
     int id;
     String jobTitle;
     double minSalary, maxSalary;
