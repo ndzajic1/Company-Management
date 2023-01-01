@@ -8,9 +8,12 @@ public class App {
         Connection con= DriverManager.getConnection("jdbc:mysql://sql.freedb.tech:3306/freedb_rpr_db",
          "freedb_ndzajic1","");
         Statement st=con.createStatement();
-     /*   st.executeUpdate(
-                "INSERT INTO `freedb_rpr_db`.`Jobs` (`id`, `job_title`, `min_salary`, `max_salary`) VALUES ('7', 'Public Accountant', '4200', '9000');"
-        ); */
+       st.executeUpdate(
+                "INSERT INTO `freedb_rpr_db`.`Employees` (id, first_name, last_name, hire_date,"+
+                        "department_id, job_id, salary) VALUES "+
+                "(10, 'Ismael', 'Sciarra', STR_TO_DATE('01 07 2005', '%d %m %Y'),"+
+               "2,5,7800);"
+        );
        ResultSet rs= st.executeQuery(
                 "select * from Employees"
         );
