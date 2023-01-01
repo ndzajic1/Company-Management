@@ -4,12 +4,12 @@ import java.util.Objects;
 
 public class Job implements Idable {
     int id;
-    String jobTitle;
+    String title;
     double minSalary, maxSalary;
 
-    public Job(int id, String jobTitle, double minSalary, double maxSalary) {
+    public Job(int id, String title, double minSalary, double maxSalary) {
         this.id = id;
-        this.jobTitle = jobTitle;
+        this.title = title;
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
     }
@@ -22,12 +22,12 @@ public class Job implements Idable {
         this.id = id;
     }
 
-    public String getJobTitle() {
-        return jobTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public double getMinSalary() {
@@ -51,19 +51,19 @@ public class Job implements Idable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Job job = (Job) o;
-        return id == job.id && Double.compare(job.minSalary, minSalary) == 0 && Double.compare(job.maxSalary, maxSalary) == 0 && jobTitle.equals(job.jobTitle);
+        return id == job.id && Double.compare(job.minSalary, minSalary) == 0 && Double.compare(job.maxSalary, maxSalary) == 0 && title.equals(job.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, jobTitle, minSalary, maxSalary);
+        return Objects.hash(id, title, minSalary, maxSalary);
     }
 
     @Override
     public String toString() {
         return "Job{" +
                 "id=" + id +
-                ", jobTitle='" + jobTitle + '\'' +
+                ", title='" + title + '\'' +
                 ", minSalary=" + minSalary +
                 ", maxSalary=" + maxSalary +
                 '}';
