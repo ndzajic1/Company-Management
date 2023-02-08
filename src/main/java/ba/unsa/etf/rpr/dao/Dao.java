@@ -14,7 +14,7 @@ public interface Dao <T> {
      * @param id primary key of entity
      * @return Entity from database
      */
-    T getById(int id);
+    T getById(int id) throws SQLException;
 
     /**
      * Saves entity into database

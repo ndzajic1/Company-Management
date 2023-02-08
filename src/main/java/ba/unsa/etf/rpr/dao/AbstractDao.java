@@ -4,10 +4,7 @@ import ba.unsa.etf.rpr.Idable;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * Abstract class for shared methods of Dao classes.
@@ -72,26 +69,77 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
     }
 
-
+    public T executeQueryUnique(String query, Object[] params) throws SQLException {
+        List<T> list = executeQuery(query, params);
+        if(list != null && list.size() == 1){
+            return list.get(0);
+        }
+        else{
+            // throw my exception
+        }
+        return null;
+    }
 
 
 
     @Override
-    public T getById(int id) {
+    public T getById(int id) throws SQLException {
         return executeQueryUnique("select * from " + this.tableName + " where id = ?", new Object[]{id});
     }
 
-    private T executeQueryUnique(String s, Object[] objects) {
-    }
 
     @Override
     public T add(T item) {
-        return null;
+        Map<String, Object> row = object2row(item);
+        Map.Entry<String, String> cols = prepareInsertParts(row);
+        StringBuilder sb=new StringBuilder();
+        sb.append("insert into ");
+        sb.append("(").append(cols.getKey()).append(") ");
+        sb.append("values (").append(cols.getValue()).append(")");
+
+        try{
+            PreparedStatement ps=getConnection().prepareStatement(sb.toString(), Statement.RETURN_GENERATED_KEYS);
+            int c = 1;
+            for(Map.Entry<String, Object> entry : row.entrySet()){
+                if (entry.getKey().equals("id")) // ID will be generated, and will be assigned from generated key
+                    continue;
+                ps.setObject(c, entry.getValue());
+                c = c + 1;
+            }
+            ps.executeUpdate();
+            ResultSet rs = ps.getGeneratedKeys(); // to get the ID from the inserted row
+            rs.next();
+            item.setId(rs.getInt(1));
+            return item;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e); // my exception
+        }
+    }
+
+    private Map.Entry<String, String> prepareInsertParts(Map<String, Object> row) {
+        StringBuilder cols=new StringBuilder(), quests=new StringBuilder();
+        int c=0;
+        for(Map.Entry<String, Object> entry : row.entrySet()){
+            c = c + 1;
+            cols.append(entry.getKey());
+            quests.append("?");
+            if(row.size() != c){
+                cols.append(",");
+                quests.append(",");
+            }
+        }
+        return new AbstractMap.SimpleEntry<>(cols.toString(), quests.toString());
     }
 
     @Override
     public T update(T item) {
-        return null;
+        Map<String, Object> row = object2row(item);
+        StringBuilder cols = new StringBuilder(), quests = new StringBuilder();
+        int c=0;
+        for(Map.Entry<String, Object> entry : row.entrySet()){
+
+        }
     }
 
     @Override
