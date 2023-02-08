@@ -14,7 +14,7 @@ public class EmployeeDaoSQLImpl implements EmployeeDao{
     public EmployeeDaoSQLImpl(){
         try{
             Properties p = new Properties();
-            p.load(ClassLoader.getSystemResource("resources/application.properties.sample").openStream());
+            p.load(ClassLoader.getSystemResource("resources/application.sample.properties").openStream());
             String url = p.getProperty("db.connection_string");
             String username = p.getProperty("db.username");
             String password = p.getProperty("db.password");
