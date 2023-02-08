@@ -135,6 +135,25 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     @Override
     public T update(T item) {
         Map<String, Object> row = object2row(item);
+        StringBuilder sb = new StringBuilder();
+        String updateParts = prepareUpdateParts(row);
+        sb.append("update ").append(tableName).append(" set ");
+        sb.append(updateParts).append(" where id = ?");
+        try{
+            PreparedStatement ps = getConnection().prepareStatement(sb.toString());
+            int c = 1;
+            for(Map.Entry<String, Object> entry : row.entrySet()){
+                c = c + 1;
+                if(entry.getKey().equals("id"))
+                    continue;
+                ps.setObject(c, entry.getValue());
+            }
+            ps.setObject(c, item.getId());
+            ps.executeUpdate();
+            return item;
+        } catch (SQLException e) {
+            throw new RuntimeException(e); // my exception
+        }
     }
 
     private  String prepareUpdateParts(Map<String, Object> row){
@@ -159,6 +178,6 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     @Override
     public List<T> getAll() throws SQLException {
-        return executeQuery("select * from "+tableName, null);
+        return executeQuery("select * from " + tableName, null);
     }
 }
