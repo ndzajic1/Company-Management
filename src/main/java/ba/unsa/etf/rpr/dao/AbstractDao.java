@@ -135,12 +135,22 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     @Override
     public T update(T item) {
         Map<String, Object> row = object2row(item);
-        StringBuilder cols = new StringBuilder(), quests = new StringBuilder();
+    }
+
+    private  String prepareUpdateParts(Map<String, Object> row){
+        StringBuilder cols = new StringBuilder();
         int c=0;
         for(Map.Entry<String, Object> entry : row.entrySet()){
-
+            c = c + 1;
+            if (entry.getKey().equals("id"))
+                continue;
+            cols.append(entry.getKey()).append("= ?");
+            if (row.size() != c) {
+                cols.append(",");
+            }
+            }
+        return  null;
         }
-    }
 
     @Override
     public void delete(int id) {
