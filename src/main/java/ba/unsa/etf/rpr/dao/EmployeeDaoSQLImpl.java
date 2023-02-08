@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.Employee;
 
 import java.sql.*;
 import java.util.List;
+import java.util.Properties;
 
 public class EmployeeDaoSQLImpl implements EmployeeDao{
 
@@ -12,8 +13,12 @@ public class EmployeeDaoSQLImpl implements EmployeeDao{
 
     public EmployeeDaoSQLImpl(){
         try{
-            this.connection = DriverManager.getConnection("jdbc:mysql://sql.freedb.tech:3306/freedb_rpr_db",
-                    "freedb_ndzajic1","");
+            Properties p = new Properties();
+            p.load(ClassLoader.getSystemResource("application.properties.sample").openStream());
+            String url = p.getProperty("db.connection_string");
+            String username = p.getProperty("db.username");
+            String password = p.getProperty("db.password");
+            connection = DriverManager.getConnection(url, username, password);
         }catch (Exception e){
             e.printStackTrace();
         }
