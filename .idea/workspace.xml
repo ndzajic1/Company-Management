@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="insertParts assist">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="insert abstract" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675897335196</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="insert abstract">
+      <created>1675897787668</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1675897787668</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,7 +305,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new jobs class design" />
     <MESSAGE value="jobs rows inserted" />
     <MESSAGE value="more data inserted" />
     <MESSAGE value="employees rows inserted" />
@@ -325,6 +329,7 @@
     <MESSAGE value="connection singleton" />
     <MESSAGE value="executeQuery" />
     <MESSAGE value="insertParts assist" />
-    <option name="LAST_COMMIT_MESSAGE" value="insertParts assist" />
+    <MESSAGE value="insert abstract" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert abstract" />
   </component>
 </project>

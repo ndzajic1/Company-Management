@@ -149,7 +149,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
                 cols.append(",");
             }
             }
-        return  null;
+        return  cols.toString();
         }
 
     @Override
