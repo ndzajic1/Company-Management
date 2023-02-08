@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -39,5 +40,5 @@ public interface Dao <T> {
      * Lists all entities from database. WARNING: Very slow operation because it reads all records.
      * @return List of entities from database
      */
-    List<T> getAll();
+    List<T> getAll() throws SQLException;
 }
