@@ -5,8 +5,7 @@ import java.sql.*;
 public class App {
     public static void main(String[] args) throws SQLException {
 
-        Connection con= DriverManager.getConnection("jdbc:mysql://sql.freedb.tech:3306/freedb_rpr_db",
-         "freedb_ndzajic1","");
+        Connection con = null;
         Statement st=con.createStatement();
        st.executeUpdate(
                 "INSERT INTO `freedb_rpr_db`.`Employees` (id, first_name, last_name, hire_date,"+

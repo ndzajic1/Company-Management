@@ -94,7 +94,7 @@ public class Employee implements Idable {
         this.salary = salary;
     }
 
-    public Employee(int id, String firstName, String lastName, Date hireDate, Department department, Job job, double salary) {
+    public Employee(int id, String firstName, String lastName, Date hireDate, Department department, Job job) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

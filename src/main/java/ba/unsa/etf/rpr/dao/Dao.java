@@ -2,6 +2,10 @@ package ba.unsa.etf.rpr.dao;
 
 import java.util.List;
 
+/**
+ * Main db interface
+ * @param <T>
+ */
 public interface Dao <T> {
 
     /**
