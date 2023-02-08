@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface DepartmentDao extends Dao<Department>{
 
-     List<Department> getByName(String name);
+     List<Department> searchByName(String name);
 }
