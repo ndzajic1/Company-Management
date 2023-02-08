@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="gitignore f" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="gitignore mf" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675888162220</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="gitignore mf">
+      <created>1675888436258</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1675888436258</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +283,7 @@
     <MESSAGE value="gitignore final" />
     <MESSAGE value="gitignore 1" />
     <MESSAGE value="gitignore f" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore f" />
+    <MESSAGE value="gitignore mf" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore mf" />
   </component>
 </project>
