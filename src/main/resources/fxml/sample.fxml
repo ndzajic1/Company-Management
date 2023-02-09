@@ -3,14 +3,16 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane prefHeight="188.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane prefHeight="174.0" prefWidth="332.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.sampleController">
    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" />
       <ColumnConstraints hgrow="SOMETIMES" />
    </columnConstraints>
    <rowConstraints>
@@ -19,21 +21,34 @@
       <RowConstraints vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="username">
+      <ButtonBar prefHeight="50.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <buttons>
+            <Button fx:id="okButtonId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+            <Button fx:id="cancelButtonId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Cancel" />
+         </buttons>
          <GridPane.margin>
-            <Insets bottom="-50.0" left="100.0" right="300.0" top="3.0" />
+            <Insets right="10.0" />
+         </GridPane.margin>
+      </ButtonBar>
+      <Label prefHeight="36.0" prefWidth="118.0" text="Username">
+         <GridPane.margin>
+            <Insets left="10.0" top="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Password" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="userId" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets right="10.0" />
          </GridPane.margin>
       </TextField>
-      <PasswordField GridPane.rowIndex="1">
+      <PasswordField fx:id="passId" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <GridPane.margin>
-            <Insets bottom="-50.0" left="100.0" right="300.0" top="30.0" />
+            <Insets right="10.0" />
          </GridPane.margin>
       </PasswordField>
-      <ButtonBar GridPane.rowIndex="2">
-         <buttons>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Cancel" />
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="OK" />
-         </buttons>
-      </ButtonBar>
    </children>
 </GridPane>
