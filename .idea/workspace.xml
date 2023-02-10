@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="EditEmployee.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/RemoveEmployee.fxml" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="RemoveEmployee.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddDepartment.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
     </list>
@@ -391,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676063277880</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="RemoveEmployee.fxml">
+      <created>1676064013143</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1676064013143</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -406,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="properties" />
     <MESSAGE value="properties 2" />
     <MESSAGE value="props" />
     <MESSAGE value="gitignore" />
@@ -431,6 +437,7 @@
     <MESSAGE value="jobsView.fxml" />
     <MESSAGE value="AddEmployee.fxml" />
     <MESSAGE value="EditEmployee.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditEmployee.fxml" />
+    <MESSAGE value="RemoveEmployee.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="RemoveEmployee.fxml" />
   </component>
 </project>
