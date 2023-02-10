@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="jobsView.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddEmployee.fxml" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="EditEmployee.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/RemoveEmployee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
     </list>
@@ -19,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -378,7 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676055571171</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="AddEmployee.fxml">
+      <created>1676063029312</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1676063029312</updated>
+    </task>
+    <task id="LOCAL-00042" summary="EditEmployee.fxml">
+      <created>1676063277880</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1676063277880</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,8 +406,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="department&amp;job dao" />
-    <MESSAGE value="daos for tables done" />
     <MESSAGE value="properties" />
     <MESSAGE value="properties 2" />
     <MESSAGE value="props" />
@@ -418,6 +429,8 @@
     <MESSAGE value="employeesView.fxml" />
     <MESSAGE value="departmentsView.fxml" />
     <MESSAGE value="jobsView.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="jobsView.fxml" />
+    <MESSAGE value="AddEmployee.fxml" />
+    <MESSAGE value="EditEmployee.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="EditEmployee.fxml" />
   </component>
 </project>
