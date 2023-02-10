@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="employeesView.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/departmentsView.fxml" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="departmentsView.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/jobsView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -361,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676054048238</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="departmentsView.fxml">
+      <created>1676054576377</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1676054576377</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +385,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="employee dao" />
     <MESSAGE value="job title refactor" />
     <MESSAGE value="department&amp;job dao" />
     <MESSAGE value="daos for tables done" />
@@ -401,6 +409,7 @@
     <MESSAGE value="login form" />
     <MESSAGE value="controllers init" />
     <MESSAGE value="employeesView.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="employeesView.fxml" />
+    <MESSAGE value="departmentsView.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="departmentsView.fxml" />
   </component>
 </project>
