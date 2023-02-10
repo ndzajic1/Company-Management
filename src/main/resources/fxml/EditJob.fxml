@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="185.0" prefWidth="251.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="49.99997749328613" minHeight="2.3999801397323637" prefHeight="32.999993896484376" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="88.8000244140625" minHeight="10.0" prefHeight="45.800006103515635" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="82.19998779296876" minHeight="10.0" prefHeight="38.20001831054688" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="46.199987792968756" minHeight="10.0" prefHeight="46.199987792968756" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="38.00003662109373" minHeight="10.0" prefHeight="34.00003662109373" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="38.00003662109373" minHeight="10.0" prefHeight="34.00003662109373" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Job Title:" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Minimal Salary:" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Maximum Salary:" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Button mnemonicParsing="false" text="Cancel" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="60.0" top="3.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="44.0" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="40.0" top="3.0" />
+         </GridPane.margin>
+      </Button>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label prefHeight="18.0" prefWidth="248.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>

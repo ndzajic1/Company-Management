@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="AddDepartment.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddJob.fxml" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="AddJob.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/EditJob.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676069320814</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="AddJob.fxml">
+      <created>1676069723177</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1676069723177</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -418,7 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="props" />
     <MESSAGE value="gitignore" />
     <MESSAGE value="gitignorea" />
     <MESSAGE value="gitignore again" />
@@ -443,6 +449,7 @@
     <MESSAGE value="EditEmployee.fxml" />
     <MESSAGE value="RemoveEmployee.fxml" />
     <MESSAGE value="AddDepartment.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="AddDepartment.fxml" />
+    <MESSAGE value="AddJob.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddJob.fxml" />
   </component>
 </project>
