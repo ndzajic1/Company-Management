@@ -5,9 +5,7 @@ import ba.unsa.etf.rpr.Employee;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
 public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements EmployeeDao{
 
@@ -36,7 +34,14 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
 
     @Override
     public Map<String, Object> object2row(Employee obj) {
-        return null;
+        Map<String, Object> row = new TreeMap<>();
+        row.put("id", obj.getId());
+        row.put("first_name", obj.getFirstName());
+        row.put("last_name", obj.getLastName());
+        row.put("hire_date", obj.getHireDate());
+        row.put("department_id", obj.getDepartment().getId());
+        row.put("job_id", obj.getJob().getId());
+        return row;
     }
 
     @Override
