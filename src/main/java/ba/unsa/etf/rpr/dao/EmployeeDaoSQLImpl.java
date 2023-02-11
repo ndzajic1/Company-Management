@@ -3,25 +3,40 @@ package ba.unsa.etf.rpr.dao;
 import ba.unsa.etf.rpr.Department;
 import ba.unsa.etf.rpr.Employee;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
-public class EmployeeDaoSQLImpl implements EmployeeDao{
+public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements EmployeeDao{
 
-    private Connection connection;
+    private static EmployeeDaoSQLImpl instance = null;
+    private EmployeeDaoSQLImpl() throws SQLException, IOException {
+        super("Employees");
+    }
 
-    public EmployeeDaoSQLImpl(){
+    public static EmployeeDaoSQLImpl getInstance() throws SQLException, IOException {
+        if(instance != null)
+            return instance;
+        instance = new EmployeeDaoSQLImpl();
+        return instance;
+    }
+
+    @Override
+    public Employee row2object(ResultSet rs) {
         try{
-            Properties p = new Properties();
-            p.load(ClassLoader.getSystemResource("resources/application.sample.properties").openStream());
-            String url = p.getProperty("db.connection_string");
-            String username = p.getProperty("db.username");
-            String password = p.getProperty("db.password");
-            connection = DriverManager.getConnection(url, username, password);
-        }catch (Exception e){
-            e.printStackTrace();
+            return new Employee(rs.getInt("id"), rs.getString("first_name"),
+                    rs.getString("last_name"), rs.getDate("hire_date"),
+                    DaoFactory.departmentDao().getById("department_id"), DaoFactory.jobDao().getById("job_id"));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public Map<String, Object> object2row(Employee obj) {
+        return null;
     }
 
     @Override
