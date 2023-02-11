@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="fxml views">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/AdminView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/img/logo.jpeg" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="AdminView.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
     </list>
@@ -81,7 +80,7 @@
     <configuration name="AppFX" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.App" />
       <module name="company-management" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Program Files\Java\javafx-sdk-17\lib --add-modules=javafx.controls, javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Program Files\Java\javafx-sdk-17 --add-modules=javafx.controls, javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,13 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00002" summary="db test">
-      <created>1670845914942</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1670845914942</updated>
     </task>
     <task id="LOCAL-00003" summary="new employees class design">
       <created>1672525545446</created>
@@ -442,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676108767115</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="AdminView.fxml">
+      <created>1676113134627</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1676113134627</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gitignore f" />
     <MESSAGE value="gitignore mf" />
     <MESSAGE value="gitignore mff" />
     <MESSAGE value="connection singleton" />
@@ -482,6 +480,7 @@
     <MESSAGE value="RemoveDepartment.fxml" />
     <MESSAGE value="RemoveJob.fxml" />
     <MESSAGE value="fxml views" />
-    <option name="LAST_COMMIT_MESSAGE" value="fxml views" />
+    <MESSAGE value="AdminView.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="AdminView.fxml" />
   </component>
 </project>
