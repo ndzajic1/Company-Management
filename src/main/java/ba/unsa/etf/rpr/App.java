@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -42,7 +43,7 @@ public class App extends Application {
         Parent p = FXMLLoader.load(getClass().getResource("/fxml/AddEmployee.fxml"));
         stage.setTitle("Company");
         stage.setScene(new Scene(p, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        //stage.getIcons()
+        stage.getIcons().add(new Image(getClass().getResource("/fxml/img/logo.jpeg").toExternalForm()));
         stage.setResizable(false);
         stage.show();
     }
