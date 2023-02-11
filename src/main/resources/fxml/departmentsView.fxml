@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -38,10 +32,10 @@
       </TextField>
       <TableView prefHeight="262.0" prefWidth="564.0" GridPane.rowIndex="1">
         <columns>
-          <TableColumn prefWidth="185.60000306367874" text="Department" />
-          <TableColumn prefWidth="159.2000274658203" text="Location" />
-            <TableColumn prefWidth="160.79998779296875" text="Manager" />
-            <TableColumn prefWidth="87.20001220703125" text="Employees" />
+          <TableColumn prefWidth="176.39998799562454" text="Department" />
+          <TableColumn prefWidth="166.00003051757812" text="Location" />
+            <TableColumn prefWidth="153.79998779296875" text="Manager" />
+            <TableColumn prefWidth="100.0" text="Employees" />
         </columns>
          <GridPane.margin>
             <Insets left="5.0" right="5.0" />
