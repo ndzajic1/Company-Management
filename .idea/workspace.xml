@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="abstract delete">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="search emp by full name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/EmployeeDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/EmployeeDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,27 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00011" summary="dao interface">
-      <created>1672610738157</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1672610738157</updated>
-    </task>
-    <task id="LOCAL-00012" summary="employee dao">
-      <created>1672611830172</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1672611830172</updated>
-    </task>
-    <task id="LOCAL-00013" summary="job title refactor">
-      <created>1672612297106</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1672612297106</updated>
     </task>
     <task id="LOCAL-00014" summary="department&amp;job dao">
       <created>1672612491326</created>
@@ -440,7 +418,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676150921641</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="object2row emp">
+      <created>1676152216893</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1676152216893</updated>
+    </task>
+    <task id="LOCAL-00061" summary="row2obj emp">
+      <created>1676152425619</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1676152425619</updated>
+    </task>
+    <task id="LOCAL-00062" summary="search emp by full name">
+      <created>1676154556358</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1676154556358</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -455,9 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="abstract update" />
-    <MESSAGE value="javafx" />
-    <MESSAGE value="login form" />
     <MESSAGE value="controllers init" />
     <MESSAGE value="employeesView.fxml" />
     <MESSAGE value="departmentsView.fxml" />
@@ -480,6 +476,9 @@
     <MESSAGE value="EmployeeView.fxml" />
     <MESSAGE value="AdminView.fxml++" />
     <MESSAGE value="abstract delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="abstract delete" />
+    <MESSAGE value="object2row emp" />
+    <MESSAGE value="row2obj emp" />
+    <MESSAGE value="search emp by full name" />
+    <option name="LAST_COMMIT_MESSAGE" value="search emp by full name" />
   </component>
 </project>

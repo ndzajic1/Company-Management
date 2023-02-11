@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.Department;
 import ba.unsa.etf.rpr.Employee;
+import ba.unsa.etf.rpr.Job;
 
 import java.io.IOException;
 import java.sql.*;
@@ -60,7 +61,20 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
 
     @Override
     public List<Employee> searchByDepartment(Department dept) {
-        return null;
+        try {
+            return super.executeQuery("select * from Employees where department_id = ?", new Object[]{dept.getId()});
+        } catch (Exception e) {
+            throw new RuntimeException(); // my own
+        }
+    }
+
+    @Override
+    public List<Employee> searchByJob(Job j) {
+        try {
+            return super.executeQuery("select * from Employees where job_id = ?", new Object[]{j.getId()});
+        } catch (Exception e) {
+            throw new RuntimeException(); // my own
+        }
     }
 
 
