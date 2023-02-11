@@ -117,7 +117,6 @@
                         <Button mnemonicParsing="false" text="Add" />
                         <Button mnemonicParsing="false" text="Edit" />
                         <Button mnemonicParsing="false" text="Remove" />
-                        <Button mnemonicParsing="false" text="Cancel" textAlignment="CENTER" />
                      </buttons>
                      <GridPane.margin>
                         <Insets right="20.0" />
@@ -162,7 +161,6 @@
                         <Button mnemonicParsing="false" text="Add" />
                         <Button mnemonicParsing="false" text="Edit" />
                         <Button mnemonicParsing="false" text="Remove" />
-                        <Button mnemonicParsing="false" text="Cancel" textAlignment="CENTER" />
                      </buttons>
                      <GridPane.margin>
                         <Insets right="20.0" />
@@ -205,7 +203,6 @@
                         <Button mnemonicParsing="false" text="Add" />
                         <Button mnemonicParsing="false" text="Edit" />
                         <Button mnemonicParsing="false" text="Remove" />
-                        <Button mnemonicParsing="false" text="Cancel" textAlignment="CENTER" />
                      </buttons>
                      <GridPane.margin>
                         <Insets right="20.0" />
