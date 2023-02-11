@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.Properties;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -43,7 +42,7 @@ public class App extends Application {
         Parent p = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
         stage.setTitle("Company");
         stage.setScene(new Scene(p, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        stage.getIcons().add(new Image(getClass().getResource("/fxml/img/logo.jpeg").toExternalForm()));
+        stage.getIcons().add(new Image(getClass().getResource("/img/logo.jpeg").toExternalForm()));
         stage.setResizable(false);
         stage.show();
     }
