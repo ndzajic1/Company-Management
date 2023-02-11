@@ -75,9 +75,8 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             return list.get(0);
         }
         else{
-            // throw my exception
+            throw new RuntimeException(new Exception());// throw my exception
         }
-        return null;
     }
 
 
@@ -173,7 +172,14 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     @Override
     public void delete(int id) {
-
+        String query = "delete from " + tableName + " where id = ?";
+        try{
+            PreparedStatement ps = getConnection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            ps.setObject(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e); // my exception
+        }
     }
 
     @Override

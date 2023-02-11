@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="fxmls excluded">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/BasicView.fxml" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="AdminView.fxml++">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,29 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nedim/IdeaProjects/company-management/src/main/resources/fxml/img&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.39195403&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Nedim/IdeaProjects/company-management/src/main/resources/fxml",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39195403"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml\img" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml" />
+      <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\java\ba\unsa\etf\rpr\controllers" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml" />
-      <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\resources" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main" />
     </key>
@@ -95,27 +96,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00007" summary="more data inserted">
-      <created>1672600519257</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1672600519257</updated>
-    </task>
-    <task id="LOCAL-00008" summary="employees rows inserted">
-      <created>1672603425243</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1672603425243</updated>
-    </task>
-    <task id="LOCAL-00009" summary="db dump">
-      <created>1672604475674</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1672604475674</updated>
     </task>
     <task id="LOCAL-00010" summary="idable interface">
       <created>1672605892578</created>
@@ -439,7 +419,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676147825999</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="EmployeeView.fxml">
+      <created>1676148142101</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1676148142101</updated>
+    </task>
+    <task id="LOCAL-00057" summary="AdminView.fxml++">
+      <created>1676148236651</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1676148236652</updated>
+    </task>
+    <task id="LOCAL-00058" summary="AdminView.fxml++">
+      <created>1676148309106</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1676148309106</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -454,8 +455,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="insertParts assist" />
-    <MESSAGE value="insert abstract" />
     <MESSAGE value="updateParts" />
     <MESSAGE value="abstract update" />
     <MESSAGE value="javafx" />
@@ -479,6 +478,8 @@
     <MESSAGE value="Login.fxml ++" />
     <MESSAGE value="ChangePassword.fxml" />
     <MESSAGE value="fxmls excluded" />
-    <option name="LAST_COMMIT_MESSAGE" value="fxmls excluded" />
+    <MESSAGE value="EmployeeView.fxml" />
+    <MESSAGE value="AdminView.fxml++" />
+    <option name="LAST_COMMIT_MESSAGE" value="AdminView.fxml++" />
   </component>
 </project>
