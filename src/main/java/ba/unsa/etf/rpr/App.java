@@ -40,7 +40,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent p = FXMLLoader.load(getClass().getResource("/fxml/AddEmployee.fxml"));
+        Parent p = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
         stage.setTitle("Company");
         stage.setScene(new Scene(p, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         stage.getIcons().add(new Image(getClass().getResource("/fxml/img/logo.jpeg").toExternalForm()));
