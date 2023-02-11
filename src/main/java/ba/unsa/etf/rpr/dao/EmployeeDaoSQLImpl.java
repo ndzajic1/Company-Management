@@ -43,49 +43,19 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         row.put("job_id", obj.getJob().getId());
         return row;
     }
-
     @Override
-    public Employee getById(int id) {
-        String query = "SELECT * FROM Employees WHERE id = ?";
+    public List<Employee> searchByName(String name) {
         try{
-            PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setInt(1, id);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()){
-                Employee emp = new Employee(rs.getInt(1),rs.getString(2),
-                        rs.getString(3),rs.getDate(4), null, null);
-                rs.close();
-                return emp;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+            List<Employee> list = super.executeQuery("select * from employees where first_name = '?%' " +
+                            "or last_name like '?%'",
+                    new Object[]{name, name});
+            list.addAll(super.executeQuery(
+                    "select * from employees where concat(first_name,' ',last_name) like '?%'", new Object[]{name}));
+            return list;
+
+        } catch(Exception e){
+            throw new RuntimeException();
         }
-        return null;
-    }
-
-    @Override
-    public Employee add(Employee item) {
-        return null;
-    }
-
-    @Override
-    public Employee update(Employee item) {
-        return null;
-    }
-
-    @Override
-    public void delete(int id) {
-
-    }
-
-    @Override
-    public List<Employee> getAll() {
-        return null;
-    }
-
-    @Override
-    public List<Employee> searchByName(String txt) {
-        return null;
     }
 
     @Override
