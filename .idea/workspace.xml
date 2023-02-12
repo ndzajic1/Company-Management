@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="factory">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="domain">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/Manageable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -61,11 +61,11 @@
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\java" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\java\ba\unsa\etf\rpr\controllers" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\resources" />
-      <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main" />
     </key>
   </component>
   <component name="RunManager">
@@ -78,7 +78,7 @@
       </method>
     </configuration>
     <configuration name="AppFX" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.App" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.domain.App" />
       <module name="company-management" />
       <option name="VM_PARAMETERS" value="--module-path C:\Program Files\Java\javafx-sdk-17 --add-modules=javafx.controls, javafx.fxml" />
       <method v="2">
@@ -97,13 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00018" summary="props">
-      <created>1675883424524</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1675883424524</updated>
     </task>
     <task id="LOCAL-00019" summary="gitignore">
       <created>1675883487068</created>
@@ -441,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676194525756</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="domain">
+      <created>1676195780010</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1676195780010</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -456,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AddEmployee.fxml" />
     <MESSAGE value="EditEmployee.fxml" />
     <MESSAGE value="RemoveEmployee.fxml" />
     <MESSAGE value="AddDepartment.fxml" />
@@ -481,6 +480,7 @@
     <MESSAGE value="dept dao sql" />
     <MESSAGE value="job dao sql" />
     <MESSAGE value="factory" />
-    <option name="LAST_COMMIT_MESSAGE" value="factory" />
+    <MESSAGE value="domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="domain" />
   </component>
 </project>
