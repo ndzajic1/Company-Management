@@ -1,10 +1,9 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.Department;
-import ba.unsa.etf.rpr.Employee;
-import ba.unsa.etf.rpr.Job;
+import ba.unsa.etf.rpr.domain.Department;
+import ba.unsa.etf.rpr.domain.Employee;
+import ba.unsa.etf.rpr.domain.Job;
 
-import java.util.Date;
 import java.util.List;
 
 public interface EmployeeDao extends Dao<Employee>{

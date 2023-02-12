@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="job dao sql">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DaoFactory.java" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="factory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DepartmentDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DepartmentDaoSQLImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/EmployeeDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/EmployeeDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppFX">
+  <component name="RunManager">
     <configuration type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.App" />
       <module name="company-management" />
@@ -99,13 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00017" summary="properties 2">
-      <created>1675883300557</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1675883300557</updated>
     </task>
     <task id="LOCAL-00018" summary="props">
       <created>1675883424524</created>
@@ -443,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676193673911</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="factory">
+      <created>1676194525756</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1676194525756</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="jobsView.fxml" />
     <MESSAGE value="AddEmployee.fxml" />
     <MESSAGE value="EditEmployee.fxml" />
     <MESSAGE value="RemoveEmployee.fxml" />
@@ -483,6 +480,7 @@
     <MESSAGE value="get emps by job and dept" />
     <MESSAGE value="dept dao sql" />
     <MESSAGE value="job dao sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="job dao sql" />
+    <MESSAGE value="factory" />
+    <option name="LAST_COMMIT_MESSAGE" value="factory" />
   </component>
 </project>

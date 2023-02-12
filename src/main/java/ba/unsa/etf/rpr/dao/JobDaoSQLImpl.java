@@ -1,12 +1,11 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.Job;
+import ba.unsa.etf.rpr.domain.Job;
 
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 
