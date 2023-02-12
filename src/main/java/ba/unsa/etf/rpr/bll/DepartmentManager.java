@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr.bll;
 
 import java.util.List;
 
-public class EmployeeManager implements Manageable{
+public class DepartmentManager implements Manageable {
     @Override
     public void add(Object o) {
 
@@ -10,7 +10,6 @@ public class EmployeeManager implements Manageable{
 
     @Override
     public void update(Object o) {
-
 
     }
 
