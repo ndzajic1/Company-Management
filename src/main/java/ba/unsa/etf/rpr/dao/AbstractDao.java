@@ -13,11 +13,11 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     private static Connection connection=null;
     private String tableName;
 
-    public AbstractDao(String tableName) throws SQLException, IOException {
+    public AbstractDao(String tableName)  {
         this.tableName=tableName;
         createConnection();
     }
-    private static void createConnection() throws IOException, SQLException {
+    private static void createConnection(){
         if(connection == null) {
             try {
                 Properties p = new Properties();

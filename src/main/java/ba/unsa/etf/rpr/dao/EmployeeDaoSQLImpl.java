@@ -4,18 +4,18 @@ import ba.unsa.etf.rpr.Department;
 import ba.unsa.etf.rpr.Employee;
 import ba.unsa.etf.rpr.Job;
 
-import java.io.IOException;
+
 import java.sql.*;
 import java.util.*;
 
 public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements EmployeeDao{
 
     private static EmployeeDaoSQLImpl instance = null;
-    private EmployeeDaoSQLImpl() throws SQLException, IOException {
+    private EmployeeDaoSQLImpl()  {
         super("Employees");
     }
 
-    public static EmployeeDaoSQLImpl getInstance() throws SQLException, IOException {
+    public static EmployeeDaoSQLImpl getInstance() {
         if(instance != null)
             return instance;
         instance = new EmployeeDaoSQLImpl();
@@ -27,7 +27,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         try{
             return new Employee(rs.getInt("id"), rs.getString("first_name"),
                     rs.getString("last_name"), rs.getDate("hire_date"),
-                    DaoFactory.departmentDao().getById("department_id"), DaoFactory.jobDao().getById("job_id"));
+                    DaoFactory.departmentDao().getById(rs.getInt("department_id")), DaoFactory.jobDao().getById(rs.getInt("job_id")));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

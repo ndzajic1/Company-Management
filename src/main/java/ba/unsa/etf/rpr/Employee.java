@@ -12,6 +12,9 @@ public class Employee implements Idable {
     Job job;
     double salary;
 
+    public Employee(int id, String first_name, String last_name, java.sql.Date hire_date, Employee department_id, Employee job_id) {
+    }
+
     @Override
     public String toString() {
         return "Employee{" +

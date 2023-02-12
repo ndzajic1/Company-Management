@@ -27,7 +27,7 @@ public class DepartmentDaoSQLImpl extends AbstractDao<Department> implements Dep
     public Department row2object(ResultSet rs) {
        try{
            return new Department(rs.getInt(1), rs.getString(2),
-                   rs.getString(3), DaoFactory.employeeDao().getById("employee_id"));
+                   rs.getString(3), DaoFactory.employeeDao().getById(4));
        } catch (SQLException e) {
            throw new RuntimeException(e);
        }
