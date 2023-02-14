@@ -1,25 +1,32 @@
 package ba.unsa.etf.rpr.bll;
 
+import ba.unsa.etf.rpr.domain.Department;
+
 import java.util.List;
 
-public class DepartmentManager implements Manageable {
+public class DepartmentManager implements Manageable<Department> {
     @Override
-    public void add(Object o) {
+    public Department getById(int id) {
+        return null;
+    }
+
+    @Override
+    public void add(Department d) {
 
     }
 
     @Override
-    public void update(Object o) {
+    public void update(Department d) {
 
     }
 
     @Override
-    public void delete(Object o) {
+    public void delete(Department d) {
 
     }
 
     @Override
-    public List getAll() {
+    public List<Department> getAll() {
         return null;
     }
 }

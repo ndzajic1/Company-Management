@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="domain">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/Manageable.java" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="exclude sample.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/DepartmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/DepartmentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/JobManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/JobManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/Manageable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/Manageable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DepartmentDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DepartmentDaoSQLImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/JobDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/JobDaoSQLImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,27 +101,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00019" summary="gitignore">
-      <created>1675883487068</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1675883487068</updated>
-    </task>
-    <task id="LOCAL-00020" summary="gitignorea">
-      <created>1675884061971</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1675884061971</updated>
-    </task>
-    <task id="LOCAL-00021" summary="gitignore again">
-      <created>1675884422726</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1675884422726</updated>
     </task>
     <task id="LOCAL-00022" summary="gitignore final">
       <created>1675887094809</created>
@@ -441,7 +424,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676195780010</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="manageable if">
+      <created>1676199105193</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1676199105193</updated>
+    </task>
+    <task id="LOCAL-00069" summary="bll classes">
+      <created>1676199192473</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1676199192473</updated>
+    </task>
+    <task id="LOCAL-00070" summary="exclude sample.fxml">
+      <created>1676199277034</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1676199277034</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -456,9 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="EditEmployee.fxml" />
-    <MESSAGE value="RemoveEmployee.fxml" />
-    <MESSAGE value="AddDepartment.fxml" />
     <MESSAGE value="AddJob.fxml" />
     <MESSAGE value="EditJob.fxml" />
     <MESSAGE value="EditDepartment.fxml" />
@@ -481,6 +482,9 @@
     <MESSAGE value="job dao sql" />
     <MESSAGE value="factory" />
     <MESSAGE value="domain" />
-    <option name="LAST_COMMIT_MESSAGE" value="domain" />
+    <MESSAGE value="manageable if" />
+    <MESSAGE value="bll classes" />
+    <MESSAGE value="exclude sample.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="exclude sample.fxml" />
   </component>
 </project>

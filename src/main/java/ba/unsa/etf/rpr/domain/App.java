@@ -10,6 +10,8 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.SecureRandom;
 import java.sql.*;
 import java.util.Collections;
 import java.util.List;
@@ -21,14 +23,15 @@ public class App { //extends Application {
 
     public static void main(String[] args) throws SQLException, IOException {
         // launch(args);
-        System.out.println("###");
+
+       /* System.out.println("###");
         List<Object> l = Collections.singletonList(DaoFactory.employeeDao().getAll());
 
         for (Object e : l) {
             System.out.println(e.toString());
         }
         System.out.println("###");
-       /* Properties p = new Properties();
+        Properties p = new Properties();
         p.load(ClassLoader.getSystemResource("application.properties.sample").openStream());
         String url = p.getProperty("db.connection_string");
         String username = p.getProperty("db.username");

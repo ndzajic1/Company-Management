@@ -13,11 +13,11 @@ public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
 
     private static JobDaoSQLImpl instance = null;
 
-    private JobDaoSQLImpl() throws SQLException, IOException {
+    private JobDaoSQLImpl() {
         super("Jobs");
     }
 
-    public static JobDaoSQLImpl getInstance() throws SQLException, IOException {
+    public static JobDaoSQLImpl getInstance() {
         if(instance != null)
             return instance;
         instance = new JobDaoSQLImpl();

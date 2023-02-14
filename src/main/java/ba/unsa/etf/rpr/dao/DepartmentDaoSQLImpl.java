@@ -11,13 +11,13 @@ import java.util.TreeMap;
 
 public class DepartmentDaoSQLImpl extends AbstractDao<Department> implements DepartmentDao{
 
-    private static DepartmentDaoSQLImpl instance=null;
+    private static DepartmentDaoSQLImpl instance = null;
 
-    private DepartmentDaoSQLImpl() throws SQLException, IOException {
+    private DepartmentDaoSQLImpl() {
         super("Departments");
     }
 
-    public static DepartmentDaoSQLImpl getInstance() throws SQLException, IOException {
+    public static DepartmentDaoSQLImpl getInstance()  {
         if(instance == null)
             instance = new DepartmentDaoSQLImpl();
         return instance;
