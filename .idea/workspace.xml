@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="idea1">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="login controller setup">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddDepartment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/sampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AddDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddDepartment.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,13 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00028" summary="connection singleton">
-      <created>1675891744385</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1675891744385</updated>
     </task>
     <task id="LOCAL-00029" summary="connection singleton">
       <created>1675891869266</created>
@@ -442,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676387476157</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="login controller setup">
+      <created>1676389334505</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1676389334506</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AdminView.fxml" />
     <MESSAGE value="Login.fxml" />
     <MESSAGE value="Login.fxml ++" />
     <MESSAGE value="ChangePassword.fxml" />
@@ -482,6 +480,7 @@
     <MESSAGE value="job manager" />
     <MESSAGE value="idea" />
     <MESSAGE value="idea1" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea1" />
+    <MESSAGE value="login controller setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="login controller setup" />
   </component>
 </project>
