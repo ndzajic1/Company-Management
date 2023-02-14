@@ -9,7 +9,7 @@ import java.util.List;
 public class JobManager implements Manageable<Job>{
     @Override
     public Job getById(int id) throws SQLException {
-        return DaoFactory.jobDao().getById(id).getJob();
+        return DaoFactory.jobDao().getById(id);
     }
 
     @Override
@@ -23,7 +23,7 @@ public class JobManager implements Manageable<Job>{
     }
 
     @Override
-    public void delete(Job j) {
+    public void delete(int id) {
 
     }
 
