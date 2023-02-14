@@ -10,8 +10,8 @@ public interface Manageable<T> {
 
     void update(T o);
 
-    void delete(T o);
+    void delete(int id);
 
-    List<T> getAll();
+    List<T> getAll() throws SQLException;
 
 }
