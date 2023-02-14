@@ -18,13 +18,13 @@ import java.util.List;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
-public class App { //extends Application {
+public class App extends Application {
 
 
-    public static void main(String[] args) throws SQLException, IOException {
-        // launch(args);
-
-       /* System.out.println("###");
+    public static void main(String[] args) {
+        launch(args);
+/*
+        System.out.println("###");
         List<Object> l = Collections.singletonList(DaoFactory.employeeDao().getAll());
 
         for (Object e : l) {
@@ -47,7 +47,7 @@ public class App { //extends Application {
            rs.getString(2)+" "+ rs.getString(3)+" \n");
        }
 
-
+*/
     }
 
     @Override
@@ -58,6 +58,6 @@ public class App { //extends Application {
         stage.getIcons().add(new Image(getClass().getResource("/img/logo.jpeg").toExternalForm()));
         stage.setResizable(false);
         stage.show();
-    } */
     }
+
 }
