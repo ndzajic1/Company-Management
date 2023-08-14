@@ -8,34 +8,35 @@ import java.util.List;
 
 public class JobManager{
 
-    public Job getById(int id) throws SQLException {
+    public Job getJobById(int id) throws SQLException {
         return DaoFactory.jobDao().getById(id);
     }
 
 
-    public void add(Job j) {
+    public void addNewJob(Job j) {
         try{
             validateJobTitle(j);
             DaoFactory.jobDao().add(j);
         } catch(SQLException e){
-            // my except
+            // already exists
         }
     }
 
     private void validateJobTitle(Job j) throws SQLException {
-        for(Job job : getAll()){
+        for(Job job : getAllJobs()){
             if(job.getTitle().equals(j.getTitle()))
                 throw new RuntimeException("duplicate");
         }
     }
 
 
-    public void update(Job j) {
+    public void updateJob(Job j) {
+
         DaoFactory.jobDao().update(j);
     }
 
 
-    public void delete(int id) {
+    public void deleteJob(int id) {
         try {
             DaoFactory.jobDao().delete(id);
         } catch (RuntimeException e){
@@ -44,7 +45,7 @@ public class JobManager{
     }
 
 
-    public List<Job> getAll() throws SQLException {
+    public List<Job> getAllJobs() throws SQLException {
         return DaoFactory.jobDao().getAll();
     }
 }

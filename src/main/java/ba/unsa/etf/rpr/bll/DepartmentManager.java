@@ -8,12 +8,12 @@ import java.util.List;
 
 public class DepartmentManager {
 
-    public Department getById(int id) throws SQLException {
+    public Department getDeptById(int id) throws SQLException {
         return DaoFactory.departmentDao().getById(id);
     }
 
 
-    public void add(Department d) {
+    public void addNewDept(Department d) {
         try{
             validateDeptName(d);
             DaoFactory.departmentDao().add(d);
@@ -23,19 +23,20 @@ public class DepartmentManager {
     }
 
     private void validateDeptName(Department d) throws SQLException {
-        for(Department dept : getAll()){
+        for(Department dept : getAllDepts()){
             if(dept.getName().equals(d.getName()))
                 throw new RuntimeException("duplicate");
         }
     }
 
 
-    public void update(Department d) {
+    public void updateDept(Department d) {
+
         DaoFactory.departmentDao().update(d);
     }
 
 
-    public void delete(int id) {
+    public void deleteDept(int id) {
         try {
             DaoFactory.departmentDao().delete(id);
         } catch (RuntimeException e){
@@ -44,7 +45,7 @@ public class DepartmentManager {
     }
 
 
-    public List<Department> getAll() throws SQLException {
+    public List<Department> getAllDepts() throws SQLException {
         return DaoFactory.departmentDao().getAll();
     }
 }
