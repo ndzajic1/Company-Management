@@ -3,7 +3,7 @@ package ba.unsa.etf.rpr.domain;
 import java.util.Date;
 import java.util.Objects;
 
-public class Employee implements Idable {
+public class Employee extends LoggableUser implements Idable{
     int id;
     String firstName;
     String lastName;
@@ -106,4 +106,5 @@ public class Employee implements Idable {
         this.job = job;
         this.salary = salary;
     }
+
 }

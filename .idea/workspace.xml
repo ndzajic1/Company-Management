@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dept job  dao refined">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Loggable.java" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="login class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/LoggableUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/LoggableUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,13 +99,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00033" summary="updateParts">
-      <created>1675897927090</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1675897927090</updated>
     </task>
     <task id="LOCAL-00034" summary="abstract update">
       <created>1675898618971</created>
@@ -442,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692045392562</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="login class">
+      <created>1692049033720</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1692049033720</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,7 +458,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="EmployeeView.fxml" />
     <MESSAGE value="AdminView.fxml++" />
     <MESSAGE value="abstract delete" />
     <MESSAGE value="object2row emp" />
@@ -482,7 +482,8 @@
     <MESSAGE value="dao refined" />
     <MESSAGE value="employee dao refined" />
     <MESSAGE value="dept job  dao refined" />
-    <option name="LAST_COMMIT_MESSAGE" value="dept job  dao refined" />
+    <MESSAGE value="login class" />
+    <option name="LAST_COMMIT_MESSAGE" value="login class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
