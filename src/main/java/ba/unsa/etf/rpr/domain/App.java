@@ -15,47 +15,27 @@ import java.security.SecureRandom;
 import java.sql.*;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
+import java.util.Properties;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class App extends Application {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, IOException {
         launch(args);
-/*
-        System.out.println("###");
-        List<Object> l = Collections.singletonList(DaoFactory.employeeDao().getAll());
+    //DaoFactory.departmentDao().getAll();
 
-        for (Object e : l) {
-            System.out.println(e.toString());
-        }
-        System.out.println("###");
-        Properties p = new Properties();
-        p.load(ClassLoader.getSystemResource("application.properties.sample").openStream());
-        String url = p.getProperty("db.connection_string");
-        String username = p.getProperty("db.username");
-        String password = p.getProperty("db.password");
-        Connection con = DriverManager.getConnection(url, username, password);
-        Statement st=con.createStatement();
-       ResultSet rs= st.executeQuery(
-                "select * from Employees"
-        );
 
-       while(rs.next()){
-           System.out.print(rs.getInt(1)+" "+
-           rs.getString(2)+" "+ rs.getString(3)+" \n");
-       }
-
-*/
     }
 
-    @Override
+   @Override
     public void start(Stage stage) throws Exception {
-        Parent p = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
+        Parent p = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/Login.fxml")));
         stage.setTitle("Company");
         stage.setScene(new Scene(p, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        stage.getIcons().add(new Image(getClass().getResource("/img/logo.jpeg").toExternalForm()));
+        stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
         stage.setResizable(false);
         stage.show();
     }

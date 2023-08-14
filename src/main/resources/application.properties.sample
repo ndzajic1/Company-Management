@@ -1,3 +1,3 @@
-db.connection_string=jdbc:mysql://sql.freedb.tech:3306/freedb_rpr_db
-db.username=freedb_ndzajic1
-db.password=JvsceCz7B2q@4%K
+db.connection_string=jdbc:mysql://localhost/cmp?serverTimeZone=SYSTEM
+db.username=ndzajic1
+db.password=Xmaf6fhl1GwQfOs

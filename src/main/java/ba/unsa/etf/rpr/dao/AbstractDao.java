@@ -9,13 +9,14 @@ import java.util.*;
  * Abstract class for shared methods of Dao classes.
  */
 public abstract class AbstractDao<T extends Idable> implements Dao<T> {
-    private static Connection connection=null;
+    private static Connection connection = null;
     private String tableName;
 
     public AbstractDao(String tableName)  {
-        this.tableName=tableName;
+        this.tableName = tableName;
         createConnection();
     }
+
     private static void createConnection(){
         if(connection == null) {
             try {
@@ -25,6 +26,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
                 String username = p.getProperty("db.username");
                 String password = p.getProperty("db.password");
                 connection = DriverManager.getConnection(url, username, password);
+                System.out.println("Connected");
             }
             catch (Exception e){
                 e.printStackTrace();
@@ -51,13 +53,14 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     public List<T> executeQuery(String query, Object[] params) throws SQLException {
         try{
-            PreparedStatement ps=getConnection().prepareStatement(query);
+            PreparedStatement ps = getConnection().prepareStatement(query);
             if(params != null){
-                for(int i = 1; i <= params.length; i = i+1){
+                for(int i = 1; i <= params.length; i = i + 1){
                    ps.setObject(i, params[i-1]);
                 }
             }
-            ResultSet rs=ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
+            System.out.println("query:" + query);
             ArrayList<T> list=new ArrayList<>();
             while(rs.next()){
                 list.add(row2object(rs));
@@ -66,10 +69,12 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
     }
 
     public T executeQueryUnique(String query, Object[] params) throws SQLException {
         List<T> list = executeQuery(query, params);
+        System.out.println(query);
         if(list != null && list.size() == 1){
             return list.get(0);
         }
@@ -90,7 +95,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     public T add(T item) {
         Map<String, Object> row = object2row(item);
         Map.Entry<String, String> cols = prepareInsertParts(row);
-        StringBuilder sb=new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         sb.append("insert into ");
         sb.append("(").append(cols.getKey()).append(") ");
         sb.append("values (").append(cols.getValue()).append(")");
@@ -116,7 +121,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     }
 
     private Map.Entry<String, String> prepareInsertParts(Map<String, Object> row) {
-        StringBuilder cols=new StringBuilder(), quests=new StringBuilder();
+        StringBuilder cols = new StringBuilder(), quests = new StringBuilder();
         int c=0;
         for(Map.Entry<String, Object> entry : row.entrySet()){
             c = c + 1;
