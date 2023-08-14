@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="add dept controller">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AdminViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dao refined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DepartmentDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DepartmentDaoSQLImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties.sample" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties.sample" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AdminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/AdminView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,13 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00030" summary="executeQuery">
-      <created>1675893525971</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1675893525971</updated>
     </task>
     <task id="LOCAL-00031" summary="insertParts assist">
       <created>1675897335196</created>
@@ -450,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676390521940</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="dao refined">
+      <created>1692040025111</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1692040025112</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Login.fxml ++" />
     <MESSAGE value="ChangePassword.fxml" />
     <MESSAGE value="fxmls excluded" />
     <MESSAGE value="EmployeeView.fxml" />
@@ -490,7 +480,8 @@
     <MESSAGE value="idea1" />
     <MESSAGE value="login controller setup" />
     <MESSAGE value="add dept controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dept controller" />
+    <MESSAGE value="dao refined" />
+    <option name="LAST_COMMIT_MESSAGE" value="dao refined" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
