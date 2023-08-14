@@ -51,7 +51,7 @@ public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
     @Override
     public List<Job> searchByTitle(String txt) {
         try {
-            return super.executeQuery("select * from Jobs where txt like '?%'", new Object[]{txt});
+            return super.executeQuery("select * from Jobs where txt = '?%'", new Object[]{txt.toLowerCase()});
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

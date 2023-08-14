@@ -46,7 +46,7 @@ public class DepartmentDaoSQLImpl extends AbstractDao<Department> implements Dep
     @Override
     public List<Department> searchByName(String name) {
         try {
-            return super.executeQuery("select * from Departments where name like '?%'", new Object[]{name});
+            return super.executeQuery("select * from Departments where lower(name) = '?%'", new Object[]{name.toLowerCase()});
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
