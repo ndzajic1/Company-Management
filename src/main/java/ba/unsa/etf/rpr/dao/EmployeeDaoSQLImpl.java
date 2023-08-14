@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
 
 
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.*;
 
@@ -25,10 +26,13 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
     @Override
     public Employee row2object(ResultSet rs) {
         try{
-            return new Employee(rs.getInt("id"), rs.getString("first_name"),
+            Employee obj = new Employee(rs.getInt("id"), rs.getString("first_name"),
                     rs.getString("last_name"), rs.getDate("hire_date"),
                     DaoFactory.departmentDao().getById(rs.getInt("department_id")), DaoFactory.jobDao().getById(rs.getInt("job_id")));
-        } catch (SQLException e) {
+            obj.setUsername(rs.getString("username"));
+            obj.setPasswordHash(rs.getString("password_hash"));
+            return obj;
+        } catch (SQLException | NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
     }
@@ -42,6 +46,8 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         row.put("hire_date", obj.getHireDate());
         row.put("department_id", obj.getDepartment().getId());
         row.put("job_id", obj.getJob().getId());
+        row.put("username", obj.getUsername());
+        row.put("password_hash", obj.getPasswordHash());
         return row;
     }
     @Override

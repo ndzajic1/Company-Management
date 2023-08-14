@@ -19,15 +19,15 @@ public abstract class LoggableUser {
         }
     }
 
-    public final String getUsername(){
+    public final String getUsername() {
         return username;
     }
 
-    public final String getPasswordHash(){
+    public final String getPasswordHash() {
         return passwordHash;
     }
 
-    public final void setUsername(String username){
+    public final void setUsername(String username) {
         this.username = username;
     }
 
@@ -39,9 +39,11 @@ public abstract class LoggableUser {
         MessageDigest md = MessageDigest.getInstance(HASHING_ALGORITHM);
         byte[] hashed = md.digest(password.getBytes());
         StringBuilder sb = new StringBuilder();
-        for(byte b : hashed){
+        for (byte b : hashed) {
             sb.append(b);
         }
         return sb.toString();
+
+    }
 
 }
