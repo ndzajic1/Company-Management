@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.domain;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -69,7 +70,7 @@ public class Employee extends LoggableUser implements Idable{
         return hireDate;
     }
 
-    public void setHireDate(Date hireDate) {
+    public void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
     }
 

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="add dept control">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="binding add empl">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AddEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddEmployee.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,13 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00039" summary="departmentsView.fxml">
-      <created>1676054576377</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1676054576377</updated>
     </task>
     <task id="LOCAL-00040" summary="jobsView.fxml">
       <created>1676055571171</created>
@@ -443,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692106750362</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="binding add empl">
+      <created>1692110460298</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1692110460298</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dept dao sql" />
     <MESSAGE value="job dao sql" />
     <MESSAGE value="factory" />
     <MESSAGE value="domain" />
@@ -483,7 +480,8 @@
     <MESSAGE value="mngrs refined" />
     <MESSAGE value="ctors" />
     <MESSAGE value="add dept control" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dept control" />
+    <MESSAGE value="binding add empl" />
+    <option name="LAST_COMMIT_MESSAGE" value="binding add empl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

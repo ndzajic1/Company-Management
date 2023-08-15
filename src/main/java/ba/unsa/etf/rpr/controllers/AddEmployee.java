@@ -20,6 +20,8 @@ import javafx.scene.control.*;
 import javafx.util.StringConverter;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class AddEmployee {
 
@@ -99,9 +101,9 @@ public class AddEmployee {
         Job j = job.valueProperty().getValue();
 
         Employee e = new Employee();
-        d.setName(deptProperty.getValue());
-        d.setLocation(locationProperty.getValue());
-        d.setManager(mngr);
+        e.setFirstName(firstNameProperty.getValue());
+        e.setLastName(lastNameProperty.getValue());
+        e.setHireDate(hired.getValue());
 
         departmentManager.addNewDept(d);
     }
