@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="binding add empl">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddEmployee.java" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="add empl control finished">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AddJob.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddJob.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,20 +99,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00040" summary="jobsView.fxml">
-      <created>1676055571171</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1676055571171</updated>
-    </task>
-    <task id="LOCAL-00041" summary="AddEmployee.fxml">
-      <created>1676063029312</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1676063029312</updated>
     </task>
     <task id="LOCAL-00042" summary="EditEmployee.fxml">
       <created>1676063277880</created>
@@ -441,7 +429,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692110460298</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="dates">
+      <created>1692110634249</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1692110634249</updated>
+    </task>
+    <task id="LOCAL-00090" summary="add empl control finished">
+      <created>1692110814352</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1692110814352</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -456,8 +458,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="job dao sql" />
-    <MESSAGE value="factory" />
     <MESSAGE value="domain" />
     <MESSAGE value="manageable if" />
     <MESSAGE value="bll classes" />
@@ -481,7 +481,9 @@
     <MESSAGE value="ctors" />
     <MESSAGE value="add dept control" />
     <MESSAGE value="binding add empl" />
-    <option name="LAST_COMMIT_MESSAGE" value="binding add empl" />
+    <MESSAGE value="dates" />
+    <MESSAGE value="add empl control finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="add empl control finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
