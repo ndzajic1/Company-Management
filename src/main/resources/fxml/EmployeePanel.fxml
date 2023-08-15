@@ -18,7 +18,7 @@
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel">
   <tabs>
-    <Tab text="  Home   ">
+    <Tab fx:id="homeTab" text="  Home   ">
          <content>
             <GridPane>
               <columnConstraints>
@@ -76,12 +76,12 @@
                                     <Insets left="5.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Label" GridPane.columnIndex="1">
+                              <Label fx:id="employeeName" text="Label" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Label fx:id="deptName" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin>
@@ -91,7 +91,7 @@
                                     <Insets left="5.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Label fx:id="deptManager" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin>
@@ -100,7 +100,7 @@
                         </GridPane>
                         <ButtonBar prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button mnemonicParsing="false" text="Change password" />
+                            <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#changePassword" text="Change password" />
                           </buttons>
                            <VBox.margin>
                               <Insets right="20.0" />
@@ -120,7 +120,7 @@
             </GridPane>
          </content>
     </Tab>
-    <Tab text="   Employees   ">
+    <Tab fx:id="employeesTab" text="   Employees   ">
          <content>
             <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
                <columnConstraints>
@@ -169,7 +169,7 @@
             </GridPane>
          </content>
     </Tab>
-      <Tab text="Departments">
+      <Tab fx:id="departmentsTab" text="Departments">
          <content>
             <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
                <columnConstraints>
@@ -206,7 +206,7 @@
             </GridPane>
          </content>
       </Tab>
-      <Tab text="   Jobs   ">
+      <Tab fx:id="jobsTab" text="   Jobs   ">
          <content>
             <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
                <columnConstraints>

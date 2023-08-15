@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="change password controller">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="redundant fxmls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AdminViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/employeesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AdminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EmployeeView.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,13 +99,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00055" summary="fxmls excluded">
-      <created>1676147825999</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1676147825999</updated>
     </task>
     <task id="LOCAL-00056" summary="EmployeeView.fxml">
       <created>1676148142101</created>
@@ -445,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692142310135</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="redundant fxmls">
+      <created>1692143189620</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1692143189620</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,7 +458,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login class hashing" />
     <MESSAGE value="dao cleanup" />
     <MESSAGE value="job mngr refined" />
     <MESSAGE value="mngrs refined" />
@@ -485,7 +482,8 @@
     <MESSAGE value="del job" />
     <MESSAGE value="login controller" />
     <MESSAGE value="change password controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="change password controller" />
+    <MESSAGE value="redundant fxmls" />
+    <option name="LAST_COMMIT_MESSAGE" value="redundant fxmls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
