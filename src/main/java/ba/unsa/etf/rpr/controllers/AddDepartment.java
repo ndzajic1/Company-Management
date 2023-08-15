@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
@@ -41,12 +42,27 @@ public class AddDepartment {
         deptName.textProperty().bindBidirectional(deptProperty);
         location.textProperty().bindBidirectional(locationProperty);
         managers.setItems(managersList);
+        managers.setConverter(new StringConverter<Employee>() {
+            @Override
+            public String toString(Employee employee) {
+                return employee.getFirstName() + " " + employee.getLastName();
+            }
+            @Override
+            public Employee fromString(String s) {
+                return null;
+            }
+        });
     }
 
     public void addDept(ActionEvent actionEvent) {
         Employee mngr = managers.valueProperty().getValue();
+
         Department d = new Department();
+        d.setName(deptProperty.getValue());
         d.setLocation(locationProperty.getValue());
+        d.setManager(mngr);
+
+        departmentManager.addNewDept(d);
     }
 
 

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="mngrs refined">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="ctors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddDepartment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AddDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddDepartment.fxml" afterDir="false" />
@@ -99,13 +99,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00037" summary="controllers init">
-      <created>1675944216699</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1675944216699</updated>
     </task>
     <task id="LOCAL-00038" summary="employeesView.fxml">
       <created>1676054048238</created>
@@ -443,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692056585255</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="ctors">
+      <created>1692105758090</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1692105758091</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,7 +458,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="search emp by full name" />
     <MESSAGE value="get emps by job and dept" />
     <MESSAGE value="dept dao sql" />
     <MESSAGE value="job dao sql" />
@@ -483,7 +482,8 @@
     <MESSAGE value="dao cleanup" />
     <MESSAGE value="job mngr refined" />
     <MESSAGE value="mngrs refined" />
-    <option name="LAST_COMMIT_MESSAGE" value="mngrs refined" />
+    <MESSAGE value="ctors" />
+    <option name="LAST_COMMIT_MESSAGE" value="ctors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
