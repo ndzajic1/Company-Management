@@ -107,4 +107,7 @@ public class Employee extends LoggableUser implements Idable{
         this.salary = salary;
     }
 
+    public Employee(){
+
+    }
 }

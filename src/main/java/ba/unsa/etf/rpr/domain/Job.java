@@ -7,6 +7,10 @@ public class Job implements Idable {
     String title;
     double minSalary, maxSalary;
 
+    public Job(){
+
+    }
+
     public Job(int id, String title, double minSalary, double maxSalary) {
         this.id = id;
         this.title = title;

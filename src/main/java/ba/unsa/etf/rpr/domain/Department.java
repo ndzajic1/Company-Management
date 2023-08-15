@@ -8,6 +8,10 @@ public class Department implements Idable {
     String location;
     Employee manager;
 
+    public Department(){
+
+    }
+
     @Override
     public String toString() {
         return "Department{" +
