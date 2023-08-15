@@ -52,4 +52,13 @@ public class EmployeeManager{
     public List<Employee> getEmployeesFromDepartment(Department d){
         return DaoFactory.employeeDao().searchByDepartment(d);
     }
+    public Employee getEmployeeByUsername(String username) throws SQLException {
+        List<Employee> employees = getAllEmployees();
+        for(Employee e : employees){
+            if(e.getUsername().equals(username)){
+                return e;
+            }
+        }
+        return null;
+    }
 }

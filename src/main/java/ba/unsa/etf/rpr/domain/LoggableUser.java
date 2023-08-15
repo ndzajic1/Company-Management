@@ -35,7 +35,7 @@ public abstract class LoggableUser {
         this.passwordHash = hashedPassword(password);
     }
 
-    public String hashedPassword(String password) throws NoSuchAlgorithmException {
+    public static String hashedPassword(String password) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance(HASHING_ALGORITHM);
         byte[] hashed = md.digest(password.getBytes());
         StringBuilder sb = new StringBuilder();
