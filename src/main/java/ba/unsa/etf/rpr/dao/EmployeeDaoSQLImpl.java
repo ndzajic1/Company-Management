@@ -27,7 +27,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
     public Employee row2object(ResultSet rs) {
         try{
             Employee obj = new Employee(rs.getInt("id"), rs.getString("first_name"),
-                    rs.getString("last_name"), rs.getDate("hire_date"),
+                    rs.getString("last_name"), rs.getDate("hire_date").toLocalDate(),
                     DaoFactory.departmentDao().getById(rs.getInt("department_id")), DaoFactory.jobDao().getById(rs.getInt("job_id")));
             obj.setUsername(rs.getString("username"));
             obj.setPasswordHash(rs.getString("password_hash"));

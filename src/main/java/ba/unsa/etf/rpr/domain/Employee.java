@@ -5,13 +5,13 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Employee extends LoggableUser implements Idable{
-    int id;
-    String firstName;
-    String lastName;
-    Date hireDate;
-    Department department;
-    Job job;
-    double salary;
+    private int id;
+    private String firstName;
+    private String lastName;
+    private LocalDate hireDate;
+    private Department department;
+    private Job job;
+    private Double salary;
 
     public Employee(int id, String first_name, String last_name, java.sql.Date hire_date, Employee department_id, Employee job_id) {
     }
@@ -66,7 +66,7 @@ public class Employee extends LoggableUser implements Idable{
         this.lastName = lastName;
     }
 
-    public Date getHireDate() {
+    public LocalDate getHireDate() {
         return hireDate;
     }
 
@@ -98,7 +98,7 @@ public class Employee extends LoggableUser implements Idable{
         this.salary = salary;
     }
 
-    public Employee(int id, String firstName, String lastName, Date hireDate, Department department, Job job) {
+    public Employee(int id, String firstName, String lastName, LocalDate hireDate, Department department, Job job) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

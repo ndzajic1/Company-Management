@@ -6,7 +6,7 @@ import javax.swing.text.TableView;
 
 public class AdminViewController {
 
-    TableView employeesTable;
+
 
     @FXML
     void initialize(){
