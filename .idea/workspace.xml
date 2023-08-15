@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="add job controller">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeeCellValueFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AdminViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AdminViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/EmployeeDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/EmployeeDaoSQLImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EditJob.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EditJob.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="emp table features" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,13 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00044" summary="AddDepartment.fxml">
-      <created>1676069320814</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1676069320814</updated>
     </task>
     <task id="LOCAL-00045" summary="AddJob.fxml">
       <created>1676069723177</created>
@@ -446,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692111959693</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="emp table features">
+      <created>1692121057884</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1692121057884</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -461,7 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bll classes" />
     <MESSAGE value="exclude sample.fxml" />
     <MESSAGE value="mngr classes" />
     <MESSAGE value="dept mngr" />
@@ -486,7 +478,8 @@
     <MESSAGE value="add empl control finished" />
     <MESSAGE value="add job xml" />
     <MESSAGE value="add job controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="add job controller" />
+    <MESSAGE value="emp table features" />
+    <option name="LAST_COMMIT_MESSAGE" value="emp table features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
