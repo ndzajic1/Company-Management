@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="ba.unsa.etf.rpr.controllers.RemoveEmployee">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.RemoveEmployee">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.60003662109375" minWidth="10.0" prefWidth="100.79998779296875" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.60003662109375" minWidth="10.0" prefWidth="100.79998779296875" />
@@ -26,7 +25,7 @@
             <Insets left="30.0" />
          </GridPane.margin>
       </Button>
-      <Button fx:id="removeEmployee" defaultButton="true" mnemonicParsing="false" text="Remove" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <Button fx:id="removeEmployee" defaultButton="true" mnemonicParsing="false" onAction="#removeEmployee" text="Remove" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets right="30.0" />
          </GridPane.margin>

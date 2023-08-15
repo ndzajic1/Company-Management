@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="edit empl controller">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditDepartment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/RemoveDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RemoveDepartment.fxml" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="controllers for delete">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/RemoveEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/RemoveEmployee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,20 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00048" summary="RemoveDepartment.fxml">
-      <created>1676070936586</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1676070936586</updated>
-    </task>
-    <task id="LOCAL-00049" summary="RemoveJob.fxml">
-      <created>1676071002315</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1676071002315</updated>
     </task>
     <task id="LOCAL-00050" summary="fxml views">
       <created>1676108767114</created>
@@ -445,7 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692129903187</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="fxmls for delete">
+      <created>1692131383071</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1692131383071</updated>
+    </task>
+    <task id="LOCAL-00098" summary="controllers for delete">
+      <created>1692131615874</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1692131615874</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,8 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="idea1" />
-    <MESSAGE value="login controller setup" />
     <MESSAGE value="add dept controller" />
     <MESSAGE value="dao refined" />
     <MESSAGE value="employee dao refined" />
@@ -485,7 +479,9 @@
     <MESSAGE value="edit job controller" />
     <MESSAGE value="edit dept controller" />
     <MESSAGE value="edit empl controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit empl controller" />
+    <MESSAGE value="fxmls for delete" />
+    <MESSAGE value="controllers for delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="controllers for delete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
