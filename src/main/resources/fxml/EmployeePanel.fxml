@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.AdminViewController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel">
   <tabs>
     <Tab text="  Home   ">
          <content>
@@ -142,7 +142,7 @@
                         <Insets right="20.0" />
                      </GridPane.margin>
                   </ButtonBar>
-                  <TextField promptText="Search...">
+                  <TextField prefHeight="26.0" prefWidth="472.0" promptText="Search...">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
@@ -160,6 +160,11 @@
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </TableView>
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchEmployees" prefHeight="26.0" prefWidth="66.0" text="Search" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
                </children>
             </GridPane>
          </content>
@@ -171,9 +176,9 @@
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints maxHeight="126.9999755859375" minHeight="0.0" prefHeight="56.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="285.6000244140625" minHeight="10.0" prefHeight="258.4" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="84.59995117187503" minHeight="10.0" prefHeight="75.79996337890628" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="126.9999755859375" minHeight="0.0" prefHeight="10.2000150680542" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="321.6000122070312" minHeight="10.0" prefHeight="321.6000122070312" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="84.59995117187503" minHeight="10.0" prefHeight="66.79998779296875" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
                   <ButtonBar prefHeight="79.0" prefWidth="542.0" GridPane.rowIndex="2">
@@ -186,11 +191,6 @@
                         <Insets right="20.0" />
                      </GridPane.margin>
                   </ButtonBar>
-                  <TextField promptText="Search...">
-                     <GridPane.margin>
-                        <Insets left="5.0" right="5.0" />
-                     </GridPane.margin>
-                  </TextField>
                   <TableView prefHeight="262.0" prefWidth="564.0" GridPane.rowIndex="1">
                      <columns>
                         <TableColumn prefWidth="176.39998799562454" text="Department" />
@@ -213,8 +213,8 @@
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints maxHeight="126.9999755859375" minHeight="0.0" prefHeight="56.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="285.6000244140625" minHeight="10.0" prefHeight="258.4" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="126.9999755859375" minHeight="0.0" prefHeight="15.000003814697266" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="316.6000093460083" minHeight="10.0" prefHeight="305.3999961853027" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="84.59995117187503" minHeight="10.0" prefHeight="75.79996337890628" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
@@ -228,11 +228,6 @@
                         <Insets right="20.0" />
                      </GridPane.margin>
                   </ButtonBar>
-                  <TextField promptText="Search...">
-                     <GridPane.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </GridPane.margin>
-                  </TextField>
                   <TableView prefHeight="262.0" prefWidth="564.0" GridPane.rowIndex="1">
                      <columns>
                         <TableColumn prefWidth="203.99999618530273" text="Job Title" />
