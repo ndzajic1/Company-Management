@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.bll;
 
 import ba.unsa.etf.rpr.dao.DaoFactory;
+import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 
 import java.sql.SQLException;
@@ -47,5 +48,8 @@ public class EmployeeManager{
 
     public List<Employee> getAllEmployees() throws SQLException {
         return DaoFactory.employeeDao().getAll();
+    }
+    public List<Employee> getEmployeesFromDepartment(Department d){
+        return DaoFactory.employeeDao().searchByDepartment(d);
     }
 }

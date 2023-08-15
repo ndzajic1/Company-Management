@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="job table features">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="edit empl controller">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditDepartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/RemoveDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RemoveDepartment.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +101,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00047" summary="EditDepartment.fxml">
-      <created>1676070699241</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1676070699241</updated>
     </task>
     <task id="LOCAL-00048" summary="RemoveDepartment.fxml">
       <created>1676070936586</created>
@@ -441,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692121769200</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="new controllers">
+      <created>1692129903187</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1692129903187</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -456,10 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dept mngr" />
-    <MESSAGE value="employee mngr" />
-    <MESSAGE value="job manager" />
-    <MESSAGE value="idea" />
     <MESSAGE value="idea1" />
     <MESSAGE value="login controller setup" />
     <MESSAGE value="add dept controller" />
@@ -481,7 +481,11 @@
     <MESSAGE value="emp table features" />
     <MESSAGE value="dept table features" />
     <MESSAGE value="job table features" />
-    <option name="LAST_COMMIT_MESSAGE" value="job table features" />
+    <MESSAGE value="new controllers" />
+    <MESSAGE value="edit job controller" />
+    <MESSAGE value="edit dept controller" />
+    <MESSAGE value="edit empl controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit empl controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
