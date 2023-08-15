@@ -96,7 +96,8 @@ public class AddEmployee {
         });
     }
 
-    public void addEmployee(ActionEvent actionEvent) {
+    public void addEmployee(ActionEvent actionEvent) throws SQLException {
+
         Department d = dept.valueProperty().getValue();
         Job j = job.valueProperty().getValue();
 
@@ -104,8 +105,11 @@ public class AddEmployee {
         e.setFirstName(firstNameProperty.getValue());
         e.setLastName(lastNameProperty.getValue());
         e.setHireDate(hired.getValue());
+        e.setDepartment(d);
+        e.setJob(j);
+        e.setSalary(salaryProperty.getValue());
 
-        departmentManager.addNewDept(d);
+        employeeManager.addNewEmployee(e);
     }
 
 
