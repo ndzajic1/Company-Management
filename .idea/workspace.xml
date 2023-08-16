@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="employees tab controller">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/DepartmentsTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/DepartmentsTabController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/DepartmentsTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/DepartmentsTab.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dept tab controller" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,20 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00069" summary="bll classes">
-      <created>1676199192473</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1676199192473</updated>
-    </task>
-    <task id="LOCAL-00070" summary="exclude sample.fxml">
-      <created>1676199277034</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1676199277034</updated>
     </task>
     <task id="LOCAL-00071" summary="mngr classes">
       <created>1676384603554</created>
@@ -443,7 +425,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692217365198</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="dept tab controller cell val factory">
+      <created>1692219361317</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1692219361317</updated>
+    </task>
+    <task id="LOCAL-00119" summary="dept tab controller">
+      <created>1692219504257</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1692219504257</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,8 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new controllers" />
-    <MESSAGE value="edit job controller" />
     <MESSAGE value="edit dept controller" />
     <MESSAGE value="edit empl controller" />
     <MESSAGE value="fxmls for delete" />
@@ -483,7 +477,9 @@
     <MESSAGE value="tabs rearranged" />
     <MESSAGE value="home tab controller" />
     <MESSAGE value="employees tab controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="employees tab controller" />
+    <MESSAGE value="dept tab controller cell val factory" />
+    <MESSAGE value="dept tab controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="dept tab controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
