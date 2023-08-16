@@ -50,6 +50,7 @@ public class JobsTabController {
     
     @FXML
     void initialize() throws SQLException {
+
         jobsList = jobManager.getAllJobs();
         Map<Job, Integer> employeesPerJob = new TreeMap<>();
         for(Job j : jobsList){
@@ -66,9 +67,8 @@ public class JobsTabController {
         maxSalaryCol.setCellValueFactory(new JobCellValueFactory("Maximal Salary"));
         numOfEmployeesCol.setCellValueFactory(new JobCellValueFactory(employeesPerJob));
 
-
-
         jobsTable.setItems(FXCollections.observableArrayList(jobsList));
+
     }
 
     public void addJob(ActionEvent actionEvent) {
