@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="logged user admin property">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dao for admin property">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +98,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00058" summary="AdminView.fxml++">
-      <created>1676148309106</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1676148309106</updated>
     </task>
     <task id="LOCAL-00059" summary="abstract delete">
       <created>1676150921641</created>
@@ -441,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692196638673</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="dao for admin property">
+      <created>1692198793786</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1692198793787</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -456,7 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mngrs refined" />
     <MESSAGE value="ctors" />
     <MESSAGE value="add dept control" />
     <MESSAGE value="binding add empl" />
@@ -481,7 +481,8 @@
     <MESSAGE value="redundant fxmls" />
     <MESSAGE value="building main stage" />
     <MESSAGE value="logged user admin property" />
-    <option name="LAST_COMMIT_MESSAGE" value="logged user admin property" />
+    <MESSAGE value="dao for admin property" />
+    <option name="LAST_COMMIT_MESSAGE" value="dao for admin property" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
