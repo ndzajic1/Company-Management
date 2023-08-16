@@ -11,9 +11,12 @@ public abstract class LoggableUser {
     private String username = null;
     private String passwordHash;
 
+    private Boolean admin;
+
     {
         try {
             passwordHash = hashedPassword(DEFAULT_PASSWORD);
+            admin = false;
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e); // my own
         }
@@ -45,5 +48,11 @@ public abstract class LoggableUser {
         return sb.toString();
 
     }
+    public Boolean isAdmin() {
+        return admin;
+    }
 
+    public void setAdmin(Boolean admin) {
+        this.admin = admin;
+    }
 }
