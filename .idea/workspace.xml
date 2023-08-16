@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="depts tab">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/JobsTabController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/JobsTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/JobsTab.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="employees new tab" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,20 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00063" summary="get emps by job and dept">
-      <created>1676155909314</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1676155909314</updated>
-    </task>
-    <task id="LOCAL-00064" summary="dept dao sql">
-      <created>1676157051025</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1676157051025</updated>
     </task>
     <task id="LOCAL-00065" summary="job dao sql">
       <created>1676193673911</created>
@@ -442,7 +425,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692212320396</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="jobs tab">
+      <created>1692212713247</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1692212713247</updated>
+    </task>
+    <task id="LOCAL-00113" summary="employees new tab">
+      <created>1692213208629</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1692213208629</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,8 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add empl control finished" />
-    <MESSAGE value="add job xml" />
     <MESSAGE value="add job controller" />
     <MESSAGE value="emp table features" />
     <MESSAGE value="dept table features" />
@@ -482,7 +477,9 @@
     <MESSAGE value="home tab" />
     <MESSAGE value="employees tab" />
     <MESSAGE value="depts tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="depts tab" />
+    <MESSAGE value="jobs tab" />
+    <MESSAGE value="employees new tab" />
+    <option name="LAST_COMMIT_MESSAGE" value="employees new tab" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

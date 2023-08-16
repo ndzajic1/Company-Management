@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -30,5 +31,20 @@ public class DepartmentsTabController {
 
     @FXML
     private Button removeButton;
+
+    @FXML
+    void addDept(ActionEvent event) {
+
+    }
+
+    @FXML
+    void editDept(ActionEvent event) {
+
+    }
+
+    @FXML
+    void removeDept(ActionEvent event) {
+
+    }
 
 }

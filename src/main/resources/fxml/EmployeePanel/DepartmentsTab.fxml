@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-    <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -22,9 +21,9 @@
         <children>
             <ButtonBar prefHeight="79.0" prefWidth="542.0" GridPane.rowIndex="2">
                 <buttons>
-                    <Button fx:id="addButton" mnemonicParsing="false" text="Add" />
-                    <Button fx:id="editButton" mnemonicParsing="false" text="Edit" />
-                    <Button fx:id="removeButton" mnemonicParsing="false" text="Remove" />
+                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#addDept" text="Add" />
+                    <Button fx:id="editButton" mnemonicParsing="false" onAction="#editDept" text="Edit" />
+                    <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeDept" text="Remove" />
                 </buttons>
                 <GridPane.margin>
                     <Insets right="20.0" />
