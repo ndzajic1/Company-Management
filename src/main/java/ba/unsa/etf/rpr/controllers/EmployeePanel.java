@@ -32,6 +32,11 @@ public class EmployeePanel {
         this.jobsTabController = new JobsTabController(e);
     }
 
+    @FXML
+    void initialize(){
+
+    }
+
 
 
 }
