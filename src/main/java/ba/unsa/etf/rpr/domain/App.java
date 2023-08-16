@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.sql.*;
 import java.util.Collections;
@@ -23,7 +24,8 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 public class App extends Application {
 
 
-    public static void main(String[] args) throws SQLException, IOException {
+    public static void main(String[] args) throws SQLException, IOException, NoSuchAlgorithmException {
+        System.out.println(LoggableUser.hashedPassword("12345678"));
         launch(args);
     //DaoFactory.departmentDao().getAll();
 

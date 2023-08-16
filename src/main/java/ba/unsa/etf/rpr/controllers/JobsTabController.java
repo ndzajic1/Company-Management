@@ -21,7 +21,8 @@ public class JobsTabController {
     
     private JobManager jobManager = new JobManager();
     private EmployeeManager employeeManager = new EmployeeManager();
-    
+
+    private Employee employee;
     private List<Job> jobsList;
 
     @FXML
@@ -46,6 +47,9 @@ public class JobsTabController {
     @FXML
     private Button removeButton;
 
+    public JobsTabController(Employee e){
+        this.employee = e;
+    }
 
     
     @FXML

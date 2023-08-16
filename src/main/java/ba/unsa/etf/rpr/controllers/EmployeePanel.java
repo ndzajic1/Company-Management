@@ -1,48 +1,37 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.domain.Employee;
-import ba.unsa.etf.rpr.domain.LoggableUser;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 
 public class EmployeePanel {
 
-    private Employee user;
-
-    //tabs
-    public Tab homeTab;
-    public Tab employeesTab;
-    public Tab departmentsTab;
-    public Tab jobsTab;
-
-
-    //home tab controls
-    public Label employeeName;
-    public Label deptName;
-    public Label deptManager;
-
-    public EmployeePanel(Employee user){
-
-        this.user = user;
-    }
-
-    public void searchEmployees(ActionEvent actionEvent) {
-
-
-    }
-
+    @FXML
+    private Tab homeTab;
+    @FXML
+    private HomeTabController homeTabController;
 
     @FXML
-    void  initialize(){
-        homeTabInitialize();
-        // roles simul
-        if(!user.isAdmin() || !user.getDepartment().getManager().equals(user))
-            employeesTab.setDisable(true);
+    private Tab employeesTab;
+    @FXML
+    private EmployeesTabController employeesTabController;
+
+    @FXML
+    private Tab departmentsTab;
+    @FXML
+    private DepartmentsTabController departmentsTabController;
+
+    @FXML
+    private Tab jobsTab;
+    @FXML
+    private JobsTabController jobsTabController;
+
+    public EmployeePanel(Employee e){
+        this.employeesTabController = new EmployeesTabController(e);
+        this.departmentsTabController = new DepartmentsTabController(e);
+        this.jobsTabController = new JobsTabController(e);
     }
 
-    public void changePassword(ActionEvent actionEvent) {
 
-    }
+
 }
