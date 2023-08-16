@@ -31,6 +31,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
                     DaoFactory.departmentDao().getById(rs.getInt("department_id")), DaoFactory.jobDao().getById(rs.getInt("job_id")));
             obj.setUsername(rs.getString("username"));
             obj.setPasswordHash(rs.getString("password_hash"));
+            obj.setAdmin(rs.getBoolean("admin"));
             return obj;
         } catch (SQLException | NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
@@ -48,6 +49,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         row.put("job_id", obj.getJob().getId());
         row.put("username", obj.getUsername());
         row.put("password_hash", obj.getPasswordHash());
+        row.put("admin", obj.isAdmin());
         return row;
     }
     @Override
