@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dao for admin property">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="new fxmls">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/HomeTabController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/HomeTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/HomeTab.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -30,7 +31,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2In85o1AiiV18eu1bYGHkY94Ixz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -62,11 +63,11 @@
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml\EmployeePanel" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\java" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\java\ba\unsa\etf\rpr\controllers" />
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml" />
-      <recent name="C:\Users\Nedim\IdeaProjects\company-management\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.AppFX">
@@ -98,13 +99,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00059" summary="abstract delete">
-      <created>1676150921641</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1676150921641</updated>
     </task>
     <task id="LOCAL-00060" summary="object2row emp">
       <created>1676152216893</created>
@@ -442,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692198793787</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="new fxmls">
+      <created>1692200751406</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1692200751406</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,7 +458,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ctors" />
     <MESSAGE value="add dept control" />
     <MESSAGE value="binding add empl" />
     <MESSAGE value="dates" />
@@ -482,7 +482,8 @@
     <MESSAGE value="building main stage" />
     <MESSAGE value="logged user admin property" />
     <MESSAGE value="dao for admin property" />
-    <option name="LAST_COMMIT_MESSAGE" value="dao for admin property" />
+    <MESSAGE value="new fxmls" />
+    <option name="LAST_COMMIT_MESSAGE" value="new fxmls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
