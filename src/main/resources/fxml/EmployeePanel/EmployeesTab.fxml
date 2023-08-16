@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-    <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -23,27 +22,27 @@
         <children>
             <ButtonBar prefHeight="79.0" prefWidth="542.0" GridPane.rowIndex="2">
                 <buttons>
-                    <Button mnemonicParsing="false" text="Add" />
-                    <Button mnemonicParsing="false" text="Edit" />
-                    <Button mnemonicParsing="false" text="Remove" />
+                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#addEmployee" text="Add" />
+                    <Button fx:id="editButton" mnemonicParsing="false" onAction="#editEmployee" text="Edit" />
+                    <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeEmployee" text="Remove" />
                 </buttons>
                 <GridPane.margin>
                     <Insets right="20.0" />
                 </GridPane.margin>
             </ButtonBar>
-            <TextField prefHeight="26.0" prefWidth="472.0" promptText="Search...">
+            <TextField fx:id="searchField" prefHeight="26.0" prefWidth="472.0" promptText="Search...">
                 <GridPane.margin>
                     <Insets left="5.0" right="5.0" />
                 </GridPane.margin>
             </TextField>
-            <TableView id="employeesTable" prefHeight="262.0" prefWidth="564.0" GridPane.rowIndex="1">
+            <TableView id="employeesTable" fx:id="employeesTable" prefHeight="262.0" prefWidth="564.0" GridPane.rowIndex="1">
                 <columns>
-                    <TableColumn prefWidth="97.39998799562454" text="First Name" />
-                    <TableColumn id="employeesTable" prefWidth="107.60000610351562" text="Last Name" />
-                    <TableColumn prefWidth="86.0" text="Date Hired" />
-                    <TableColumn prefWidth="121.39996337890625" text="Department" />
-                    <TableColumn minWidth="0.0" prefWidth="105.0" text="Job" />
-                    <TableColumn prefWidth="101.39996337890625" text="Salary        " />
+                    <TableColumn fx:id="firstNameCol" prefWidth="97.39998799562454" text="First Name" />
+                    <TableColumn id="employeesTable" fx:id="lastNameCol" prefWidth="107.60000610351562" text="Last Name" />
+                    <TableColumn fx:id="dateHiredCol" prefWidth="86.0" text="Date Hired" />
+                    <TableColumn fx:id="deptNameCol" prefWidth="121.39996337890625" text="Department" />
+                    <TableColumn fx:id="jobTitleCol" minWidth="0.0" prefWidth="105.0" text="Job" />
+                    <TableColumn fx:id="salaryCol" prefWidth="101.39996337890625" text="Salary        " />
                 </columns>
                 <GridPane.margin>
                     <Insets left="5.0" right="5.0" />
