@@ -33,13 +33,7 @@ public class EmployeePanel {
 
     }
 
-    private void homeTabInitialize(){
-        employeeName.setText(user.getFirstName() + " " + user.getLastName());
-        deptName.setText(user.getDepartment().getName());
-        Employee mngr = user.getDepartment().getManager();
-        deptManager.setText(mngr.getFirstName() + " " + mngr.getLastName());
-        // listener to change password
-    }
+
     @FXML
     void  initialize(){
         homeTabInitialize();

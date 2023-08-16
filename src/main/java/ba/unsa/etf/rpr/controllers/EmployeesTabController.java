@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.controllers;
 
+import ba.unsa.etf.rpr.domain.Employee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,40 +11,40 @@ import javafx.scene.control.TextField;
 public class EmployeesTabController {
 
     @FXML
+    private Button searchButton;
+
+    @FXML
+    private TextField searchField;
+
+    @FXML
+    private TableView<Employee> employeesTable;
+
+    @FXML
+    private TableColumn<Employee, String> firstNameCol;
+
+    @FXML
+    private TableColumn<Employee, String> lastNameCol;
+
+    @FXML
+    private TableColumn<Employee, String> dateHiredCol;
+
+    @FXML
+    private TableColumn<Employee, String> deptNameCol;
+
+    @FXML
+    private TableColumn<Employee, String> jobTitleCol;
+
+    @FXML
+    private TableColumn<Employee, String> salaryCol;
+
+    @FXML
     private Button addButton;
-
-    @FXML
-    private TableColumn<?, ?> dateHiredCol;
-
-    @FXML
-    private TableColumn<?, ?> deptNameCol;
 
     @FXML
     private Button editButton;
 
     @FXML
-    private TableView<?> employeesTable;
-
-    @FXML
-    private TableColumn<?, ?> firstNameCol;
-
-    @FXML
-    private TableColumn<?, ?> jobTitleCol;
-
-    @FXML
-    private TableColumn<?, ?> lastNameCol;
-
-    @FXML
     private Button removeButton;
-
-    @FXML
-    private TableColumn<?, ?> salaryCol;
-
-    @FXML
-    private Button searchButton;
-
-    @FXML
-    private TextField searchField;
 
     @FXML
     void addEmployee(ActionEvent event) {
