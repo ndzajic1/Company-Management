@@ -58,7 +58,7 @@ public class DepartmentsTabController {
         deptNameCol.setCellValueFactory(new DepartmentCellValueFactory("Department"));
         locationCol.setCellValueFactory(new DepartmentCellValueFactory("Location"));
         managerCol.setCellValueFactory(new DepartmentCellValueFactory("Manager"));
-        numOfEmployeesCol.setCellValueFactory(new DepartmentCellValueFactory("Employees"));
+        numOfEmployeesCol.setCellValueFactory(new DepartmentCellValueFactory(employeesPerDept));
 
 
 
