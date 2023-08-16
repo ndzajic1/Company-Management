@@ -4,7 +4,7 @@ import ba.unsa.etf.rpr.domain.Employee;
 import javafx.scene.control.TableColumn;
 import javafx.util.Callback;
 
-public class EmployeeCellValueFactory implements Callback<TableColumn.CellDataFeatures<Employee, String>, String> {
+    public class EmployeeCellValueFactory<T> implements Callback<TableColumn.CellDataFeatures<Employee, String>, String> {
     private String field;
 
     public EmployeeCellValueFactory(String e){
