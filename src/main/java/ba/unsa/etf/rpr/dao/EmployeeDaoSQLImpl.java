@@ -29,7 +29,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
             System.out.println("Result set: " + rs.getMetaData());
             Employee obj = new Employee(rs.getInt("id"), rs.getString("first_name"),
                     rs.getString("last_name"), rs.getDate("hire_date").toLocalDate(),
-                    null, DaoFactory.jobDao().getById(rs.getInt("job_id")));
+                    null, DaoFactory.jobDao().getById(rs.getInt("job_id")), rs.getDouble("salary"));
             try {
                 System.out.println(rs.toString());
                 obj.setDepartment(DaoFactory.departmentDao().getById(rs.getInt("department_id")));

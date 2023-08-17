@@ -13,9 +13,6 @@ public class Employee extends LoggableUser implements Idable{
     private Job job;
     private Double salary;
 
-    public Employee(int id, String first_name, String last_name, java.sql.Date hire_date, Employee department_id, Employee job_id) {
-    }
-
     @Override
     public String toString() {
         return "Employee{" +
@@ -23,7 +20,7 @@ public class Employee extends LoggableUser implements Idable{
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", hireDate=" + hireDate +
-                ", department=" + (department != null ? department : "null" ) +
+                ", department=" + department +
                 ", job=" + job +
                 ", salary=" + salary +
                 '}';
@@ -98,7 +95,7 @@ public class Employee extends LoggableUser implements Idable{
         this.salary = salary;
     }
 
-    public Employee(int id, String firstName, String lastName, LocalDate hireDate, Department department, Job job) {
+    public Employee(int id, String firstName, String lastName, LocalDate hireDate, Department department, Job job, double salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

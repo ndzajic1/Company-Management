@@ -23,9 +23,6 @@ public class HomeTabController {
     @FXML
     private Label employeeName;
 
-    public HomeTabController(Employee e){
-
-    }
 
     public HomeTabController(){
 
