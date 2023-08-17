@@ -37,7 +37,7 @@ public class EmployeePanel {
         this.homeTabController = new HomeTabController();
         this.employeesTabController = new EmployeesTabController();
         this.departmentsTabController = new DepartmentsTabController();
-        this.jobsTabController = new JobsTabController(e);
+        this.jobsTabController = new JobsTabController();
     }
 
     @FXML

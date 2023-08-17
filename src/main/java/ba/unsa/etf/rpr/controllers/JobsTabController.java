@@ -47,23 +47,23 @@ public class JobsTabController {
     @FXML
     private Button removeButton;
 
-    public JobsTabController(Employee e){
-        this.employee = e;
+    public JobsTabController(){
+
     }
 
     
     @FXML
     void initialize() throws SQLException {
-
+        this.employee = EmployeePanel.getUser();
         jobsList = jobManager.getAllJobs();
-        Map<Job, Integer> employeesPerJob = new TreeMap<>();
+        Map<Integer, Integer> employeesPerJob = new TreeMap<>();
         for(Job j : jobsList){
-            employeesPerJob.put(j,0);
+            employeesPerJob.put(j.getId(),0);
         }
         
         for(Employee e : employeeManager.getAllEmployees()){
-            int curr = employeesPerJob.get(e.getJob());
-            employeesPerJob.put(e.getJob(), curr + 1);
+            int curr = employeesPerJob.get(e.getJob().getId());
+            employeesPerJob.put(e.getJob().getId(), curr + 1);
         }
         
         titleCol.setCellValueFactory(new JobCellValueFactory("Job Title"));
