@@ -25,7 +25,7 @@ public class Department implements Idable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", location='" + location + '\'' +
-                ", manager=" + manager +
+                ", manager=" + "yes" + // manager +
                 '}';
     }
 

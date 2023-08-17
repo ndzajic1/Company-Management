@@ -34,10 +34,8 @@ public class LoginController {
 
     public void login(ActionEvent actionEvent) throws NoSuchAlgorithmException, SQLException {
         String passwordHash = LoggableUser.hashedPassword(password.getText());
-        System.out.println("Text: " + password.getText());
-        System.out.println("PasswordHash: " + passwordHash);
         Employee user = employeeManager.getEmployeeByUsername(username.getText());
-        System.out.println("Correct: " + user.getPasswordHash());
+        System.out.println(user.toString());
         if(user.getPasswordHash().equals(passwordHash)){
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EmployeePanel/EmployeePanel.fxml"));

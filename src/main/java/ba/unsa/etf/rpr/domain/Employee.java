@@ -23,7 +23,7 @@ public class Employee extends LoggableUser implements Idable{
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", hireDate=" + hireDate +
-                ", department=" + department +
+                ", department=" + (department != null ? department : "null" ) +
                 ", job=" + job +
                 ", salary=" + salary +
                 '}';

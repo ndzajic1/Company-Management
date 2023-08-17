@@ -26,13 +26,15 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
     @Override
     public Employee row2object(ResultSet rs) {
         try{
+            System.out.println("Result set: " + rs.getMetaData());
             Employee obj = new Employee(rs.getInt("id"), rs.getString("first_name"),
                     rs.getString("last_name"), rs.getDate("hire_date").toLocalDate(),
                     null, DaoFactory.jobDao().getById(rs.getInt("job_id")));
             try {
-                DaoFactory.departmentDao().getById(rs.getInt("department_id"));
+                System.out.println(rs.toString());
+                obj.setDepartment(DaoFactory.departmentDao().getById(rs.getInt("department_id")));
             }
-            catch(RuntimeException e){
+            catch(Exception e){
                 // its null
             }
             obj.setUsername(rs.getString("username"));
@@ -94,7 +96,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
     @Override
     public Employee getByIdWithoutDepartment(int id) throws SQLException {
         try {
-            return super.executeQueryUnique("select id, first_name, last_name, date_hired, null as department_id, job_id, salary, username, password_hash, admin from Employees where id = ?", new Object[]{id});
+            return super.executeQueryUnique("select id, first_name, last_name, hire_date, null as department_id, job_id, salary, username, password_hash, admin from Employees where id = ?", new Object[]{id});
         } catch (Exception e) {
             throw new RuntimeException(); // my own
         }
