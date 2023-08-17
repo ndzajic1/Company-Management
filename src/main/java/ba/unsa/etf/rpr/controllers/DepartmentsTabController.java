@@ -40,20 +40,22 @@ public class DepartmentsTabController {
     @FXML
     private TableColumn<Department, String> numOfEmployeesCol;
 
-    public DepartmentsTabController(Employee e){
-        this.employee = e;
+    public DepartmentsTabController(){
+
+
     }
 
     @FXML
     void initialize() throws SQLException {
+        this.employee = EmployeePanel.getUser();
         departmentsList = departmentManager.getAllDepts();
-        Map<Department, Integer> employeesPerDept = new TreeMap<>();
+        Map<Integer, Integer> employeesPerDept = new TreeMap<>();
         for(Department d : departmentsList){
-            employeesPerDept.put(d,0);
+            employeesPerDept.put(d.getId(),0);
         }
         for(Employee e : employeeManager.getAllEmployees()){
-            int curr = employeesPerDept.get(e.getDepartment());
-            employeesPerDept.put(e.getDepartment(), curr + 1);
+            int curr = employeesPerDept.get(e.getDepartment().getId());
+            employeesPerDept.put(e.getDepartment().getId(), curr + 1);
         }
         deptNameCol.setCellValueFactory(new DepartmentCellValueFactory("Department"));
         locationCol.setCellValueFactory(new DepartmentCellValueFactory("Location"));

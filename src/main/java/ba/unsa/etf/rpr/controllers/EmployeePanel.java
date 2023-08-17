@@ -36,7 +36,7 @@ public class EmployeePanel {
         user = e;
         this.homeTabController = new HomeTabController();
         this.employeesTabController = new EmployeesTabController();
-        this.departmentsTabController = new DepartmentsTabController(e);
+        this.departmentsTabController = new DepartmentsTabController();
         this.jobsTabController = new JobsTabController(e);
     }
 
