@@ -6,6 +6,12 @@ import javafx.scene.control.Tab;
 
 public class EmployeePanel {
 
+    private static Employee user = null;
+
+    public static Employee getUser(){
+        return user;
+    }
+
     @FXML
     private Tab homeTab;
     @FXML
@@ -27,6 +33,8 @@ public class EmployeePanel {
     private JobsTabController jobsTabController;
 
     public EmployeePanel(Employee e){
+        user = e;
+        this.homeTabController = new HomeTabController(e);
         this.employeesTabController = new EmployeesTabController(e);
         this.departmentsTabController = new DepartmentsTabController(e);
         this.jobsTabController = new JobsTabController(e);

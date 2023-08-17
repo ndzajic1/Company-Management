@@ -24,12 +24,18 @@ public class HomeTabController {
     private Label employeeName;
 
     public HomeTabController(Employee e){
-        this.user = e;
+
+    }
+
+    public HomeTabController(){
+
     }
 
     @FXML
-    void initialize(){
+    public void initialize(){
+        user = EmployeePanel.getUser();
         employeeName.setText(user.getFirstName() + " " + user.getLastName());
+        System.out.println(employeeName.getText());
         deptName.setText(user.getDepartment().getName());
         Employee mngr = user.getDepartment().getManager();
         deptManager.setText(mngr.getFirstName() + " " + mngr.getLastName());

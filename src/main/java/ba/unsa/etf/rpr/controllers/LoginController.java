@@ -40,7 +40,7 @@ public class LoginController {
         System.out.println("Correct: " + user.getPasswordHash());
         if(user.getPasswordHash().equals(passwordHash)){
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EmployeePanel.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EmployeePanel/EmployeePanel.fxml"));
                 loader.setController(new EmployeePanel(user));
                 Stage stage = new Stage();
                 stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
@@ -48,6 +48,7 @@ public class LoginController {
                 stage.initStyle(StageStyle.UTILITY);
                 stage.show();
             }catch (Exception e){
+                e.printStackTrace();
                 new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
             }
         }
