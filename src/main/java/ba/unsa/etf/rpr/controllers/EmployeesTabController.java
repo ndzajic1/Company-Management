@@ -57,13 +57,15 @@ public class EmployeesTabController {
     @FXML
     private Button removeButton;
 
-    public EmployeesTabController(Employee e){
-        this.employee = e;
+    public EmployeesTabController(){
+
+
     }
 
     @FXML
     void initialize() throws SQLException {
 
+        this.employee = EmployeePanel.getUser();
         firstNameCol.setCellValueFactory(new EmployeeCellValueFactory("First Name"));
         lastNameCol.setCellValueFactory(new EmployeeCellValueFactory("Last Name"));
         dateHiredCol.setCellValueFactory(new EmployeeCellValueFactory("Date Hired"));

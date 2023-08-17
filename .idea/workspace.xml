@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="toString methods">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/EmployeeDaoSQLImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/EmployeeDaoSQLImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Employee.java" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="home tab controller">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeesTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeesTabController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,13 +98,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00080" summary="employee dao refined">
-      <created>1692044397141</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1692044397142</updated>
     </task>
     <task id="LOCAL-00081" summary="dept job  dao refined">
       <created>1692045392561</created>
@@ -444,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692312899947</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="home tab controller">
+      <created>1692313503222</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1692313503222</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -471,7 +469,6 @@
     <MESSAGE value="employees new tab" />
     <MESSAGE value="depts new tab" />
     <MESSAGE value="tabs rearranged" />
-    <MESSAGE value="home tab controller" />
     <MESSAGE value="employees tab controller" />
     <MESSAGE value="dept tab controller cell val factory" />
     <MESSAGE value="dept tab controller" />
@@ -484,7 +481,8 @@
     <MESSAGE value="hash fixed" />
     <MESSAGE value="loading tabs" />
     <MESSAGE value="toString methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="toString methods" />
+    <MESSAGE value="home tab controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="home tab controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
