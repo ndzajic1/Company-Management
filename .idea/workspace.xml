@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="job tab controller cell val fact">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="main panel init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties.sample" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties.sample" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,20 +98,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00073" summary="employee mngr">
-      <created>1676386699666</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1676386699666</updated>
-    </task>
-    <task id="LOCAL-00074" summary="job manager">
-      <created>1676387081475</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1676387081476</updated>
     </task>
     <task id="LOCAL-00075" summary="idea">
       <created>1676387402536</created>
@@ -443,7 +428,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692220522381</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="main panel">
+      <created>1692229797697</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1692229797697</updated>
+    </task>
+    <task id="LOCAL-00123" summary="main panel init">
+      <created>1692229894445</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1692229894445</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,8 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fxmls for delete" />
-    <MESSAGE value="controllers for delete" />
     <MESSAGE value="del employee" />
     <MESSAGE value="del dept" />
     <MESSAGE value="del job" />
@@ -483,7 +480,9 @@
     <MESSAGE value="dept tab controller" />
     <MESSAGE value="job tab controller" />
     <MESSAGE value="job tab controller cell val fact" />
-    <option name="LAST_COMMIT_MESSAGE" value="job tab controller cell val fact" />
+    <MESSAGE value="main panel" />
+    <MESSAGE value="main panel init" />
+    <option name="LAST_COMMIT_MESSAGE" value="main panel init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
