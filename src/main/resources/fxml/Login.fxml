@@ -52,7 +52,7 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="username" GridPane.columnIndex="1">
+            <TextField fx:id="username" prefHeight="26.0" prefWidth="431.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
@@ -62,7 +62,7 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </PasswordField>
-            <Label fx:id="status" prefHeight="18.0" prefWidth="362.0" text="Label" GridPane.rowIndex="2" />
+            <Label fx:id="status" prefHeight="18.0" prefWidth="362.0" text="Label" textFill="#e70808" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <ImageView fitHeight="200.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">

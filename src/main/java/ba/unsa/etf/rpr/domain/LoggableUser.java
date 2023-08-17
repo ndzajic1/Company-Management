@@ -34,8 +34,8 @@ public abstract class LoggableUser {
         this.username = username;
     }
 
-    public final void setPasswordHash(String password) throws NoSuchAlgorithmException {
-        this.passwordHash = hashedPassword(password);
+    public final void setPasswordHash(String passwordHash) throws NoSuchAlgorithmException {
+        this.passwordHash = passwordHash;
     }
 
     public static String hashedPassword(String password) throws NoSuchAlgorithmException {
@@ -43,7 +43,7 @@ public abstract class LoggableUser {
         byte[] hashed = md.digest(password.getBytes());
         StringBuilder sb = new StringBuilder();
         for (byte b : hashed) {
-            sb.append(b);
+            sb.append(String.format("%02x", b));
         }
         return sb.toString();
 

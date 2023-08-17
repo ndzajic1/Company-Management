@@ -4,15 +4,18 @@ import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.LoggableUser;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class LoginController {
 
@@ -31,10 +34,22 @@ public class LoginController {
 
     public void login(ActionEvent actionEvent) throws NoSuchAlgorithmException, SQLException {
         String passwordHash = LoggableUser.hashedPassword(password.getText());
-        System.out.println("Password: " + passwordHash);
+        System.out.println("Text: " + password.getText());
+        System.out.println("PasswordHash: " + passwordHash);
         Employee user = employeeManager.getEmployeeByUsername(username.getText());
+        System.out.println("Correct: " + user.getPasswordHash());
         if(user.getPasswordHash().equals(passwordHash)){
-            // open new window
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EmployeePanel.fxml"));
+                loader.setController(new EmployeePanel(user));
+                Stage stage = new Stage();
+                stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+                stage.setTitle("Employee Panel");
+                stage.initStyle(StageStyle.UTILITY);
+                stage.show();
+            }catch (Exception e){
+                new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+            }
         }
         else{
             status.setText("Invalid login credentials.");
