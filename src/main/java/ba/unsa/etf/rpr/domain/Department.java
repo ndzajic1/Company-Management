@@ -12,6 +12,13 @@ public class Department implements Idable {
 
     }
 
+    public Department(Department d, Employee e){
+        this.id = d.getId();
+        this.name = d.getName();
+        this.location = d.getLocation();
+        this.manager = e;
+    }
+
     @Override
     public String toString() {
         return "Department{" +

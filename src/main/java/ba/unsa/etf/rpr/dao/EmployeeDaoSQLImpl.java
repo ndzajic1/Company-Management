@@ -13,7 +13,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
 
     private static EmployeeDaoSQLImpl instance = null;
     private EmployeeDaoSQLImpl()  {
-        super("Employees");
+        super("employees");
     }
 
     public static EmployeeDaoSQLImpl getInstance() {
@@ -28,10 +28,17 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         try{
             Employee obj = new Employee(rs.getInt("id"), rs.getString("first_name"),
                     rs.getString("last_name"), rs.getDate("hire_date").toLocalDate(),
-                    DaoFactory.departmentDao().getById(rs.getInt("department_id")), DaoFactory.jobDao().getById(rs.getInt("job_id")));
+                    null, DaoFactory.jobDao().getById(rs.getInt("job_id")));
+            try {
+                DaoFactory.departmentDao().getById(rs.getInt("department_id"));
+            }
+            catch(RuntimeException e){
+                // its null
+            }
             obj.setUsername(rs.getString("username"));
             obj.setPasswordHash(rs.getString("password_hash"));
             obj.setAdmin(rs.getBoolean("admin"));
+           //
             return obj;
         } catch (SQLException | NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
@@ -79,6 +86,15 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
     public List<Employee> searchByJob(Job j) {
         try {
             return super.executeQuery("select * from Employees where job_id = ?", new Object[]{j.getId()});
+        } catch (Exception e) {
+            throw new RuntimeException(); // my own
+        }
+    }
+
+    @Override
+    public Employee getByIdWithoutDepartment(int id) throws SQLException {
+        try {
+            return super.executeQueryUnique("select id, first_name, last_name, date_hired, null as department_id, job_id, salary, username, password_hash, admin from Employees where id = ?", new Object[]{id});
         } catch (Exception e) {
             throw new RuntimeException(); // my own
         }

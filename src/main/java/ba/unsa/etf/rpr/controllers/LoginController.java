@@ -31,6 +31,7 @@ public class LoginController {
 
     public void login(ActionEvent actionEvent) throws NoSuchAlgorithmException, SQLException {
         String passwordHash = LoggableUser.hashedPassword(password.getText());
+        System.out.println("Password: " + passwordHash);
         Employee user = employeeManager.getEmployeeByUsername(username.getText());
         if(user.getPasswordHash().equals(passwordHash)){
             // open new window

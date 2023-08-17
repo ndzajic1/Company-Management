@@ -53,6 +53,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     public List<T> executeQuery(String query, Object[] params) throws SQLException {
         try{
+            System.out.println(query);
             PreparedStatement ps = getConnection().prepareStatement(query);
             if(params != null){
                 for(int i = 1; i <= params.length; i = i + 1){
@@ -60,7 +61,6 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
                 }
             }
             ResultSet rs = ps.executeQuery();
-            System.out.println("query:" + query);
             ArrayList<T> list=new ArrayList<>();
             while(rs.next()){
                 list.add(row2object(rs));
@@ -74,7 +74,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     public T executeQueryUnique(String query, Object[] params) throws SQLException {
         List<T> list = executeQuery(query, params);
-        System.out.println(query);
+        System.out.println("Result " + list.size());
         if(list != null && list.size() == 1){
             return list.get(0);
         }

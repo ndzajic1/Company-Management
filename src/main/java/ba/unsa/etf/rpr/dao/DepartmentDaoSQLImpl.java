@@ -26,8 +26,13 @@ public class DepartmentDaoSQLImpl extends AbstractDao<Department> implements Dep
     @Override
     public Department row2object(ResultSet rs) {
        try{
-           return new Department(rs.getInt(1), rs.getString(2),
-                   rs.getString(3), DaoFactory.employeeDao().getById(rs.getInt(4)));
+           Department d = new Department();
+           d.setId(rs.getInt(1));
+           d.setName(rs.getString(2));
+           d.setLocation(rs.getString(3));
+           d.setManager(DaoFactory.employeeDao().getByIdWithoutDepartment(rs.getInt(4)));
+           d.getManager().setDepartment(d);
+           return d;
        } catch (SQLException e) {
            throw new RuntimeException(e);
        }
