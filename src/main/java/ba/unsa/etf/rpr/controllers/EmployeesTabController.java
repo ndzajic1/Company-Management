@@ -5,14 +5,22 @@ import ba.unsa.etf.rpr.domain.Employee;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import javax.swing.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class EmployeesTabController {
 
@@ -101,6 +109,26 @@ public class EmployeesTabController {
     @FXML
     void searchEmployees(ActionEvent event) {
         // refresh  the list
+    }
+
+    void openForm(ActionEvent actionEvent){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EmployeePanel/EmployeePanel.fxml"));
+            loader.setController(new EmployeePanel(employee));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            stage.setTitle("Employee Panel");
+            stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
+            stage.initStyle(StageStyle.UTILITY);
+            stage.setResizable(false);
+            stage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.show();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 
 }
