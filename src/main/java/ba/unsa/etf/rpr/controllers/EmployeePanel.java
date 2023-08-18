@@ -42,6 +42,13 @@ public class EmployeePanel {
 
     @FXML
     void initialize(){
+        System.out.println(user.getDepartment().getManager());
+        if(user.isAdmin() || user.getDepartment().getManager().equals(user)){
+            employeesTab.setDisable(false);
+        }
+        else{
+            employeesTab.setDisable(true);
+        }
 
     }
 
