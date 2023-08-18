@@ -145,10 +145,11 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             PreparedStatement ps = getConnection().prepareStatement(sb.toString());
             int c = 1;
             for(Map.Entry<String, Object> entry : row.entrySet()){
-                c = c + 1;
+
                 if(entry.getKey().equals("id"))
                     continue;
                 ps.setObject(c, entry.getValue());
+                c = c + 1;
             }
             ps.setObject(c, item.getId());
             ps.executeUpdate();
@@ -160,7 +161,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     private  String prepareUpdateParts(Map<String, Object> row){
         StringBuilder cols = new StringBuilder();
-        int c=0;
+        int c = 0;
         for(Map.Entry<String, Object> entry : row.entrySet()){
             c = c + 1;
             if (entry.getKey().equals("id"))

@@ -4,8 +4,16 @@ import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.LoggableUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class HomeTabController {
 
@@ -39,8 +47,14 @@ public class HomeTabController {
     }
 
     @FXML
-    void changePassword(ActionEvent event) {
-        // open changing password
+    void changePassword(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ChangePassword.fxml"));
+        loader.setController(new ChangePasswordController(user));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        stage.setTitle("Change Password");
+        stage.initStyle(StageStyle.UTILITY);
+        stage.show();
     }
 
 }

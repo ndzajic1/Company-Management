@@ -26,12 +26,10 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
     @Override
     public Employee row2object(ResultSet rs) {
         try{
-            System.out.println("Result set: " + rs.getMetaData());
             Employee obj = new Employee(rs.getInt("id"), rs.getString("first_name"),
                     rs.getString("last_name"), rs.getDate("hire_date").toLocalDate(),
                     null, DaoFactory.jobDao().getById(rs.getInt("job_id")), rs.getDouble("salary"));
             try {
-                System.out.println(rs.toString());
                 obj.setDepartment(DaoFactory.departmentDao().getById(rs.getInt("department_id")));
             }
             catch(Exception e){
@@ -54,6 +52,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         row.put("first_name", obj.getFirstName());
         row.put("last_name", obj.getLastName());
         row.put("hire_date", obj.getHireDate());
+        row.put("salary", obj.getSalary());
         row.put("department_id", obj.getDepartment().getId());
         row.put("job_id", obj.getJob().getId());
         row.put("username", obj.getUsername());

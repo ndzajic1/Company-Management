@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.LoggableUser;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
@@ -45,6 +46,9 @@ public class LoginController {
                 stage.setTitle("Employee Panel");
                 stage.initStyle(StageStyle.UTILITY);
                 stage.show();
+                Node n = (Node) actionEvent.getSource();
+                Stage currStage = (Stage) n.getScene().getWindow();
+                currStage.close();
             }catch (Exception e){
                 e.printStackTrace();
                 new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
