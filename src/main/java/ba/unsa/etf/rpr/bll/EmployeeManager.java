@@ -30,6 +30,7 @@ public class EmployeeManager{
     public void addNewEmployee(Employee e) throws SQLException {
         String username = generateUsername(e);
         e.setUsername(username);
+        e.setAdmin(false);
         DaoFactory.employeeDao().add(e);
     }
 

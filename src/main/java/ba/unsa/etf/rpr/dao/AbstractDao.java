@@ -101,7 +101,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
         try{
             PreparedStatement ps=getConnection().prepareStatement(sb.toString(), Statement.RETURN_GENERATED_KEYS);
-            int c = 1;
+            int c = 0;
             for(Map.Entry<String, Object> entry : row.entrySet()){
                 if (entry.getKey().equals("id")) // ID will be generated, and will be assigned from generated key
                     continue;
@@ -121,7 +121,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     private Map.Entry<String, String> prepareInsertParts(Map<String, Object> row) {
         StringBuilder cols = new StringBuilder(), quests = new StringBuilder();
-        int c=0;
+        int c = 0;
         for(Map.Entry<String, Object> entry : row.entrySet()){
             c = c + 1;
             cols.append(entry.getKey());

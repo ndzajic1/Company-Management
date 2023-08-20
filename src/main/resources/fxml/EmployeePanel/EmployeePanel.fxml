@@ -19,16 +19,16 @@
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
       <Tab fx:id="homeTab" text="Home">
-          <fx:include source="HomeTab.fxml"/>
+          <fx:include source="HomeTab/HomeTab.fxml"/>
       </Tab>
       <Tab fx:id="employeesTab" text="Employees">
-          <fx:include source="EmployeesTab.fxml"/>
+          <fx:include source="EmployeesTab/EmployeesTab.fxml"/>
       </Tab>
       <Tab fx:id="departmentsTab" text="Departments">
-          <fx:include source="DepartmentsTab.fxml"/>
+          <fx:include source="DepartmentsTab/DepartmentsTab.fxml"/>
       </Tab>
       <Tab fx:id="jobsTab" text="Jobs">
-          <fx:include source="JobsTab.fxml"/>
+          <fx:include source="JobsTab/JobsTab.fxml"/>
       </Tab>
   </tabs>
 </TabPane>

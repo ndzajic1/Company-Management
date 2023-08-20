@@ -14,7 +14,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import javax.swing.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -89,35 +88,38 @@ public class EmployeesTabController {
 
         employeesTable.setItems(FXCollections.observableArrayList(employeeList));
         //disable buttons if not admin
+        if(!employee.isAdmin()){
+            addButton.setDisable(true);
+            editButton.setDisable(true);
+            removeButton.setDisable(true);
+        }
     }
 
     @FXML
-    void addEmployee(ActionEvent event) {
+    void addEmployee(ActionEvent event) throws SQLException {
         // open new window
+        openForm(event, new AddEmployeeController(), "/fxml/EmployeePanel/EmployeesTab/AddEmployee.fxml", "Add employee");
     }
 
     @FXML
-    void editEmployee(ActionEvent event) {
+    void editEmployee(ActionEvent event) throws SQLException {
         // open new window
+        openForm(event, new EditEmployeeController(employee), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "Edit employee");
     }
 
     @FXML
     void removeEmployee(ActionEvent event) {
         // open new window
+        openForm(event, new RemoveEmployeeController(employee), "/fxml/EmployeePanel/EmployeesTab/RemoveEmployee.fxml", "Remove employee");
     }
 
-    @FXML
-    void searchEmployees(ActionEvent event) {
-        // refresh  the list
-    }
-
-    void openForm(ActionEvent actionEvent){
+    void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EmployeePanel/EmployeePanel.fxml"));
-            loader.setController(new EmployeePanel(employee));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            loader.setController(controller);
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-            stage.setTitle("Employee Panel");
+            stage.setTitle(title);
             stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
             stage.initStyle(StageStyle.UTILITY);
             stage.setResizable(false);
@@ -129,6 +131,11 @@ public class EmployeesTabController {
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
+    }
+
+    @FXML
+    void searchEmployees(ActionEvent event) {
+        // refresh  the list
     }
 
 }
