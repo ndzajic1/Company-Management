@@ -29,8 +29,10 @@ public class EmployeeManager{
 
     public void addNewEmployee(Employee e) throws SQLException {
         String username = generateUsername(e);
+        e.setId(666);
         e.setUsername(username);
         e.setAdmin(false);
+        System.out.println(e.toString());
         DaoFactory.employeeDao().add(e);
     }
 

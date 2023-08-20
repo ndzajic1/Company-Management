@@ -94,20 +94,23 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     public T add(T item) {
         Map<String, Object> row = object2row(item);
         Map.Entry<String, String> cols = prepareInsertParts(row);
-        StringBuilder sb = new StringBuilder();
-        sb.append("insert into ");
-        sb.append("(").append(cols.getKey()).append(") ");
-        sb.append("values (").append(cols.getValue()).append(")");
-
+        StringBuilder builder = new StringBuilder();
+        builder.append("INSERT INTO ").append(tableName);
+        builder.append(" (").append(cols.getKey()).append(") ");
+        builder.append("VALUES (").append(cols.getValue()).append(")");
+        System.out.println("QUERY:  "    + builder.toString());
         try{
-            PreparedStatement ps=getConnection().prepareStatement(sb.toString(), Statement.RETURN_GENERATED_KEYS);
-            int c = 0;
+            PreparedStatement ps=getConnection().prepareStatement(builder.toString(), Statement.RETURN_GENERATED_KEYS);
+            int c = 1;
             for(Map.Entry<String, Object> entry : row.entrySet()){
+
+                System.out.println("PARAMS: " + entry.getKey() + " : " + entry.getValue().toString());
                 if (entry.getKey().equals("id")) // ID will be generated, and will be assigned from generated key
                     continue;
                 ps.setObject(c, entry.getValue());
                 c = c + 1;
             }
+
             ps.executeUpdate();
             ResultSet rs = ps.getGeneratedKeys(); // to get the ID from the inserted row
             rs.next();
@@ -124,12 +127,15 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         int c = 0;
         for(Map.Entry<String, Object> entry : row.entrySet()){
             c = c + 1;
+            if(entry.getKey().equals("id"))
+                continue;
             cols.append(entry.getKey());
             quests.append("?");
             if(row.size() != c){
                 cols.append(",");
                 quests.append(",");
             }
+
         }
         return new AbstractMap.SimpleEntry<>(cols.toString(), quests.toString());
     }
