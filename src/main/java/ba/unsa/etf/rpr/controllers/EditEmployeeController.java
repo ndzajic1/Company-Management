@@ -16,7 +16,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
 import java.sql.SQLException;
@@ -117,5 +119,9 @@ public class EditEmployeeController {
         employee.setSalary(salaryProperty.getValue());
 
         employeeManager.updateEmployee(employee);
+
+        Node n = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) n.getScene().getWindow();
+        currStage.close();
     }
 }
