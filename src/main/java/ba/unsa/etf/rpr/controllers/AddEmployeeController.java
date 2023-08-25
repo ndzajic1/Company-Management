@@ -112,7 +112,7 @@ public class AddEmployeeController {
         e.setJob(j);
 
         System.out.println(salary.getValueFactory().getValue());
-        e.setSalary(salaryProperty.getValue());
+        e.setSalary(salary.getValueFactory().getValue());
 
         employeeManager.addNewEmployee(e);
     }

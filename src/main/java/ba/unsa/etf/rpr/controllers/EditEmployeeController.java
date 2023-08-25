@@ -116,7 +116,7 @@ public class EditEmployeeController {
         employee.setHireDate(hired.getValue());
         employee.setDepartment(d);
         employee.setJob(j);
-        employee.setSalary(salaryProperty.getValue());
+        employee.setSalary(salary.getValueFactory().getValue());
 
         employeeManager.updateEmployee(employee);
 
