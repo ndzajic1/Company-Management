@@ -34,7 +34,7 @@ public class Department implements Idable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Department that = (Department) o;
-        return id == that.id && name.equals(that.name) && Objects.equals(location, that.location) && Objects.equals(manager, that.manager);
+        return id == that.id && name.equals(that.name) && Objects.equals(location, that.location) && Objects.equals(manager.getFirstName(), that.manager.getFirstName())  && Objects.equals(manager.getLastName(), that.manager.getLastName());
     }
 
     @Override
