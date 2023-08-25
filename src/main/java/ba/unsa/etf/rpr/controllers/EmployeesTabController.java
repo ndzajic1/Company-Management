@@ -2,6 +2,9 @@ package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.domain.Employee;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.Property;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -64,6 +67,9 @@ public class EmployeesTabController {
     @FXML
     private Button removeButton;
 
+    private ObjectProperty<Employee> selectedEmployee;
+
+
     public EmployeesTabController(){
 
 
@@ -87,12 +93,17 @@ public class EmployeesTabController {
         }
 
         employeesTable.setItems(FXCollections.observableArrayList(employeeList));
+
         //disable buttons if not admin
         if(!employee.isAdmin()){
             addButton.setDisable(true);
             editButton.setDisable(true);
             removeButton.setDisable(true);
         }
+
+        selectedEmployee.bindBidirectional((Property<Employee>) employeesTable.getSelectionModel().getSelectedItem());
+
+
     }
 
     @FXML
@@ -104,13 +115,13 @@ public class EmployeesTabController {
     @FXML
     void editEmployee(ActionEvent event) throws SQLException {
         // open new window
-        openForm(event, new EditEmployeeController(employee), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "Edit employee");
+        openForm(event, new EditEmployeeController(selectedEmployee.getValue()), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "Edit employee");
     }
 
     @FXML
     void removeEmployee(ActionEvent event) {
         // open new window
-        openForm(event, new RemoveEmployeeController(employee), "/fxml/EmployeePanel/EmployeesTab/RemoveEmployee.fxml", "Remove employee");
+        openForm(event, new RemoveEmployeeController(selectedEmployee.getValue()), "/fxml/EmployeePanel/EmployeesTab/RemoveEmployee.fxml", "Remove employee");
     }
 
     void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
