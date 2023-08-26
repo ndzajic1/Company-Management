@@ -100,7 +100,7 @@ public class DepartmentsTabController {
 
     @FXML
     void removeDept(ActionEvent event) {
-        openForm(event, new RemoveDepartmentController(departmentsTable.getSelectionModel().getSelectedItem()), "/fxml/EmployeePanel/DepartmentsTab/RemoveDepartment.fxml", "Remove department" );
+        openForm(event, new RemoveDepartmentController(departmentsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/DepartmentsTab/RemoveDepartment.fxml", "Remove department" );
 
     }
 
