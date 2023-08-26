@@ -8,9 +8,12 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
 import java.sql.SQLException;
@@ -19,25 +22,31 @@ public class EditDepartmentController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
 
-    private Department department;
+    private DepartmentsTabController mainController;
 
-    public Button editButton;
-    public TextField deptName;
+    private Department department;
+    @FXML
+    private Button editButton;
+    @FXML
+    private TextField deptName;
     private SimpleStringProperty deptProperty;
 
-    public TextField location;
+    @FXML
+    private TextField location;
     private SimpleStringProperty locationProperty;
     public ChoiceBox<Employee> managers;
     private ObservableList<Employee> managersList;
 
-    public EditDepartmentController(Department d) throws SQLException {
+    public EditDepartmentController(Department d, Object o) throws SQLException {
         this.department = d;
+        this.mainController = (DepartmentsTabController) o;
         deptProperty = new SimpleStringProperty(d.getName());
         locationProperty = new SimpleStringProperty(d.getLocation());
         managersList = FXCollections.observableArrayList(employeeManager.getEmployeesFromDepartment(d));
 
     }
 
+    @FXML
     public void initialize(){
         deptName.textProperty().bindBidirectional(deptProperty);
         location.textProperty().bindBidirectional(locationProperty);
@@ -54,7 +63,8 @@ public class EditDepartmentController {
         });
     }
 
-    public void editDept(ActionEvent actionEvent) {
+    @FXML
+    public void editDept(ActionEvent actionEvent) throws SQLException {
 
         Employee mngr = managers.valueProperty().getValue();
 
@@ -63,5 +73,11 @@ public class EditDepartmentController {
         department.setManager(mngr);
 
         departmentManager.updateDept(department);
+
+        mainController.refreshTable();
+
+        Node n = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) n.getScene().getWindow();
+        currStage.close();
     }
 }

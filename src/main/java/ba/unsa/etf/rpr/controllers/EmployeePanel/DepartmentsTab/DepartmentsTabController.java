@@ -95,7 +95,7 @@ public class DepartmentsTabController {
 
     @FXML
     void editDept(ActionEvent event) throws SQLException {
-        openForm(event, new EditDepartmentController(departmentsTable.getSelectionModel().getSelectedItem()), "/fxml/EmployeePanel/DepartmentsTab/EditDepartment.fxml", "Edit department" );
+        openForm(event, new EditDepartmentController(departmentsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/DepartmentsTab/EditDepartment.fxml", "Edit department" );
     }
 
     @FXML
