@@ -54,16 +54,25 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     public List<T> executeQuery(String query, Object[] params) throws SQLException {
         try{
             PreparedStatement ps = getConnection().prepareStatement(query);
+            System.out.println("KVERI " + query);
+
             if(params != null){
+                System.out.println("ParametarI  " + params.length);
                 for(int i = 1; i <= params.length; i = i + 1){
-                   ps.setObject(i, params[i-1]);
+                    System.out.println(params[i-1].toString());
+                    if(params[i-1] instanceof String)
+                        ps.setString(i, (String)params[i-1]);
+                    else
+                        ps.setObject(i, params[i-1]);
                 }
             }
+            System.out.println("RESULTS " + query + " REZULTATI " + ps.toString());
             ResultSet rs = ps.executeQuery();
             ArrayList<T> list=new ArrayList<>();
             while(rs.next()){
                 list.add(row2object(rs));
             }
+
             return list;
         } catch (SQLException e) {
             throw new RuntimeException(e);

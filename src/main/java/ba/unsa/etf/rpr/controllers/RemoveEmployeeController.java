@@ -23,7 +23,7 @@ public class RemoveEmployeeController {
     @FXML
     public void removeEmployee(ActionEvent actionEvent) throws SQLException {
         employeeManager.deleteEmployee(employee.getId());
-        mainController.refreshTable();
+        mainController.refreshTable(null);
         Node n = (Node) actionEvent.getSource();
         Stage currStage = (Stage) n.getScene().getWindow();
         currStage.close();

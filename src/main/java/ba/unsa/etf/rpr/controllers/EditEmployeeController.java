@@ -135,12 +135,14 @@ public class EditEmployeeController {
         });
         update.start();
         latch.await();
-        mainController.refreshTable();
+
 
 
         /////////////////////////////
         Node n = (Node) actionEvent.getSource();
         Stage currStage = (Stage) n.getScene().getWindow();
         currStage.close();
+
+        mainController.refreshTable(null);
     }
 }

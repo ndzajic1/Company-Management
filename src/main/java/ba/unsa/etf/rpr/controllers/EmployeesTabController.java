@@ -85,7 +85,13 @@ public class EmployeesTabController {
         jobTitleCol.setCellValueFactory(new EmployeeCellValueFactory("Job Title"));
         salaryCol.setCellValueFactory(new EmployeeCellValueFactory("Salary"));
 
-        refreshTable();
+        if(employee.isAdmin())
+                employeeList = employeeManager.getAllEmployees();
+        else{
+                employeeList = employeeManager.getEmployeesFromDepartment(employee.getDepartment());
+            }
+
+        refreshTable(employeeList);
 
         //disable buttons if not admin
         if(!employee.isAdmin()){
@@ -141,17 +147,19 @@ public class EmployeesTabController {
     void searchEmployees(ActionEvent event) throws SQLException {
         // refresh  the list
         String query = searchField.getText();
-        employeeList = employeeManager.searchEmployees(query);
-        refreshTable();
+        if(query.equals(""))
+            refreshTable(employeeList);
+        else
+            refreshTable(employeeManager.searchEmployees(query));
+        System.out.println(employeeList.size());
     }
 
-    void refreshTable() throws SQLException {
-        if(employee.isAdmin())
-            employeeList = employeeManager.getAllEmployees();
-        else{
-            employeeList = employeeManager.getEmployeesFromDepartment(employee.getDepartment());
-        }
-        employeesTable.setItems(FXCollections.observableArrayList(employeeList));
+    void refreshTable(List<Employee> employees) throws SQLException {
+
+
+        employeesTable.setItems(FXCollections.observableArrayList(employees));
+
+        System.out.println("SIZEEEEEEEE" + employeeList.size());
     }
 
 }

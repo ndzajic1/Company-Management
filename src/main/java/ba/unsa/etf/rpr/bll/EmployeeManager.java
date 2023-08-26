@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeManager{
@@ -66,9 +67,22 @@ public class EmployeeManager{
     }
 
     public List<Employee> searchEmployees(String query) throws SQLException {
+
+        List<Employee> emps = DaoFactory.employeeDao().searchByName(query);
+        return emps;
+        /*
+        System.out.println("dbkveeee" + emps.size());
         if(query.equals("")){
-            return getAllEmployees();
+            return employees;
         }
-        return DaoFactory.employeeDao().searchByName(query);
+        List<Employee> filtered = new ArrayList<>();
+        for(Employee e : employees){
+            if(e.getFirstName().toLowerCase().contains(query.toLowerCase()) ||
+                    e.getLastName().toLowerCase().contains(query.toLowerCase()) ||
+                    (e.getFirstName() + " " + e.getLastName()).toLowerCase().contains(query.toLowerCase()))
+                filtered.add(e);
+
+        }
+        return filtered;  */
     }
 }

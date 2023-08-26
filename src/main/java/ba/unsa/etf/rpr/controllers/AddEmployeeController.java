@@ -120,7 +120,7 @@ public class AddEmployeeController {
         e.setSalary(salary.getValueFactory().getValue());
 
         employeeManager.addNewEmployee(e);
-        mainController.refreshTable();
+        mainController.refreshTable(null);
 
         Node n = (Node) actionEvent.getSource();
         Stage currStage = (Stage) n.getScene().getWindow();
