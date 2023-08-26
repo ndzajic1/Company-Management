@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="opening forms" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="rm dept">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/DepartmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/DepartmentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/DepartmentsTab/AddDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/DepartmentsTab/AddDepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/DepartmentsTab/DepartmentsTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/DepartmentsTab/DepartmentsTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/DepartmentsTab/AddDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/DepartmentsTab/AddDepartment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/DepartmentsTab/RemoveDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/DepartmentsTab/RemoveDepartment.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,34 +118,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00102" summary="login controller">
-      <created>1692141258703</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1692141258704</updated>
-    </task>
-    <task id="LOCAL-00103" summary="change password controller">
-      <created>1692142310135</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1692142310135</updated>
-    </task>
-    <task id="LOCAL-00104" summary="redundant fxmls">
-      <created>1692143189620</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1692143189620</updated>
-    </task>
-    <task id="LOCAL-00105" summary="building main stage">
-      <created>1692143959423</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1692143959424</updated>
     </task>
     <task id="LOCAL-00106" summary="logged user admin property">
       <created>1692196638671</created>
@@ -455,7 +434,35 @@
       <option name="project" value="LOCAL" />
       <updated>1693074693802</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="calling forms">
+      <created>1693075004888</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1693075004888</updated>
+    </task>
+    <task id="LOCAL-00152" summary="add dept">
+      <created>1693075360168</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1693075360168</updated>
+    </task>
+    <task id="LOCAL-00153" summary="edit dept">
+      <created>1693075570581</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1693075570582</updated>
+    </task>
+    <task id="LOCAL-00154" summary="rm dept">
+      <created>1693075674191</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1693075674191</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -470,10 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hash fixed" />
-    <MESSAGE value="loading tabs" />
-    <MESSAGE value="toString methods" />
-    <MESSAGE value="home tab controller" />
     <MESSAGE value="emps tab controller" />
     <MESSAGE value="depts tab controller" />
     <MESSAGE value="gui working" />
@@ -495,7 +498,11 @@
     <MESSAGE value="package refactor" />
     <MESSAGE value="rename dept controllers" />
     <MESSAGE value="opening forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="opening forms" />
+    <MESSAGE value="calling forms" />
+    <MESSAGE value="add dept" />
+    <MESSAGE value="edit dept" />
+    <MESSAGE value="rm dept" />
+    <option name="LAST_COMMIT_MESSAGE" value="rm dept" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

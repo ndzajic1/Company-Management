@@ -61,12 +61,13 @@ public class DepartmentsTabController {
     @FXML
     void initialize() throws SQLException {
         this.employee = EmployeePanelController.getUser();
+        departmentsList = departmentManager.getAllDepts();
         Map<Integer, Integer> employeesPerDept = new TreeMap<>();
         for(Department d : departmentsList){
             employeesPerDept.put(d.getId(),0);
         }
         for(Employee e : employeeManager.getAllEmployees()){
-            int curr = employeesPerDept.get(e.getDepartment().getId());
+            Integer curr = employeesPerDept.get(e.getDepartment().getId()); // != null ? employeesPerDept.get(e.getDepartment().getId()) : 0;
             employeesPerDept.put(e.getDepartment().getId(), curr + 1);
         }
         deptNameCol.setCellValueFactory(new DepartmentCellValueFactory("Department"));

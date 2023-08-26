@@ -31,7 +31,7 @@ public class AddDepartmentController {
 
     private SimpleStringProperty deptProperty;
     @FXML
-    private TextField location;
+    private TextField deptLocation;
     private SimpleStringProperty locationProperty;
     @FXML
     private ChoiceBox<Employee> managers;
@@ -45,14 +45,15 @@ public class AddDepartmentController {
 
     }
 
+    @FXML
     public void initialize(){
         deptName.textProperty().bindBidirectional(deptProperty);
-        location.textProperty().bindBidirectional(locationProperty);
+        deptLocation.textProperty().bindBidirectional(locationProperty);
         managers.setItems(managersList);
         managers.setConverter(new StringConverter<Employee>() {
             @Override
             public String toString(Employee employee) {
-                return employee.getFirstName() + " " + employee.getLastName();
+                return employee == null ? "" : employee.getFirstName() + " " + employee.getLastName();
             }
             @Override
             public Employee fromString(String s) {
