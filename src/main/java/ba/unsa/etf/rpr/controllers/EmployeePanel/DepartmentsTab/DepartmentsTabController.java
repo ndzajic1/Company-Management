@@ -46,6 +46,13 @@ public class DepartmentsTabController {
     @FXML
     private TableColumn<Department, String> numOfEmployeesCol;
 
+    @FXML
+    private Button addButton;
+    @FXML
+    private Button editButton;
+    @FXML
+    private Button removeButton;
+
     public DepartmentsTabController(){
 
 
@@ -54,7 +61,6 @@ public class DepartmentsTabController {
     @FXML
     void initialize() throws SQLException {
         this.employee = EmployeePanelController.getUser();
-        departmentsList = departmentManager.getAllDepts();
         Map<Integer, Integer> employeesPerDept = new TreeMap<>();
         for(Department d : departmentsList){
             employeesPerDept.put(d.getId(),0);
@@ -70,16 +76,17 @@ public class DepartmentsTabController {
 
 
 
-        departmentsTable.setItems(FXCollections.observableArrayList(departmentsList));
-        //disable buttons if not admin
-    }
+        refreshTable();
 
-    @FXML
-    private Button addButton;
-    @FXML
-    private Button editButton;
-    @FXML
-    private Button removeButton;
+        //disable buttons if not admin
+        if(!employee.isAdmin()){
+            addButton.setDisable(true);
+            editButton.setDisable(true);
+            removeButton.setDisable(true);
+        }
+
+
+    }
 
     @FXML
     void addDept(ActionEvent event) throws SQLException {
@@ -116,4 +123,14 @@ public class DepartmentsTabController {
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
     }
+
+    public void refreshTable() throws SQLException {
+
+        departmentsList = departmentManager.getAllDepts();
+        departmentsTable.setItems(FXCollections.observableArrayList(departmentsList));
+        departmentsTable.refresh();
+
+    }
+
+
 }
