@@ -9,9 +9,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
 import java.sql.SQLException;
@@ -19,17 +21,24 @@ import java.sql.SQLException;
 public class AddDepartmentController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
-    @FXML
-    public Button addButton;
-    public TextField deptName;
-    private SimpleStringProperty deptProperty;
 
-    public TextField location;
+    private DepartmentsTabController mainController;
+
+    @FXML
+    private Button addButton;
+    @FXML
+    private TextField deptName;
+
+    private SimpleStringProperty deptProperty;
+    @FXML
+    private TextField location;
     private SimpleStringProperty locationProperty;
-    public ChoiceBox<Employee> managers;
+    @FXML
+    private ChoiceBox<Employee> managers;
     private ObservableList<Employee> managersList;
 
-    public AddDepartmentController() throws SQLException {
+    public AddDepartmentController(Object o) throws SQLException {
+        mainController = (DepartmentsTabController) o;
         deptProperty = new SimpleStringProperty("");
         locationProperty = new SimpleStringProperty("");
         managersList = FXCollections.observableArrayList(employeeManager.getAllEmployees());
@@ -52,15 +61,21 @@ public class AddDepartmentController {
         });
     }
 
-    public void addDept(ActionEvent actionEvent) {
+    @FXML
+    public void addDept(ActionEvent actionEvent) throws SQLException {
         Employee mngr = managers.valueProperty().getValue();
-
         Department d = new Department();
         d.setName(deptProperty.getValue());
         d.setLocation(locationProperty.getValue());
         d.setManager(mngr);
 
         departmentManager.addNewDept(d);
+        mainController.refreshTable();
+
+        Node n = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) n.getScene().getWindow();
+        currStage.close();
+
     }
 
 

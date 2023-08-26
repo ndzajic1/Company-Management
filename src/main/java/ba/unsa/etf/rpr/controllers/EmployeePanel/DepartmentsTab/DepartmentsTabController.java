@@ -90,7 +90,7 @@ public class DepartmentsTabController {
 
     @FXML
     void addDept(ActionEvent event) throws SQLException {
-        openForm(event, new AddDepartmentController(), "/fxml/EmployeePanel/DepartmentsTab/AddDepartment.fxml", "Add department" );
+        openForm(event, new AddDepartmentController(this), "/fxml/EmployeePanel/DepartmentsTab/AddDepartment.fxml", "Add department" );
     }
 
     @FXML
