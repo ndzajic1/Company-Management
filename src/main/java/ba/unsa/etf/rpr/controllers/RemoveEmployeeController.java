@@ -11,9 +11,11 @@ public class RemoveEmployeeController {
 
     private Employee employee;
     private EmployeeManager employeeManager = new EmployeeManager();
+    private EmployeesTabController mainController;
 
-    public RemoveEmployeeController(Employee e){
+    public RemoveEmployeeController(Employee e, Object mainController){
         this.employee = e;
+        this.mainController = (EmployeesTabController) mainController;
     }
 
     @FXML

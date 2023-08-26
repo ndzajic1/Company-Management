@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="add fixed">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="add emp done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditEmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeesTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeesTabController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,13 +115,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00093" summary="emp table features">
-      <created>1692121057884</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1692121057884</updated>
     </task>
     <task id="LOCAL-00094" summary="dept table features">
       <created>1692121563492</created>
@@ -459,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693007271626</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="add emp done">
+      <created>1693008184398</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1693008184398</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,7 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="employees tab controller" />
     <MESSAGE value="dept tab controller cell val factory" />
     <MESSAGE value="dept tab controller" />
     <MESSAGE value="job tab controller" />
@@ -499,7 +498,8 @@
     <MESSAGE value="edit controller" />
     <MESSAGE value="controllers set up" />
     <MESSAGE value="add fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fixed" />
+    <MESSAGE value="add emp done" />
+    <option name="LAST_COMMIT_MESSAGE" value="add emp done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

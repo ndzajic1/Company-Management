@@ -108,13 +108,13 @@ public class EmployeesTabController {
     @FXML
     void editEmployee(ActionEvent event) throws SQLException {
         // open new window
-        openForm(event, new EditEmployeeController(employeesTable.getSelectionModel().getSelectedItem()), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "Edit employee");
+        openForm(event, new EditEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "Edit employee");
     }
 
     @FXML
     void removeEmployee(ActionEvent event) {
         // open new window
-        openForm(event, new RemoveEmployeeController(employeesTable.getSelectionModel().getSelectedItem()), "/fxml/EmployeePanel/EmployeesTab/RemoveEmployee.fxml", "Remove employee");
+        openForm(event, new RemoveEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/RemoveEmployee.fxml", "Remove employee");
     }
 
     void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){

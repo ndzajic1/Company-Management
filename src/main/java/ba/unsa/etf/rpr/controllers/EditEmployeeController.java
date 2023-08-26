@@ -6,6 +6,7 @@ import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
+import javafx.application.Platform;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -22,10 +23,13 @@ import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
 import java.sql.SQLException;
+import java.util.concurrent.CountDownLatch;
 
 public class EditEmployeeController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
+
+    private EmployeesTabController mainController;
 
     private JobManager jobManager = new JobManager();
 
@@ -49,8 +53,9 @@ public class EditEmployeeController {
     public Spinner<Double> salary;
     private SimpleDoubleProperty salaryProperty;
 
-    public EditEmployeeController(Employee e) throws SQLException {
+    public EditEmployeeController(Employee e, Object mainController) throws SQLException {
         this.employee = e;
+        this.mainController = (EmployeesTabController) mainController;
         System.out.println(e);
         firstNameProperty = new SimpleStringProperty(e.getFirstName());
         lastNameProperty = new SimpleStringProperty(e.getLastName());
@@ -106,7 +111,8 @@ public class EditEmployeeController {
         });
     }
 
-    public void editEmployee(ActionEvent actionEvent) throws SQLException {
+    @FXML
+    public void editEmployee(ActionEvent actionEvent) throws SQLException, InterruptedException {
 
         Department d = dept.valueProperty().getValue();
         Job j = job.valueProperty().getValue();
@@ -118,8 +124,21 @@ public class EditEmployeeController {
         employee.setJob(j);
         employee.setSalary(salary.getValueFactory().getValue());
 
-        employeeManager.updateEmployee(employee);
+        // db-ui consistency
+        // employeeManager.updateEmployee(employee);
+        // mainController.refreshTable();
 
+        CountDownLatch latch = new CountDownLatch(1);
+        Thread update = new Thread(() -> {
+            employeeManager.updateEmployee(employee);
+            latch.countDown();
+        });
+        update.start();
+        latch.await();
+        mainController.refreshTable();
+
+
+        /////////////////////////////
         Node n = (Node) actionEvent.getSource();
         Stage currStage = (Stage) n.getScene().getWindow();
         currStage.close();
