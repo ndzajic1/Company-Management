@@ -31,6 +31,17 @@ public class EmployeesTabController {
 
     private List<Employee> employeeList = new ArrayList<>();
 
+    public List<Employee> getEmployeeList(){
+        return employeeList;
+    }
+    public void setEmployeeList() throws SQLException {
+        if(employee.isAdmin())
+            employeeList = employeeManager.getAllEmployees();
+        else{
+            employeeList = employeeManager.getEmployeesFromDepartment(employee.getDepartment());
+        }
+    }
+
     @FXML
     private Button searchButton;
 
@@ -85,11 +96,7 @@ public class EmployeesTabController {
         jobTitleCol.setCellValueFactory(new EmployeeCellValueFactory("Job Title"));
         salaryCol.setCellValueFactory(new EmployeeCellValueFactory("Salary"));
 
-        if(employee.isAdmin())
-                employeeList = employeeManager.getAllEmployees();
-        else{
-                employeeList = employeeManager.getEmployeesFromDepartment(employee.getDepartment());
-            }
+        setEmployeeList();
 
         refreshTable(employeeList);
 
@@ -158,8 +165,14 @@ public class EmployeesTabController {
 
 
         employeesTable.setItems(FXCollections.observableArrayList(employees));
+        employeesTable.refresh();
 
         System.out.println("SIZEEEEEEEE" + employeeList.size());
+    }
+
+    void returnFromModal() throws SQLException {
+        setEmployeeList();
+        refreshTable(getEmployeeList());
     }
 
 }

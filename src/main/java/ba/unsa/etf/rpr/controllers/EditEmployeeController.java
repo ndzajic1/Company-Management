@@ -127,22 +127,33 @@ public class EditEmployeeController {
         // db-ui consistency
         // employeeManager.updateEmployee(employee);
         // mainController.refreshTable();
-
+        /*
         CountDownLatch latch = new CountDownLatch(1);
         Thread update = new Thread(() -> {
-            employeeManager.updateEmployee(employee);
+
             latch.countDown();
         });
         update.start();
         latch.await();
+        */
 
+       // Platform.runLater(new Thread(() -> {
+            employeeManager.updateEmployee(employee);
+         //   try {
 
+                mainController.returnFromModal();
+          //  } catch (SQLException e) {
+           //     System.out.println("THREAD EXCEPTION");
+           //     throw new RuntimeException(e); // my own
+
+          //  }
+        //}));
 
         /////////////////////////////
         Node n = (Node) actionEvent.getSource();
         Stage currStage = (Stage) n.getScene().getWindow();
         currStage.close();
 
-        mainController.refreshTable(null);
+
     }
 }
