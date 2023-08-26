@@ -64,4 +64,11 @@ public class EmployeeManager{
         }
         return null;
     }
+
+    public List<Employee> searchEmployees(String query) throws SQLException {
+        if(query.equals("")){
+            return getAllEmployees();
+        }
+        return DaoFactory.employeeDao().searchByName(query);
+    }
 }

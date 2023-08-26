@@ -140,6 +140,8 @@ public class EmployeesTabController {
     @FXML
     void searchEmployees(ActionEvent event) {
         // refresh  the list
+        String query = searchField.getText().toString();
+
     }
 
     void refreshTable() throws SQLException {

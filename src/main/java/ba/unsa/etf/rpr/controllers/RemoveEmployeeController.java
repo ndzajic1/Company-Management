@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
+import java.sql.SQLException;
+
 public class RemoveEmployeeController {
 
     private Employee employee;
@@ -19,9 +21,9 @@ public class RemoveEmployeeController {
     }
 
     @FXML
-    public void removeEmployee(ActionEvent actionEvent) {
+    public void removeEmployee(ActionEvent actionEvent) throws SQLException {
         employeeManager.deleteEmployee(employee.getId());
-
+        mainController.refreshTable();
         Node n = (Node) actionEvent.getSource();
         Stage currStage = (Stage) n.getScene().getWindow();
         currStage.close();
