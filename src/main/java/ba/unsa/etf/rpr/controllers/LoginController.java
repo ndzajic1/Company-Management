@@ -1,9 +1,9 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
+import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.LoggableUser;
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,7 +12,6 @@ import javafx.scene.control.*;
 
 import javafx.event.ActionEvent;
 import javafx.scene.image.Image;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -44,7 +43,7 @@ public class LoginController {
         if(user.getPasswordHash().equals(passwordHash)){
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EmployeePanel/EmployeePanel.fxml"));
-                loader.setController(new EmployeePanel(user));
+                loader.setController(new EmployeePanelController(user));
                 Stage stage = new Stage();
                 stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
                 stage.setTitle("Employee Panel");

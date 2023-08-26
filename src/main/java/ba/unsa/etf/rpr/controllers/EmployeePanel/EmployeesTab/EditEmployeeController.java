@@ -1,15 +1,12 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeesTab;
 
 import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.bll.JobManager;
-import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
-import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -24,49 +21,56 @@ import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
-public class AddEmployeeController {
-
+public class EditEmployeeController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
 
-    private JobManager jobManager = new JobManager();
-
     private EmployeesTabController mainController;
 
-    @FXML
-    public Button addButton;
-    @FXML
-    public TextField firstName;
+    private JobManager jobManager = new JobManager();
 
+    private Employee employee;
+
+    public Button editButton;
+    public TextField firstName;
     private SimpleStringProperty firstNameProperty;
-    @FXML
+
     public TextField lastName;
     private SimpleStringProperty lastNameProperty;
-    @FXML
+
     public DatePicker hired;
-    @FXML
+
     public ChoiceBox<Department> dept;
     private ObservableList<Department> departments;
-    @FXML
+
     public ChoiceBox<Job> job;
     private ObservableList<Job> jobs;
-    @FXML
-    public  Spinner<Double> salary;
+
+    public Spinner<Double> salary;
     private SimpleDoubleProperty salaryProperty;
 
-    public AddEmployeeController(Object mainController) throws SQLException {
+    public EditEmployeeController(Employee e, Object mainController) throws SQLException {
+        this.employee = e;
         this.mainController = (EmployeesTabController) mainController;
-        firstNameProperty = new SimpleStringProperty("");
-        lastNameProperty = new SimpleStringProperty("");
+        System.out.println(e);
+        firstNameProperty = new SimpleStringProperty(e.getFirstName());
+        lastNameProperty = new SimpleStringProperty(e.getLastName());
         departments = FXCollections.observableArrayList(departmentManager.getAllDepts());
         jobs = FXCollections.observableArrayList(jobManager.getAllJobs());
-        salaryProperty = new SimpleDoubleProperty();
+        salaryProperty = new SimpleDoubleProperty(e.getSalary());
     }
 
     @FXML
     public void initialize() {
         firstName.textProperty().bindBidirectional(firstNameProperty);
         lastName.textProperty().bindBidirectional(lastNameProperty);
+        dept.setValue(employee.getDepartment());
+        dept.setItems(departments);
+        job.setValue(employee.getJob());
+        job.setItems(jobs);
+
+        hired.setValue(employee.getHireDate());
+
         job.setConverter(new StringConverter<Job>() {
             @Override
             public String toString(Job job) {
@@ -89,46 +93,63 @@ public class AddEmployeeController {
                 return null;
             }
         });
-        dept.setItems(departments);
-        job.setItems(jobs);
-        salary.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(0,100000, 0));
+        salary.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(employee.getJob().getMinSalary(), employee.getJob().getMaxSalary(), employee.getSalary()));
         // mozda ovo u listener
         salary.getValueFactory().valueProperty().bindBidirectional(salaryProperty.asObject());
+
         job.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Job>() {
             @Override
             public void changed(ObservableValue<? extends Job> observableValue, Job job, Job t1) {
                 salary.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(
-                     t1.getMinSalary(), t1.getMaxSalary(), t1.getMinSalary()
+                        t1.getMinSalary(), t1.getMaxSalary(), t1.getMinSalary()
                 ));
             }
         });
     }
 
     @FXML
-    public void addEmployee(ActionEvent actionEvent) throws SQLException {
+    public void editEmployee(ActionEvent actionEvent) throws SQLException, InterruptedException {
 
         Department d = dept.valueProperty().getValue();
         Job j = job.valueProperty().getValue();
 
-        Employee e = new Employee();
-        e.setFirstName(firstNameProperty.getValue());
-        e.setLastName(lastNameProperty.getValue());
-        e.setHireDate(hired.getValue());
-        e.setDepartment(d);
-        e.setJob(j);
+        employee.setFirstName(firstNameProperty.getValue());
+        employee.setLastName(lastNameProperty.getValue());
+        employee.setHireDate(hired.getValue());
+        employee.setDepartment(d);
+        employee.setJob(j);
+        employee.setSalary(salary.getValueFactory().getValue());
 
-        System.out.println(salary.getValueFactory().getValue());
-        e.setSalary(salary.getValueFactory().getValue());
+        // db-ui consistency
+        // employeeManager.updateEmployee(employee);
+        // mainController.refreshTable();
+        /*
+        CountDownLatch latch = new CountDownLatch(1);
+        Thread update = new Thread(() -> {
 
-        employeeManager.addNewEmployee(e);
-        mainController.returnFromModal();
+            latch.countDown();
+        });
+        update.start();
+        latch.await();
+        */
 
+       // Platform.runLater(new Thread(() -> {
+            employeeManager.updateEmployee(employee);
+         //   try {
+
+                mainController.returnFromModal();
+          //  } catch (SQLException e) {
+           //     System.out.println("THREAD EXCEPTION");
+           //     throw new RuntimeException(e); // my own
+
+          //  }
+        //}));
+
+        /////////////////////////////
         Node n = (Node) actionEvent.getSource();
         Stage currStage = (Stage) n.getScene().getWindow();
         currStage.close();
 
+
     }
-
-
 }
-

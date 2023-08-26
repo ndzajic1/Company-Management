@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.bll.JobManager;
-import ba.unsa.etf.rpr.domain.Department;
+import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
 import javafx.collections.FXCollections;
@@ -54,7 +54,7 @@ public class JobsTabController {
     
     @FXML
     void initialize() throws SQLException {
-        this.employee = EmployeePanel.getUser();
+        this.employee = EmployeePanelController.getUser();
         jobsList = jobManager.getAllJobs();
         Map<Integer, Integer> employeesPerJob = new TreeMap<>();
         for(Job j : jobsList){

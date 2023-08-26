@@ -1,4 +1,4 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeesTab;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.domain.Employee;

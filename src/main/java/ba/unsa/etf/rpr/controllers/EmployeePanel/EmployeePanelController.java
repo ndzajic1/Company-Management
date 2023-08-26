@@ -1,10 +1,14 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel;
 
+import ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab.DepartmentsTabController;
+import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeesTab.EmployeesTabController;
+import ba.unsa.etf.rpr.controllers.HomeTabController;
+import ba.unsa.etf.rpr.controllers.JobsTabController;
 import ba.unsa.etf.rpr.domain.Employee;
 import javafx.fxml.FXML;
 import javafx.scene.control.Tab;
 
-public class EmployeePanel {
+public class EmployeePanelController {
 
     private static Employee user = null;
 
@@ -32,7 +36,7 @@ public class EmployeePanel {
     @FXML
     private JobsTabController jobsTabController;
 
-    public EmployeePanel(Employee e){
+    public EmployeePanelController(Employee e){
         user = e;
         this.homeTabController = new HomeTabController();
         this.employeesTabController = new EmployeesTabController();

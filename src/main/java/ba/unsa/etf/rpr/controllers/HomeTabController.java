@@ -1,7 +1,7 @@
 package ba.unsa.etf.rpr.controllers;
 
+import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Employee;
-import ba.unsa.etf.rpr.domain.LoggableUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,7 +38,7 @@ public class HomeTabController {
 
     @FXML
     public void initialize(){
-        user = EmployeePanel.getUser();
+        user = EmployeePanelController.getUser();
         employeeName.setText(user.getFirstName() + " " + user.getLastName());
         System.out.println(employeeName.getText());
         deptName.setText(user.getDepartment().getName());

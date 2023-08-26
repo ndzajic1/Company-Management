@@ -1,9 +1,11 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab;
 
 import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
+import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,13 +18,11 @@ import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
-public class EditDepartment {
+public class AddDepartment {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
-
-    private Department department;
-
-    public Button editButton;
+    @FXML
+    public Button addButton;
     public TextField deptName;
     private SimpleStringProperty deptProperty;
 
@@ -31,11 +31,10 @@ public class EditDepartment {
     public ChoiceBox<Employee> managers;
     private ObservableList<Employee> managersList;
 
-    public EditDepartment(Department d) throws SQLException {
-        this.department = d;
-        deptProperty = new SimpleStringProperty(d.getName());
-        locationProperty = new SimpleStringProperty(d.getLocation());
-        managersList = FXCollections.observableArrayList(employeeManager.getEmployeesFromDepartment(d));
+    public AddDepartment() throws SQLException {
+        deptProperty = new SimpleStringProperty("");
+        locationProperty = new SimpleStringProperty("");
+        managersList = FXCollections.observableArrayList(employeeManager.getAllEmployees());
 
     }
 
@@ -55,14 +54,16 @@ public class EditDepartment {
         });
     }
 
-    public void editDept(ActionEvent actionEvent) {
-
+    public void addDept(ActionEvent actionEvent) {
         Employee mngr = managers.valueProperty().getValue();
 
-        department.setName(deptProperty.getValue());
-        department.setLocation(locationProperty.getValue());
-        department.setManager(mngr);
+        Department d = new Department();
+        d.setName(deptProperty.getValue());
+        d.setLocation(locationProperty.getValue());
+        d.setManager(mngr);
 
-        departmentManager.updateDept(department);
+        departmentManager.addNewDept(d);
     }
+
+
 }

@@ -1,10 +1,9 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeesTab;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
+import ba.unsa.etf.rpr.controllers.EmployeeCellValueFactory;
+import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Employee;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.Property;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -86,9 +85,9 @@ public class EmployeesTabController {
     }
 
     @FXML
-    void initialize() throws SQLException {
+    public void initialize() throws SQLException {
 
-        this.employee = EmployeePanel.getUser();
+        this.employee = EmployeePanelController.getUser();
         firstNameCol.setCellValueFactory(new EmployeeCellValueFactory("First Name"));
         lastNameCol.setCellValueFactory(new EmployeeCellValueFactory("Last Name"));
         dateHiredCol.setCellValueFactory(new EmployeeCellValueFactory("Date Hired"));
@@ -113,24 +112,24 @@ public class EmployeesTabController {
     }
 
     @FXML
-    void addEmployee(ActionEvent event) throws SQLException {
+    public void addEmployee(ActionEvent event) throws SQLException {
         // open new window
         openForm(event, new AddEmployeeController(this), "/fxml/EmployeePanel/EmployeesTab/AddEmployee.fxml", "Add employee");
     }
 
     @FXML
-    void editEmployee(ActionEvent event) throws SQLException {
+   public void editEmployee(ActionEvent event) throws SQLException {
         // open new window
         openForm(event, new EditEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "Edit employee");
     }
 
     @FXML
-    void removeEmployee(ActionEvent event) {
+    public void removeEmployee(ActionEvent event) {
         // open new window
         openForm(event, new RemoveEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/RemoveEmployee.fxml", "Remove employee");
     }
 
-    void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
+    public void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             loader.setController(controller);
@@ -151,7 +150,7 @@ public class EmployeesTabController {
     }
 
     @FXML
-    void searchEmployees(ActionEvent event) throws SQLException {
+    public void searchEmployees(ActionEvent event) throws SQLException {
         // refresh  the list
         String query = searchField.getText();
         if(query.equals(""))
@@ -161,7 +160,7 @@ public class EmployeesTabController {
         System.out.println(employeeList.size());
     }
 
-    void refreshTable(List<Employee> employees) throws SQLException {
+    public void refreshTable(List<Employee> employees) throws SQLException {
 
 
         employeesTable.setItems(FXCollections.observableArrayList(employees));
@@ -170,7 +169,7 @@ public class EmployeesTabController {
         System.out.println("SIZEEEEEEEE" + employeeList.size());
     }
 
-    void returnFromModal() throws SQLException {
+    public void returnFromModal() throws SQLException {
         setEmployeeList();
         refreshTable(getEmployeeList());
     }

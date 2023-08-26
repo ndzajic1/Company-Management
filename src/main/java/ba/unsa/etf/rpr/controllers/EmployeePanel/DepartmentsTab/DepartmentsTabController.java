@@ -1,7 +1,9 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab;
 
 import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
+import ba.unsa.etf.rpr.controllers.DepartmentCellValueFactory;
+import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 import javafx.collections.FXCollections;
@@ -47,7 +49,7 @@ public class DepartmentsTabController {
 
     @FXML
     void initialize() throws SQLException {
-        this.employee = EmployeePanel.getUser();
+        this.employee = EmployeePanelController.getUser();
         departmentsList = departmentManager.getAllDepts();
         Map<Integer, Integer> employeesPerDept = new TreeMap<>();
         for(Department d : departmentsList){
