@@ -85,13 +85,7 @@ public class EmployeesTabController {
         jobTitleCol.setCellValueFactory(new EmployeeCellValueFactory("Job Title"));
         salaryCol.setCellValueFactory(new EmployeeCellValueFactory("Salary"));
 
-        if(employee.isAdmin())
-            employeeList = employeeManager.getAllEmployees();
-        else{
-            employeeList = employeeManager.getEmployeesFromDepartment(employee.getDepartment());
-        }
-
-        employeesTable.setItems(FXCollections.observableArrayList(employeeList));
+        refreshTable();
 
         //disable buttons if not admin
         if(!employee.isAdmin()){
@@ -108,7 +102,7 @@ public class EmployeesTabController {
     @FXML
     void addEmployee(ActionEvent event) throws SQLException {
         // open new window
-        openForm(event, new AddEmployeeController(), "/fxml/EmployeePanel/EmployeesTab/AddEmployee.fxml", "Add employee");
+        openForm(event, new AddEmployeeController(this), "/fxml/EmployeePanel/EmployeesTab/AddEmployee.fxml", "Add employee");
     }
 
     @FXML
@@ -146,6 +140,15 @@ public class EmployeesTabController {
     @FXML
     void searchEmployees(ActionEvent event) {
         // refresh  the list
+    }
+
+    void refreshTable() throws SQLException {
+        if(employee.isAdmin())
+            employeeList = employeeManager.getAllEmployees();
+        else{
+            employeeList = employeeManager.getEmployeesFromDepartment(employee.getDepartment());
+        }
+        employeesTable.setItems(FXCollections.observableArrayList(employeeList));
     }
 
 }

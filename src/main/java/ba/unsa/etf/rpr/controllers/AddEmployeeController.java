@@ -16,7 +16,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
 import java.sql.SQLException;
@@ -27,6 +29,8 @@ public class AddEmployeeController {
     private DepartmentManager departmentManager = new DepartmentManager();
 
     private JobManager jobManager = new JobManager();
+
+    private EmployeesTabController mainController;
 
     @FXML
     public Button addButton;
@@ -49,7 +53,8 @@ public class AddEmployeeController {
     public  Spinner<Double> salary;
     private SimpleDoubleProperty salaryProperty;
 
-    public AddEmployeeController() throws SQLException {
+    public AddEmployeeController(Object mainController) throws SQLException {
+        this.mainController = (EmployeesTabController) mainController;
         firstNameProperty = new SimpleStringProperty("");
         lastNameProperty = new SimpleStringProperty("");
         departments = FXCollections.observableArrayList(departmentManager.getAllDepts());
@@ -115,6 +120,12 @@ public class AddEmployeeController {
         e.setSalary(salary.getValueFactory().getValue());
 
         employeeManager.addNewEmployee(e);
+        mainController.refreshTable();
+
+        Node n = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) n.getScene().getWindow();
+        currStage.close();
+
     }
 
 
