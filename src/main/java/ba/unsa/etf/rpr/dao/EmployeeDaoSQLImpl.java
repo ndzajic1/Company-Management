@@ -64,9 +64,11 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
     public List<Employee> searchByName(String name) {
         try{
 
-            return super.executeQuery("select * from employees where lower(first_name) = '?%' " +
-                            "or lower(last_name) = '?%' " +
-                            "or lower(concat(first_name,' ',last_name)) = '?%'",
+            return super.executeQuery("SELECT *\n" +
+                            "FROM employees\n" +
+                            "WHERE lower(first_name) LIKE '?%' OR\n" +
+                            "      lower(last_name) LIKE '?%' OR\n" +
+                            "      lower(concat(first_name, ' ', last_name)) LIKE '?%'",
                     new Object[]{name.toLowerCase(), name.toLowerCase(), name.toLowerCase()});
 
         } catch(Exception e){
