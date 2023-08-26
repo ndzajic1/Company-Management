@@ -82,19 +82,19 @@ public class DepartmentsTabController {
     private Button removeButton;
 
     @FXML
-    void addDept(ActionEvent event) {
-        // open window
+    void addDept(ActionEvent event) throws SQLException {
+        openForm(event, new AddDepartmentController(), "/fxml/EmployeePanel/DepartmentsTab/AddDepartment.fxml", "Add department" );
     }
 
     @FXML
-    void editDept(ActionEvent event) {
-        // open window
+    void editDept(ActionEvent event) throws SQLException {
+        openForm(event, new EditDepartmentController(departmentsTable.getSelectionModel().getSelectedItem()), "/fxml/EmployeePanel/DepartmentsTab/EditDepartment.fxml", "Edit department" );
     }
 
     @FXML
     void removeDept(ActionEvent event) {
-        // open window
-      //  openForm(event, new AddDepartmentController(), );
+        openForm(event, new RemoveDepartmentController(departmentsTable.getSelectionModel().getSelectedItem()), "/fxml/EmployeePanel/DepartmentsTab/RemoveDepartment.fxml", "Remove department" );
+
     }
 
     public void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
