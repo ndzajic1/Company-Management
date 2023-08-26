@@ -9,15 +9,19 @@ import ba.unsa.etf.rpr.domain.Employee;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class DepartmentsTabController {
 
@@ -90,6 +94,26 @@ public class DepartmentsTabController {
     @FXML
     void removeDept(ActionEvent event) {
         // open window
+      //  openForm(event, new AddDepartmentController(), );
     }
 
+    public void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            loader.setController(controller);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            stage.setTitle(title);
+            stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
+            stage.initStyle(StageStyle.UTILITY);
+            stage.setResizable(false);
+            stage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.show();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
+    }
 }

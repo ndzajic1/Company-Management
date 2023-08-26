@@ -1,16 +1,14 @@
 package ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab;
 
 import ba.unsa.etf.rpr.bll.DepartmentManager;
-import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.domain.Department;
-import ba.unsa.etf.rpr.domain.Employee;
 import javafx.event.ActionEvent;
 
-public class RemoveDepartment {
+public class RemoveDepartmentController {
     private Department department;
     private DepartmentManager departmentManager = new DepartmentManager();
 
-    public RemoveDepartment(Department d){
+    public RemoveDepartmentController(Department d){
         this.department = d;
     }
 

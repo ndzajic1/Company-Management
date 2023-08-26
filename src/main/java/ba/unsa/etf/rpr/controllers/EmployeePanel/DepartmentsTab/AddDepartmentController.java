@@ -2,10 +2,8 @@ package ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab;
 
 import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
-import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
-import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,7 +16,7 @@ import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
-public class AddDepartment {
+public class AddDepartmentController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
     @FXML
@@ -31,7 +29,7 @@ public class AddDepartment {
     public ChoiceBox<Employee> managers;
     private ObservableList<Employee> managersList;
 
-    public AddDepartment() throws SQLException {
+    public AddDepartmentController() throws SQLException {
         deptProperty = new SimpleStringProperty("");
         locationProperty = new SimpleStringProperty("");
         managersList = FXCollections.observableArrayList(employeeManager.getAllEmployees());

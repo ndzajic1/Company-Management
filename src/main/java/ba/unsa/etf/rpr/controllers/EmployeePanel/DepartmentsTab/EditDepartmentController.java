@@ -8,7 +8,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
@@ -16,7 +15,7 @@ import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
-public class EditDepartment {
+public class EditDepartmentController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
 
@@ -31,7 +30,7 @@ public class EditDepartment {
     public ChoiceBox<Employee> managers;
     private ObservableList<Employee> managersList;
 
-    public EditDepartment(Department d) throws SQLException {
+    public EditDepartmentController(Department d) throws SQLException {
         this.department = d;
         deptProperty = new SimpleStringProperty(d.getName());
         locationProperty = new SimpleStringProperty(d.getLocation());
