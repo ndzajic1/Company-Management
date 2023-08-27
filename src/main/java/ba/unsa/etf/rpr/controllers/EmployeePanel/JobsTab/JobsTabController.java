@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.bll.JobManager;
+import ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab.AddDepartmentController;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.controllers.JobCellValueFactory;
 import ba.unsa.etf.rpr.domain.Employee;
@@ -9,14 +10,22 @@ import ba.unsa.etf.rpr.domain.Job;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.TreeMap;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class JobsTabController {
     
@@ -79,12 +88,35 @@ public class JobsTabController {
         jobsTable.refresh();
     }
 
-    public void addJob(ActionEvent actionEvent) {
+    public void addJob(ActionEvent actionEvent) throws SQLException {
+        openForm(actionEvent, new AddJobController(this), "/fxml/EmployeePanel/JobsTab/AddJob.fxml", "Add job" );
     }
 
-    public void editJob(ActionEvent actionEvent) {
+    public void editJob(ActionEvent actionEvent) throws SQLException {
+        openForm(actionEvent, new EditJobController(jobsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/JobsTab/EditJob.fxml", "Edit job" );
     }
 
     public void removeJob(ActionEvent actionEvent) {
+        openForm(actionEvent, new RemoveJobController(jobsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/JobsTab/RemoveJob.fxml", "Remove job" );
+    }
+
+    public void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            loader.setController(controller);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            stage.setTitle(title);
+            stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
+            stage.initStyle(StageStyle.UTILITY);
+            stage.setResizable(false);
+            stage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.show();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 }
