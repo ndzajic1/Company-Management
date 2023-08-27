@@ -20,6 +20,7 @@ public class DepartmentManager {
             validateDeptName(d);
             DaoFactory.departmentDao().add(d);
             Employee manager = d.getManager();
+            manager.setDepartment(d);
             DaoFactory.employeeDao().update(manager);
         } catch(SQLException e){
             // my except

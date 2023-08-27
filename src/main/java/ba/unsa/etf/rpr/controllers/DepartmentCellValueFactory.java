@@ -16,8 +16,8 @@ import java.util.TreeMap;
 
 public class DepartmentCellValueFactory<T> implements Callback<TableColumn.CellDataFeatures<Department, String>, ObservableValue<String>> {
 
-    private final EmployeeManager employeeManager = new EmployeeManager();
-    private final DepartmentManager departmentManager = new DepartmentManager();
+    private static final EmployeeManager employeeManager = new EmployeeManager();
+    private static final DepartmentManager departmentManager = new DepartmentManager();
     private final String field;
     private static Map<Integer, Integer> employeesPerDept = null;
 
@@ -28,7 +28,7 @@ public class DepartmentCellValueFactory<T> implements Callback<TableColumn.CellD
         }
     }
 
-    public void setEmployeesPerDeptMap() throws SQLException {
+    public static void setEmployeesPerDeptMap() throws SQLException {
         employeesPerDept = new TreeMap<>();
         for(Department d : departmentManager.getAllDepts()){
             employeesPerDept.put(d.getId(),0);

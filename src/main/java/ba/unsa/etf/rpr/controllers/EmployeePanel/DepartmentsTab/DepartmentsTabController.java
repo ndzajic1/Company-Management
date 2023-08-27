@@ -120,6 +120,7 @@ public class DepartmentsTabController {
     public void refreshTable() throws SQLException {
 
         departmentsList = departmentManager.getAllDepts();
+        DepartmentCellValueFactory.setEmployeesPerDeptMap();
         departmentsTable.setItems(FXCollections.observableArrayList(departmentsList));
         departmentsTable.refresh();
 

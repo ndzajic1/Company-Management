@@ -18,8 +18,8 @@ import java.util.TreeMap;
 public class JobCellValueFactory<T> implements Callback<TableColumn.CellDataFeatures<Job, String>, ObservableValue<String>> {
 
     // mora ovo bolje
-    private EmployeeManager employeeManager = new EmployeeManager();
-    private JobManager jobManager = new JobManager();
+    private static EmployeeManager employeeManager = new EmployeeManager();
+    private static JobManager jobManager = new JobManager();
     private String field;
     private static Map<Integer, Integer> employeesPerJob = null;
 
@@ -30,7 +30,7 @@ public class JobCellValueFactory<T> implements Callback<TableColumn.CellDataFeat
         }
     }
 
-    public void setEmployeesPerJobMap() throws SQLException {
+    public static void setEmployeesPerJobMap() throws SQLException {
         employeesPerJob = new TreeMap<>();
         for(Job d : jobManager.getAllJobs()){
             employeesPerJob.put(d.getId(),0);

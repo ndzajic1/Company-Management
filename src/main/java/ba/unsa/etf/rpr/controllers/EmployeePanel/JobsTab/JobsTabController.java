@@ -79,8 +79,9 @@ public class JobsTabController {
 
     }
 
-    void refreshTable() throws SQLException {
+    public void refreshTable() throws SQLException {
         jobsList = jobManager.getAllJobs();
+        JobCellValueFactory.setEmployeesPerJobMap();
         jobsTable.setItems(FXCollections.observableArrayList(jobsList));
         jobsTable.refresh();
     }
