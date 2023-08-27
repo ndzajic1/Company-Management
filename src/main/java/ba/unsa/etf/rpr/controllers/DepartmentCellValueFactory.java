@@ -16,9 +16,9 @@ import java.util.TreeMap;
 
 public class DepartmentCellValueFactory<T> implements Callback<TableColumn.CellDataFeatures<Department, String>, ObservableValue<String>> {
 
-    private EmployeeManager employeeManager = new EmployeeManager();
-    private DepartmentManager departmentManager = new DepartmentManager();
-    private String field;
+    private final EmployeeManager employeeManager = new EmployeeManager();
+    private final DepartmentManager departmentManager = new DepartmentManager();
+    private final String field;
     private static Map<Integer, Integer> employeesPerDept = null;
 
     public DepartmentCellValueFactory(String e) throws SQLException {
@@ -39,15 +39,6 @@ public class DepartmentCellValueFactory<T> implements Callback<TableColumn.CellD
         }
     }
 
-    public static void setDepartmentList(List<Department> departmentList) {
-        DepartmentCellValueFactory.departmentList = departmentList;
-    }
-
-    private
-    public DepartmentCellValueFactory(Map<Integer, Integer> map){
-        field = "Employees";
-        numOfEmployeesPerDept = map;
-    }
 
     @Override
     public ObservableValue<String> call(TableColumn.CellDataFeatures<Department, String> features) {
@@ -56,7 +47,7 @@ public class DepartmentCellValueFactory<T> implements Callback<TableColumn.CellD
             case "Department" -> new SimpleStringProperty(e.getName());
             case "Location" -> new SimpleStringProperty(e.getLocation());
             case "Manager" -> new SimpleStringProperty(e.getManager().getFirstName() + " " + e.getManager().getLastName());
-            case "Employees" -> new SimpleStringProperty(Integer.toString(numOfEmployeesPerDept.get(e.getId())));
+            case "Employees" -> new SimpleStringProperty(Integer.toString(employeesPerDept.get(e.getId())));
             default -> throw new RuntimeException();
         };
     }

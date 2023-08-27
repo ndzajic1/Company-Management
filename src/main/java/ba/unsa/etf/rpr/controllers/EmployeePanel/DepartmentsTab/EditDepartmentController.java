@@ -32,7 +32,7 @@ public class EditDepartmentController {
     private SimpleStringProperty deptProperty;
 
     @FXML
-    private TextField location;
+    private TextField deptLocation;
     private SimpleStringProperty locationProperty;
     public ChoiceBox<Employee> managers;
     private ObservableList<Employee> managersList;
@@ -49,7 +49,8 @@ public class EditDepartmentController {
     @FXML
     public void initialize(){
         deptName.textProperty().bindBidirectional(deptProperty);
-        location.textProperty().bindBidirectional(locationProperty);
+        deptLocation.textProperty().bindBidirectional(locationProperty);
+        managers.setValue(department.getManager());
         managers.setItems(managersList);
         managers.setConverter(new StringConverter<Employee>() {
             @Override
