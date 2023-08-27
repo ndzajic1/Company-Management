@@ -37,7 +37,7 @@
             <Insets bottom="5.0" left="60.0" top="3.0" />
          </GridPane.margin>
       </Button>
-      <Button fx:id="editButton" mnemonicParsing="false" onAction="#editDept" prefHeight="26.0" prefWidth="44.0" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <Button fx:id="editButton" mnemonicParsing="false"  prefHeight="26.0" prefWidth="44.0" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="5.0" left="40.0" top="3.0" />
          </GridPane.margin>

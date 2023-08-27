@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dept value factory">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/DepartmentCellValueFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/DepartmentCellValueFactory.java" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dept control" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,13 +111,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00108" summary="new fxmls">
-      <created>1692200751406</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1692200751406</updated>
     </task>
     <task id="LOCAL-00109" summary="home tab">
       <created>1692211924201</created>
@@ -457,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693096269435</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="dept control">
+      <created>1693096888998</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1693096888998</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -472,7 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gui working" />
     <MESSAGE value="change password gui" />
     <MESSAGE value="roles" />
     <MESSAGE value="opening tabs" />
@@ -497,7 +494,8 @@
     <MESSAGE value="rm dept" />
     <MESSAGE value="dept building" />
     <MESSAGE value="dept value factory" />
-    <option name="LAST_COMMIT_MESSAGE" value="dept value factory" />
+    <MESSAGE value="dept control" />
+    <option name="LAST_COMMIT_MESSAGE" value="dept control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

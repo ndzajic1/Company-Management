@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab.DepartmentsTabController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab.DepartmentsTabController">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -19,17 +19,17 @@
             <RowConstraints maxHeight="84.59995117187503" minHeight="10.0" prefHeight="66.79998779296875" vgrow="SOMETIMES" />
         </rowConstraints>
         <children>
-            <ButtonBar prefHeight="79.0" prefWidth="542.0" GridPane.rowIndex="2">
+            <ButtonBar prefHeight="66.0" prefWidth="658.0" GridPane.rowIndex="2">
                 <buttons>
                     <Button fx:id="addButton" mnemonicParsing="false" onAction="#addDept" text="Add" />
                     <Button fx:id="editButton" mnemonicParsing="false" onAction="#editDept" text="Edit" />
                     <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeDept" text="Remove" />
                 </buttons>
                 <GridPane.margin>
-                    <Insets right="20.0" />
+                    <Insets bottom="20.0" right="20.0" />
                 </GridPane.margin>
             </ButtonBar>
-            <TableView fx:id="departmentsTable" prefHeight="262.0" prefWidth="564.0" GridPane.rowIndex="1">
+            <TableView fx:id="departmentsTable" prefHeight="331.0" prefWidth="702.0" GridPane.rowIndex="1">
                 <columns>
                     <TableColumn fx:id="deptNameCol" prefWidth="176.39998799562454" text="Department" />
                     <TableColumn fx:id="locationCol" prefWidth="166.00003051757812" text="Location" />
