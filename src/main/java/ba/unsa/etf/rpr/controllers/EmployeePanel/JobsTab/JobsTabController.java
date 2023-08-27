@@ -2,7 +2,6 @@ package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.bll.JobManager;
-import ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab.AddDepartmentController;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.controllers.JobCellValueFactory;
 import ba.unsa.etf.rpr.domain.Employee;
@@ -21,9 +20,7 @@ import javafx.stage.StageStyle;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
-import java.util.TreeMap;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 

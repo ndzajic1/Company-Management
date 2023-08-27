@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dept fxml">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/AddJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/AddJobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EditJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/EditJobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/EmployeePanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/EmployeePanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/JobsTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/JobsTabController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/RemoveJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/RemoveJobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AddJob.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddJob.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/JobsTab/JobsTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/EmployeePanel/JobsTab/JobsTab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/RemoveJob.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RemoveJob.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="rm job controller" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,48 +111,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00110" summary="employees tab">
-      <created>1692212087755</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1692212087756</updated>
-    </task>
-    <task id="LOCAL-00111" summary="depts tab">
-      <created>1692212320395</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1692212320396</updated>
-    </task>
-    <task id="LOCAL-00112" summary="jobs tab">
-      <created>1692212713247</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1692212713247</updated>
-    </task>
-    <task id="LOCAL-00113" summary="employees new tab">
-      <created>1692213208629</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1692213208629</updated>
-    </task>
-    <task id="LOCAL-00114" summary="depts new tab">
-      <created>1692213362029</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1692213362029</updated>
-    </task>
-    <task id="LOCAL-00115" summary="tabs rearranged">
-      <created>1692213630432</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1692213630432</updated>
     </task>
     <task id="LOCAL-00116" summary="home tab controller">
       <created>1692214613671</created>
@@ -464,7 +413,49 @@
       <option name="project" value="LOCAL" />
       <updated>1693097378977</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="job value factory">
+      <created>1693097954970</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1693097954970</updated>
+    </task>
+    <task id="LOCAL-00160" summary="jobs tab setup">
+      <created>1693098080268</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1693098080269</updated>
+    </task>
+    <task id="LOCAL-00161" summary="jobs tab setup opening forms">
+      <created>1693098318388</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1693098318388</updated>
+    </task>
+    <task id="LOCAL-00162" summary="add job controller">
+      <created>1693098484452</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1693098484452</updated>
+    </task>
+    <task id="LOCAL-00163" summary="edit job controller">
+      <created>1693098616894</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1693098616894</updated>
+    </task>
+    <task id="LOCAL-00164" summary="rm job controller">
+      <created>1693098728862</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1693098728862</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,12 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="roles" />
-    <MESSAGE value="opening tabs" />
-    <MESSAGE value="add empl window" />
-    <MESSAGE value="fix add dao" />
-    <MESSAGE value="select emp binding" />
-    <MESSAGE value="edit controller" />
     <MESSAGE value="controllers set up" />
     <MESSAGE value="add fixed" />
     <MESSAGE value="add emp done" />
@@ -504,7 +489,13 @@
     <MESSAGE value="dept value factory" />
     <MESSAGE value="dept control" />
     <MESSAGE value="dept fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="dept fxml" />
+    <MESSAGE value="job value factory" />
+    <MESSAGE value="jobs tab setup" />
+    <MESSAGE value="jobs tab setup opening forms" />
+    <MESSAGE value="add job controller" />
+    <MESSAGE value="edit job controller" />
+    <MESSAGE value="rm job controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="rm job controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
