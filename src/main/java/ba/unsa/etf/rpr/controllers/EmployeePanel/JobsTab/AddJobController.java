@@ -1,27 +1,16 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 
 
-import ba.unsa.etf.rpr.bll.DepartmentManager;
-import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.bll.JobManager;
-import ba.unsa.etf.rpr.dao.DaoFactory;
-import ba.unsa.etf.rpr.domain.Department;
-import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
-import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
-public class AddJob {
+public class AddJobController {
 
     private JobManager jobManager = new JobManager();
 
@@ -37,7 +26,7 @@ public class AddJob {
     private SimpleStringProperty maxSalaryProperty;
 
 
-    public AddJob() throws SQLException {
+    public AddJobController() throws SQLException {
         titleProperty = new SimpleStringProperty("");
         minSalaryProperty = new SimpleStringProperty("");
         maxSalaryProperty = new SimpleStringProperty("");

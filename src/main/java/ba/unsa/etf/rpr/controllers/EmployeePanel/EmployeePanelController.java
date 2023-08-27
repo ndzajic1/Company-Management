@@ -3,7 +3,7 @@ package ba.unsa.etf.rpr.controllers.EmployeePanel;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab.DepartmentsTabController;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeesTab.EmployeesTabController;
 import ba.unsa.etf.rpr.controllers.HomeTabController;
-import ba.unsa.etf.rpr.controllers.JobsTabController;
+import ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab.JobsTabController;
 import ba.unsa.etf.rpr.domain.Employee;
 import javafx.fxml.FXML;
 import javafx.scene.control.Tab;

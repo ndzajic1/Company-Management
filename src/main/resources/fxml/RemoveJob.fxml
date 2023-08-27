@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.RemoveJob">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab.RemoveJobController">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.60003662109375" minWidth="10.0" prefWidth="100.79998779296875" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.60003662109375" minWidth="10.0" prefWidth="100.79998779296875" />

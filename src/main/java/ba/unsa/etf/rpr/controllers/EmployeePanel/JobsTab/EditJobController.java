@@ -1,4 +1,4 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 
 import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.domain.Job;
@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 
 import java.sql.SQLException;
 
-public class EditJob {
+public class EditJobController {
     private JobManager jobManager = new JobManager();
     private Job job;
 
@@ -26,7 +26,7 @@ public class EditJob {
     private SimpleStringProperty maxSalaryProperty;
 
 
-    public EditJob(Job j) throws SQLException {
+    public EditJobController(Job j) throws SQLException {
         this.job = j;
         titleProperty = new SimpleStringProperty(j.getTitle());
         minSalaryProperty = new SimpleStringProperty(Double.toString(j.getMinSalary()));

@@ -1,8 +1,9 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
+import ba.unsa.etf.rpr.controllers.JobCellValueFactory;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
 import javafx.collections.FXCollections;
@@ -69,7 +70,7 @@ public class JobsTabController {
         titleCol.setCellValueFactory(new JobCellValueFactory("Job Title"));
         minSalaryCol.setCellValueFactory(new JobCellValueFactory("Minimal Salary"));
         maxSalaryCol.setCellValueFactory(new JobCellValueFactory("Maximal Salary"));
-        numOfEmployeesCol.setCellValueFactory(new JobCellValueFactory(employeesPerJob));
+        numOfEmployeesCol.setCellValueFactory(new JobCellValueFactory("Employees"));
 
         jobsTable.setItems(FXCollections.observableArrayList(jobsList));
 

@@ -1,16 +1,14 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 
-import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.JobManager;
-import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Job;
 import javafx.event.ActionEvent;
 
-public class RemoveJob {
+public class RemoveJobController {
     private Job job;
     private JobManager jobManager = new JobManager();
 
-    public RemoveJob(Job j){
+    public RemoveJobController(Job j){
         this.job = j;
     }
 
