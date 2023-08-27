@@ -42,7 +42,7 @@
             <Insets bottom="5.0" left="60.0" top="3.0" />
          </GridPane.margin>
       </Button>
-      <Button fx:id="addJob" defaultButton="true" mnemonicParsing="false" onAction="#addJob" prefHeight="26.0" prefWidth="44.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <Button fx:id="addButton" defaultButton="true" mnemonicParsing="false" onAction="#addJob" prefHeight="26.0" prefWidth="44.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets bottom="5.0" left="40.0" top="3.0" />
          </GridPane.margin>

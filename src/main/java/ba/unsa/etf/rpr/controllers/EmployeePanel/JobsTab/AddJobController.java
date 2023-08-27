@@ -18,16 +18,17 @@ public class AddJobController {
     private JobManager jobManager = new JobManager();
 
     private JobsTabController mainController;
+    @FXML
+    private Button addButton;
 
-    public Button addJob;
-
-    public TextField title;
+    @FXML
+    private TextField title;
     private SimpleStringProperty titleProperty;
-
-    public TextField minSalary;
+    @FXML
+    private TextField minSalary;
     private SimpleStringProperty minSalaryProperty;
-
-    public TextField maxSalary;
+    @FXML
+    private TextField maxSalary;
     private SimpleStringProperty maxSalaryProperty;
 
 
