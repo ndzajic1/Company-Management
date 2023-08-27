@@ -56,24 +56,27 @@ public class JobsTabController {
     @FXML
     void initialize() throws SQLException {
         this.employee = EmployeePanelController.getUser();
-        jobsList = jobManager.getAllJobs();
-        Map<Integer, Integer> employeesPerJob = new TreeMap<>();
-        for(Job j : jobsList){
-            employeesPerJob.put(j.getId(),0);
-        }
-        
-        for(Employee e : employeeManager.getAllEmployees()){
-            int curr = employeesPerJob.get(e.getJob().getId());
-            employeesPerJob.put(e.getJob().getId(), curr + 1);
-        }
         
         titleCol.setCellValueFactory(new JobCellValueFactory("Job Title"));
         minSalaryCol.setCellValueFactory(new JobCellValueFactory("Minimal Salary"));
         maxSalaryCol.setCellValueFactory(new JobCellValueFactory("Maximal Salary"));
         numOfEmployeesCol.setCellValueFactory(new JobCellValueFactory("Employees"));
 
-        jobsTable.setItems(FXCollections.observableArrayList(jobsList));
+        refreshTable();
 
+        //disable buttons if not admin
+        if(!employee.isAdmin()){
+            addButton.setDisable(true);
+            editButton.setDisable(true);
+            removeButton.setDisable(true);
+        }
+
+    }
+
+    void refreshTable() throws SQLException {
+        jobsList = jobManager.getAllJobs();
+        jobsTable.setItems(FXCollections.observableArrayList(jobsList));
+        jobsTable.refresh();
     }
 
     public void addJob(ActionEvent actionEvent) {
