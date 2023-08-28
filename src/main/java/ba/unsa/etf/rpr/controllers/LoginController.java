@@ -49,6 +49,7 @@ public class LoginController {
                 stage.setTitle("Employee Panel");
                 stage.initStyle(StageStyle.UTILITY);
                 stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
+                stage.setResizable(false);
                 stage.show();
                 Node n = (Node) actionEvent.getSource();
                 Stage currStage = (Stage) n.getScene().getWindow();
