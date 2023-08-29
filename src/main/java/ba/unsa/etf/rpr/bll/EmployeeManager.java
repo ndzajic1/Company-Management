@@ -3,16 +3,17 @@ package ba.unsa.etf.rpr.bll;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeManager{
-    public Employee getById(int id) throws SQLException {
+    public Employee getById(int id) throws SQLException, CompanyException {
         return DaoFactory.employeeDao().getById(id);
     }
-    private String generateUsername(Employee user) throws SQLException {
+    private String generateUsername(Employee user) throws SQLException, CompanyException {
         List<Employee> users = getAllEmployees();
         int counter = 0;
         for(Employee e : users){
@@ -28,7 +29,7 @@ public class EmployeeManager{
             return sb.append(counter).toString();
     }
 
-    public void addNewEmployee(Employee e) throws SQLException {
+    public void addNewEmployee(Employee e) throws SQLException, CompanyException {
         String username = generateUsername(e);
         e.setId(666);
         e.setUsername(username);
@@ -38,25 +39,25 @@ public class EmployeeManager{
     }
 
 
-    public void updateEmployee(Employee e) {
+    public void updateEmployee(Employee e) throws CompanyException {
 
         DaoFactory.employeeDao().update(e);
     }
 
 
-    public void deleteEmployee(int id) {
+    public void deleteEmployee(int id) throws CompanyException {
 
         DaoFactory.employeeDao().delete(id);
     }
 
 
-    public List<Employee> getAllEmployees() throws SQLException {
+    public List<Employee> getAllEmployees() throws SQLException, CompanyException {
         return DaoFactory.employeeDao().getAll();
     }
-    public List<Employee> getEmployeesFromDepartment(Department d){
+    public List<Employee> getEmployeesFromDepartment(Department d) throws CompanyException {
         return DaoFactory.employeeDao().searchByDepartment(d);
     }
-    public Employee getEmployeeByUsername(String username) throws SQLException {
+    public Employee getEmployeeByUsername(String username) throws SQLException, CompanyException {
         List<Employee> employees = getAllEmployees();
         for(Employee e : employees){
             if(e.getUsername().equals(username)){
@@ -66,7 +67,7 @@ public class EmployeeManager{
         return null;
     }
 
-    public List<Employee> searchEmployees(String query) throws SQLException {
+    public List<Employee> searchEmployees(String query) throws CompanyException {
 
         List<Employee> emps = DaoFactory.employeeDao().searchByName(query);
         return emps;

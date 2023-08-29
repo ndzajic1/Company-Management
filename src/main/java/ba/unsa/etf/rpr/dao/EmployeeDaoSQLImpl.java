@@ -3,6 +3,7 @@ package ba.unsa.etf.rpr.dao;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 
 
 import java.security.NoSuchAlgorithmException;
@@ -24,7 +25,7 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
     }
 
     @Override
-    public Employee row2object(ResultSet rs) {
+    public Employee row2object(ResultSet rs) throws CompanyException {
         try{
             Employee obj = new Employee(rs.getInt("id"), rs.getString("first_name"),
                     rs.getString("last_name"), rs.getDate("hire_date").toLocalDate(),
@@ -33,15 +34,15 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
                 obj.setDepartment(DaoFactory.departmentDao().getById(rs.getInt("department_id")));
             }
             catch(Exception e){
-                // its null
+                throw new CompanyException(e.getMessage(),e);
             }
             obj.setUsername(rs.getString("username"));
             obj.setPasswordHash(rs.getString("password_hash"));
             obj.setAdmin(rs.getBoolean("admin"));
            //
             return obj;
-        } catch (SQLException | NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new CompanyException(e.getMessage(),e);
         }
     }
 
@@ -61,8 +62,8 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         return row;
     }
     @Override
-    public List<Employee> searchByName(String name) {
-        try{
+    public List<Employee> searchByName(String name) throws CompanyException {
+
 
             return super.executeQuery("SELECT *\n" +
                             "FROM employees\n" +
@@ -71,36 +72,25 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
                             "      lower(concat(first_name, ' ', last_name)) LIKE concat(?, '%')",
                     new Object[]{name.toLowerCase() + "%", name.toLowerCase() + "%", name.toLowerCase() + "%"});
 
-        } catch(Exception e){
-            throw new RuntimeException();
-        }
+
     }
 
     @Override
-    public List<Employee> searchByDepartment(Department dept) {
-        try {
+    public List<Employee> searchByDepartment(Department dept) throws CompanyException {
             return super.executeQuery("select * from Employees where department_id = ?", new Object[]{dept.getId()});
-        } catch (Exception e) {
-            throw new RuntimeException(); // my own
-        }
+
     }
 
     @Override
-    public List<Employee> searchByJob(Job j) {
-        try {
-            return super.executeQuery("select * from Employees where job_id = ?", new Object[]{j.getId()});
-        } catch (Exception e) {
-            throw new RuntimeException(); // my own
-        }
+    public List<Employee> searchByJob(Job j) throws CompanyException {
+        return super.executeQuery("select * from Employees where job_id = ?", new Object[]{j.getId()});
+
     }
 
     @Override
-    public Employee getByIdWithoutDepartment(int id) throws SQLException {
-        try {
+    public Employee getByIdWithoutDepartment(int id) throws CompanyException {
             return super.executeQueryUnique("select id, first_name, last_name, hire_date, null as department_id, job_id, salary, username, password_hash, admin from Employees where id = ?", new Object[]{id});
-        } catch (Exception e) {
-            throw new RuntimeException(); // my own
-        }
+
     }
 
 
