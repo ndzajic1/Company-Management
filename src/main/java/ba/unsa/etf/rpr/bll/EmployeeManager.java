@@ -10,49 +10,67 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeManager{
-    public Employee getById(int id) throws SQLException, CompanyException {
+    public Employee getById(int id) throws CompanyException {
         return DaoFactory.employeeDao().getById(id);
     }
-    private String generateUsername(Employee user) throws SQLException, CompanyException {
-        List<Employee> users = getAllEmployees();
-        int counter = 0;
-        for(Employee e : users){
-            if(e.getFirstName().charAt(0) == user.getFirstName().charAt(0)
-                    && e.getLastName().equals(user.getLastName()) )
-                counter = counter + 1;
+    private String generateUsername(Employee user) throws CompanyException {
+        try {
+            List<Employee> users = getAllEmployees();
+            int counter = 0;
+            for (Employee e : users) {
+                if (e.getFirstName().charAt(0) == user.getFirstName().charAt(0)
+                        && e.getLastName().equals(user.getLastName()))
+                    counter = counter + 1;
+            }
+            StringBuilder sb = new StringBuilder(Character.toLowerCase(user.getFirstName().charAt(0))
+                    + user.getLastName().toLowerCase());
+            if (counter == 0)
+                return sb.toString();
+            else
+                return sb.append(counter).toString();
+        }catch(CompanyException | SQLException e){
+            throw new CompanyException("Connection lost");
         }
-        StringBuilder sb = new StringBuilder(Character.toLowerCase(user.getFirstName().charAt(0))
-                + user.getLastName().toLowerCase());
-        if(counter == 0)
-            return sb.toString();
-        else
-            return sb.append(counter).toString();
     }
 
-    public void addNewEmployee(Employee e) throws SQLException, CompanyException {
-        String username = generateUsername(e);
-        e.setId(666);
-        e.setUsername(username);
-        e.setAdmin(false);
-        System.out.println(e.toString());
-        DaoFactory.employeeDao().add(e);
+    public void addNewEmployee(Employee e) throws CompanyException {
+        try {
+            String username = generateUsername(e);
+            e.setId(0);
+            e.setUsername(username);
+            e.setAdmin(false);
+            System.out.println(e);
+            DaoFactory.employeeDao().add(e);
+        } catch(CompanyException ee){
+            throw new CompanyException("Connection lost");
+        }
     }
 
 
     public void updateEmployee(Employee e) throws CompanyException {
-
-        DaoFactory.employeeDao().update(e);
+        try {
+            DaoFactory.employeeDao().update(e);
+        } catch(CompanyException ee){
+            throw new CompanyException("Connection lost");
+        }
     }
 
 
     public void deleteEmployee(int id) throws CompanyException {
-
-        DaoFactory.employeeDao().delete(id);
+        try {
+            DaoFactory.employeeDao().delete(id);
+        }catch (CompanyException e){
+            // deleting manager
+        }
     }
 
 
     public List<Employee> getAllEmployees() throws SQLException, CompanyException {
-        return DaoFactory.employeeDao().getAll();
+        try {
+            return DaoFactory.employeeDao().getAll();
+        }catch (Exception e){
+            throw new CompanyException("Connection lost");
+        }
     }
     public List<Employee> getEmployeesFromDepartment(Department d) throws CompanyException {
         return DaoFactory.employeeDao().searchByDepartment(d);

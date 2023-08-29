@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="my exception for dept dao" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="my exception for dal">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,27 +114,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00124" summary="server time fix">
-      <created>1692230764816</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1692230764816</updated>
-    </task>
-    <task id="LOCAL-00125" summary="circ dependency solved">
-      <created>1692293528742</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1692293528743</updated>
-    </task>
-    <task id="LOCAL-00126" summary="hash fixed">
-      <created>1692303420107</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1692303420108</updated>
     </task>
     <task id="LOCAL-00127" summary="loading tabs">
       <created>1692305516926</created>
@@ -455,7 +437,28 @@
       <option name="project" value="LOCAL" />
       <updated>1693297487809</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="my exception for job dao">
+      <created>1693297636900</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1693297636900</updated>
+    </task>
+    <task id="LOCAL-00174" summary="my exception for employee dao">
+      <created>1693298071723</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1693298071723</updated>
+    </task>
+    <task id="LOCAL-00175" summary="my exception for dal">
+      <created>1693298281642</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1693298281643</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -470,9 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="package refactor" />
-    <MESSAGE value="rename dept controllers" />
-    <MESSAGE value="opening forms" />
     <MESSAGE value="calling forms" />
     <MESSAGE value="add dept" />
     <MESSAGE value="edit dept" />
@@ -495,7 +495,10 @@
     <MESSAGE value="my exception" />
     <MESSAGE value="my exception for abstr dao" />
     <MESSAGE value="my exception for dept dao" />
-    <option name="LAST_COMMIT_MESSAGE" value="my exception for dept dao" />
+    <MESSAGE value="my exception for job dao" />
+    <MESSAGE value="my exception for employee dao" />
+    <MESSAGE value="my exception for dal" />
+    <option name="LAST_COMMIT_MESSAGE" value="my exception for dal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
