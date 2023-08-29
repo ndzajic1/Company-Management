@@ -16,7 +16,7 @@ public interface Dao <T> {
      * @param id primary key of entity
      * @return Entity from database
      */
-    T getById(int id) throws SQLException, CompanyException;
+    T getById(int id) throws  CompanyException;
 
     /**
      * Saves entity into database
@@ -42,5 +42,5 @@ public interface Dao <T> {
      * Lists all entities from database. WARNING: Very slow operation because it reads all records.
      * @return List of entities from database
      */
-    List<T> getAll() throws SQLException, CompanyException;
+    List<T> getAll() throws CompanyException;
 }

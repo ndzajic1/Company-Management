@@ -27,7 +27,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
                 String username = p.getProperty("db.username");
                 String password = p.getProperty("db.password");
                 connection = DriverManager.getConnection(url, username, password);
-                System.out.println("Connected");
+                //System.out.println("Connected");
             }
             catch (Exception e){
                 e.printStackTrace();
@@ -49,7 +49,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         return connection;
     }
 
-    public abstract T row2object(ResultSet rs) throws SQLException, CompanyException;
+    public abstract T row2object(ResultSet rs) throws CompanyException;
     public abstract Map<String, Object> object2row(T obj);
 
     public List<T> executeQuery(String query, Object[] params) throws CompanyException {
