@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.domain.Department;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -24,7 +25,7 @@ public class DepartmentDaoSQLImpl extends AbstractDao<Department> implements Dep
     }
 
     @Override
-    public Department row2object(ResultSet rs) {
+    public Department row2object(ResultSet rs) throws CompanyException {
        try{
            Department d = new Department();
            d.setId(rs.getInt(1));
@@ -34,7 +35,7 @@ public class DepartmentDaoSQLImpl extends AbstractDao<Department> implements Dep
            d.getManager().setDepartment(d);
            return d;
        } catch (SQLException e) {
-           throw new RuntimeException(e);
+           throw new CompanyException(e.getMessage(),e);
        }
     }
 
@@ -49,11 +50,8 @@ public class DepartmentDaoSQLImpl extends AbstractDao<Department> implements Dep
     }
 
     @Override
-    public List<Department> searchByName(String name) {
-        try {
+    public List<Department> searchByName(String name) throws CompanyException {
             return super.executeQuery("select * from Departments where lower(name) = '?%'", new Object[]{name.toLowerCase()});
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+
     }
 }

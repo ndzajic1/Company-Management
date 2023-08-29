@@ -49,7 +49,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         return connection;
     }
 
-    public abstract T row2object(ResultSet rs) throws SQLException;
+    public abstract T row2object(ResultSet rs) throws SQLException, CompanyException;
     public abstract Map<String, Object> object2row(T obj);
 
     public List<T> executeQuery(String query, Object[] params) throws CompanyException {
