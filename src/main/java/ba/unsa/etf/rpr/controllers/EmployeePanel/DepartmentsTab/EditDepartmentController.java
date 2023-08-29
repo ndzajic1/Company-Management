@@ -4,15 +4,14 @@ import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
@@ -37,7 +36,7 @@ public class EditDepartmentController {
     public ChoiceBox<Employee> managers;
     private ObservableList<Employee> managersList;
 
-    public EditDepartmentController(Department d, Object o) throws SQLException {
+    public EditDepartmentController(Department d, Object o) throws CompanyException {
         this.department = d;
         this.mainController = (DepartmentsTabController) o;
         deptProperty = new SimpleStringProperty(d.getName());
@@ -66,19 +65,23 @@ public class EditDepartmentController {
 
     @FXML
     public void editDept(ActionEvent actionEvent) throws SQLException {
+        try {
+            Employee mngr = managers.valueProperty().getValue();
 
-        Employee mngr = managers.valueProperty().getValue();
+            department.setName(deptProperty.getValue());
+            department.setLocation(locationProperty.getValue());
+            department.setManager(mngr);
 
-        department.setName(deptProperty.getValue());
-        department.setLocation(locationProperty.getValue());
-        department.setManager(mngr);
+            departmentManager.updateDept(department);
 
-        departmentManager.updateDept(department);
+            mainController.refreshTable();
 
-        mainController.refreshTable();
-
-        Node n = (Node) actionEvent.getSource();
-        Stage currStage = (Stage) n.getScene().getWindow();
-        currStage.close();
+            Node n = (Node) actionEvent.getSource();
+            Stage currStage = (Stage) n.getScene().getWindow();
+            currStage.close();
+        } catch(CompanyException e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 }

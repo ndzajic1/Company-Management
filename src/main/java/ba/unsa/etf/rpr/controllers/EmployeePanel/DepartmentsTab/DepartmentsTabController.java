@@ -6,6 +6,7 @@ import ba.unsa.etf.rpr.controllers.DepartmentCellValueFactory;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -82,12 +83,12 @@ public class DepartmentsTabController {
     }
 
     @FXML
-    void addDept(ActionEvent event) throws SQLException {
+    void addDept(ActionEvent event) throws SQLException, CompanyException {
         openForm(event, new AddDepartmentController(this), "/fxml/EmployeePanel/DepartmentsTab/AddDepartment.fxml", "Add department" );
     }
 
     @FXML
-    void editDept(ActionEvent event) throws SQLException {
+    void editDept(ActionEvent event) throws SQLException, CompanyException {
         openForm(event, new EditDepartmentController(departmentsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/DepartmentsTab/EditDepartment.fxml", "Edit department" );
     }
 
@@ -118,12 +119,15 @@ public class DepartmentsTabController {
     }
 
     public void refreshTable() throws SQLException {
-
-        departmentsList = departmentManager.getAllDepts();
-        DepartmentCellValueFactory.setEmployeesPerDeptMap();
-        departmentsTable.setItems(FXCollections.observableArrayList(departmentsList));
-        departmentsTable.refresh();
-
+        try {
+            departmentsList = departmentManager.getAllDepts();
+            DepartmentCellValueFactory.setEmployeesPerDeptMap();
+            departmentsTable.setItems(FXCollections.observableArrayList(departmentsList));
+            departmentsTable.refresh();
+        } catch(CompanyException e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 
 
