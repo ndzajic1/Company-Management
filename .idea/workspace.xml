@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="EmployeeManager exception handling">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="JobManager exception handling" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,27 +111,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00128" summary="toString methods">
-      <created>1692312899946</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1692312899947</updated>
-    </task>
-    <task id="LOCAL-00129" summary="home tab controller">
-      <created>1692313503222</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1692313503222</updated>
-    </task>
-    <task id="LOCAL-00130" summary="emps tab controller">
-      <created>1692313628360</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1692313628360</updated>
     </task>
     <task id="LOCAL-00131" summary="depts tab controller">
       <created>1692313834288</created>
@@ -458,7 +434,28 @@
       <option name="project" value="LOCAL" />
       <updated>1693299419158</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="EmployeeManager">
+      <created>1693351332275</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1693351332275</updated>
+    </task>
+    <task id="LOCAL-00178" summary="DepartmentManager exception handling">
+      <created>1693351618044</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1693351618044</updated>
+    </task>
+    <task id="LOCAL-00179" summary="JobManager exception handling">
+      <created>1693351858880</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1693351858880</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -473,9 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add dept" />
-    <MESSAGE value="edit dept" />
-    <MESSAGE value="rm dept" />
     <MESSAGE value="dept building" />
     <MESSAGE value="dept value factory" />
     <MESSAGE value="dept control" />
@@ -498,7 +492,10 @@
     <MESSAGE value="my exception for employee dao" />
     <MESSAGE value="my exception for dal" />
     <MESSAGE value="EmployeeManager exception handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="EmployeeManager exception handling" />
+    <MESSAGE value="EmployeeManager" />
+    <MESSAGE value="DepartmentManager exception handling" />
+    <MESSAGE value="JobManager exception handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="JobManager exception handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
