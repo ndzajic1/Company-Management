@@ -6,6 +6,7 @@ import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
@@ -51,7 +52,7 @@ public class AddEmployeeController {
     public  Spinner<Double> salary;
     private SimpleDoubleProperty salaryProperty;
 
-    public AddEmployeeController(Object mainController) throws SQLException {
+    public AddEmployeeController(Object mainController) throws CompanyException {
         this.mainController = (EmployeesTabController) mainController;
         firstNameProperty = new SimpleStringProperty("");
         lastNameProperty = new SimpleStringProperty("");
@@ -89,7 +90,6 @@ public class AddEmployeeController {
         dept.setItems(departments);
         job.setItems(jobs);
         salary.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(0,100000, 0));
-        // mozda ovo u listener
         salary.getValueFactory().valueProperty().bindBidirectional(salaryProperty.asObject());
         job.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Job>() {
             @Override
@@ -103,27 +103,30 @@ public class AddEmployeeController {
 
     @FXML
     public void addEmployee(ActionEvent actionEvent) throws SQLException {
+        try {
+            Department d = dept.valueProperty().getValue();
+            Job j = job.valueProperty().getValue();
 
-        Department d = dept.valueProperty().getValue();
-        Job j = job.valueProperty().getValue();
+            Employee e = new Employee();
+            e.setFirstName(firstNameProperty.getValue());
+            e.setLastName(lastNameProperty.getValue());
+            e.setHireDate(hired.getValue());
+            e.setDepartment(d);
+            e.setJob(j);
 
-        Employee e = new Employee();
-        e.setFirstName(firstNameProperty.getValue());
-        e.setLastName(lastNameProperty.getValue());
-        e.setHireDate(hired.getValue());
-        e.setDepartment(d);
-        e.setJob(j);
+            System.out.println(salary.getValueFactory().getValue());
+            e.setSalary(salary.getValueFactory().getValue());
 
-        System.out.println(salary.getValueFactory().getValue());
-        e.setSalary(salary.getValueFactory().getValue());
+            employeeManager.addNewEmployee(e);
+            mainController.returnFromModal();
 
-        employeeManager.addNewEmployee(e);
-        mainController.returnFromModal();
-
-        Node n = (Node) actionEvent.getSource();
-        Stage currStage = (Stage) n.getScene().getWindow();
-        currStage.close();
-
+            Node n = (Node) actionEvent.getSource();
+            Stage currStage = (Stage) n.getScene().getWindow();
+            currStage.close();
+        } catch(CompanyException e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 
 

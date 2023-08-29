@@ -4,6 +4,7 @@ import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.controllers.EmployeeCellValueFactory;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Employee;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,6 +17,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +35,7 @@ public class EmployeesTabController {
     public List<Employee> getEmployeeList(){
         return employeeList;
     }
-    public void setEmployeeList() throws SQLException {
+    public void setEmployeeList() throws SQLException, CompanyException {
         if(employee.isAdmin())
             employeeList = employeeManager.getAllEmployees();
         else{
@@ -85,7 +87,7 @@ public class EmployeesTabController {
     }
 
     @FXML
-    public void initialize() throws SQLException {
+    public void initialize() throws SQLException, CompanyException {
 
         this.employee = EmployeePanelController.getUser();
         firstNameCol.setCellValueFactory(new EmployeeCellValueFactory("First Name"));
@@ -112,13 +114,13 @@ public class EmployeesTabController {
     }
 
     @FXML
-    public void addEmployee(ActionEvent event) throws SQLException {
+    public void addEmployee(ActionEvent event) throws CompanyException {
         // open new window
         openForm(event, new AddEmployeeController(this), "/fxml/EmployeePanel/EmployeesTab/AddEmployee.fxml", "Add employee");
     }
 
     @FXML
-   public void editEmployee(ActionEvent event) throws SQLException {
+   public void editEmployee(ActionEvent event) throws CompanyException {
         // open new window
         openForm(event, new EditEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "Edit employee");
     }
@@ -143,7 +145,7 @@ public class EmployeesTabController {
             stage.initModality(Modality.WINDOW_MODAL);
             stage.show();
 
-        }catch (Exception e){
+        }catch ( IOException e){
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
@@ -151,27 +153,32 @@ public class EmployeesTabController {
 
     @FXML
     public void searchEmployees(ActionEvent event) throws SQLException {
-        // refresh  the list
-        String query = searchField.getText();
-        if(query.equals(""))
-            refreshTable(employeeList);
-        else
-            refreshTable(employeeManager.searchEmployees(query));
-        System.out.println(employeeList.size());
+        try {
+            String query = searchField.getText();
+            if (query.equals(""))
+                refreshTable(employeeList);
+            else
+                refreshTable(employeeManager.searchEmployees(query));
+        } catch (CompanyException e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 
     public void refreshTable(List<Employee> employees) throws SQLException {
-
-
         employeesTable.setItems(FXCollections.observableArrayList(employees));
         employeesTable.refresh();
 
-        System.out.println("SIZEEEEEEEE" + employeeList.size());
     }
 
     public void returnFromModal() throws SQLException {
-        setEmployeeList();
-        refreshTable(getEmployeeList());
+        try {
+            setEmployeeList();
+            refreshTable(getEmployeeList());
+        } catch (CompanyException e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 
 }

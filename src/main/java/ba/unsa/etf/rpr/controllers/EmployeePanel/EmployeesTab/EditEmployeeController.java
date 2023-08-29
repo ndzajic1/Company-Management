@@ -6,6 +6,7 @@ import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
@@ -49,7 +50,7 @@ public class EditEmployeeController {
     public Spinner<Double> salary;
     private SimpleDoubleProperty salaryProperty;
 
-    public EditEmployeeController(Employee e, Object mainController) throws SQLException {
+    public EditEmployeeController(Employee e, Object mainController) throws CompanyException {
         this.employee = e;
         this.mainController = (EmployeesTabController) mainController;
         System.out.println(e);
@@ -108,48 +109,29 @@ public class EditEmployeeController {
     }
 
     @FXML
-    public void editEmployee(ActionEvent actionEvent) throws SQLException, InterruptedException {
+    public void editEmployee(ActionEvent actionEvent) throws SQLException {
+        try {
+            Department d = dept.valueProperty().getValue();
+            Job j = job.valueProperty().getValue();
 
-        Department d = dept.valueProperty().getValue();
-        Job j = job.valueProperty().getValue();
+            employee.setFirstName(firstNameProperty.getValue());
+            employee.setLastName(lastNameProperty.getValue());
+            employee.setHireDate(hired.getValue());
+            employee.setDepartment(d);
+            employee.setJob(j);
+            employee.setSalary(salary.getValueFactory().getValue());
 
-        employee.setFirstName(firstNameProperty.getValue());
-        employee.setLastName(lastNameProperty.getValue());
-        employee.setHireDate(hired.getValue());
-        employee.setDepartment(d);
-        employee.setJob(j);
-        employee.setSalary(salary.getValueFactory().getValue());
-
-        // db-ui consistency
-        // employeeManager.updateEmployee(employee);
-        // mainController.refreshTable();
-        /*
-        CountDownLatch latch = new CountDownLatch(1);
-        Thread update = new Thread(() -> {
-
-            latch.countDown();
-        });
-        update.start();
-        latch.await();
-        */
-
-       // Platform.runLater(new Thread(() -> {
             employeeManager.updateEmployee(employee);
-         //   try {
 
-                mainController.returnFromModal();
-          //  } catch (SQLException e) {
-           //     System.out.println("THREAD EXCEPTION");
-           //     throw new RuntimeException(e); // my own
+            mainController.returnFromModal();
 
-          //  }
-        //}));
-
-        /////////////////////////////
-        Node n = (Node) actionEvent.getSource();
-        Stage currStage = (Stage) n.getScene().getWindow();
-        currStage.close();
-
+            Node n = (Node) actionEvent.getSource();
+            Stage currStage = (Stage) n.getScene().getWindow();
+            currStage.close();
+        } catch(CompanyException e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
 
     }
 }
