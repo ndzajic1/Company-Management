@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="login controller">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="my exception" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,13 +111,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00121" summary="job tab controller cell val fact">
-      <created>1692220522381</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1692220522381</updated>
     </task>
     <task id="LOCAL-00122" summary="main panel">
       <created>1692229797697</created>
@@ -457,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693260221490</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="my exception">
+      <created>1693296545455</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1693296545455</updated>
+    </task>
+    <option name="localTasksCounter" value="171" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -472,7 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="search mngr" />
     <MESSAGE value="search done" />
     <MESSAGE value="search done really" />
     <MESSAGE value="package refactor" />
@@ -497,7 +494,8 @@
     <MESSAGE value="depts finished" />
     <MESSAGE value="basic gui done" />
     <MESSAGE value="login controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="login controller" />
+    <MESSAGE value="my exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="my exception" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

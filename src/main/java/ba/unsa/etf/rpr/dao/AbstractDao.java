@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.domain.Idable;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 
 import java.sql.*;
 import java.util.*;
@@ -51,22 +52,22 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     public abstract T row2object(ResultSet rs) throws SQLException;
     public abstract Map<String, Object> object2row(T obj);
 
-    public List<T> executeQuery(String query, Object[] params) throws SQLException {
+    public List<T> executeQuery(String query, Object[] params) throws CompanyException {
         try{
             PreparedStatement ps = getConnection().prepareStatement(query);
-            System.out.println("KVERI " + query);
+            //System.out.println("KVERI " + query);
 
             if(params != null){
-                System.out.println("ParametarI  " + params.length);
+                //System.out.println("ParametarI  " + params.length);
                 for(int i = 1; i <= params.length; i = i + 1){
-                    System.out.println(params[i-1].toString());
+                    //System.out.println(params[i-1].toString());
                     if(params[i-1] instanceof String)
                         ps.setString(i, (String)params[i-1]);
                     else
                         ps.setObject(i, params[i-1]);
                 }
             }
-            System.out.println("RESULTS " + query + " REZULTATI " + ps.toString());
+            //System.out.println("RESULTS " + query + " REZULTATI " + ps.toString());
             ResultSet rs = ps.executeQuery();
             ArrayList<T> list=new ArrayList<>();
             while(rs.next()){
@@ -75,32 +76,32 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
             return list;
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new CompanyException(e.getMessage(), e);
         }
 
     }
 
-    public T executeQueryUnique(String query, Object[] params) throws SQLException {
+    public T executeQueryUnique(String query, Object[] params) throws CompanyException {
         List<T> list = executeQuery(query, params);
 
         if(list != null && list.size() == 1){
             return list.get(0);
         }
         else{
-            throw new RuntimeException(new Exception());// throw my exception
+            throw new CompanyException("No results");// throw my exception
         }
     }
 
 
 
     @Override
-    public T getById(int id) throws SQLException {
+    public T getById(int id) throws CompanyException {
         return executeQueryUnique("select * from " + this.tableName + " where id = ?", new Object[]{id});
     }
 
 
     @Override
-    public T add(T item) {
+    public T add(T item) throws CompanyException {
         Map<String, Object> row = object2row(item);
         Map.Entry<String, String> cols = prepareInsertParts(row);
         StringBuilder builder = new StringBuilder();
@@ -127,7 +128,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             return item;
 
         } catch (SQLException e) {
-            throw new RuntimeException(e); // my exception
+            throw new CompanyException(e.getMessage(), e); // my exception
         }
     }
 
@@ -150,7 +151,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     }
 
     @Override
-    public T update(T item) {
+    public T update(T item) throws CompanyException {
         Map<String, Object> row = object2row(item);
         StringBuilder sb = new StringBuilder();
         String updateParts = prepareUpdateParts(row);
@@ -170,7 +171,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             ps.executeUpdate();
             return item;
         } catch (SQLException e) {
-            throw new RuntimeException(e); // my exception
+            throw new CompanyException(e.getMessage(), e); // my exception
         }
     }
 
@@ -190,19 +191,19 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
 
     @Override
-    public void delete(int id) {
+    public void delete(int id) throws CompanyException {
         String query = "delete from " + tableName + " where id = ?";
         try{
             PreparedStatement ps = getConnection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             ps.setObject(1, id);
             ps.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e); // my exception
+            throw new CompanyException(e.getMessage(),e); // my exception
         }
     }
 
     @Override
-    public List<T> getAll() throws SQLException {
+    public List<T> getAll() throws CompanyException {
         return executeQuery("select * from " + tableName, null);
     }
 }
