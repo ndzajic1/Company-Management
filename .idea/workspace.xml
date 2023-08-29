@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="my exception" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="my exception for dept dao" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,20 +111,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00122" summary="main panel">
-      <created>1692229797697</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1692229797697</updated>
-    </task>
-    <task id="LOCAL-00123" summary="main panel init">
-      <created>1692229894445</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1692229894445</updated>
     </task>
     <task id="LOCAL-00124" summary="server time fix">
       <created>1692230764816</created>
@@ -455,7 +441,21 @@
       <option name="project" value="LOCAL" />
       <updated>1693296545455</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="my exception for abstr dao">
+      <created>1693297199149</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1693297199149</updated>
+    </task>
+    <task id="LOCAL-00172" summary="my exception for dept dao">
+      <created>1693297487809</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1693297487809</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -470,8 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="search done" />
-    <MESSAGE value="search done really" />
     <MESSAGE value="package refactor" />
     <MESSAGE value="rename dept controllers" />
     <MESSAGE value="opening forms" />
@@ -495,7 +493,9 @@
     <MESSAGE value="basic gui done" />
     <MESSAGE value="login controller" />
     <MESSAGE value="my exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="my exception" />
+    <MESSAGE value="my exception for abstr dao" />
+    <MESSAGE value="my exception for dept dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="my exception for dept dao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

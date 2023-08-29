@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.domain.Job;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -29,12 +30,12 @@ public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
             instance = null;
     }
     @Override
-    public Job row2object(ResultSet rs) {
+    public Job row2object(ResultSet rs) throws CompanyException {
         try{
             return new Job(rs.getInt(1), rs.getString(2),
                     rs.getDouble(3), rs.getDouble(4));
         } catch (SQLException e){
-            throw new RuntimeException(); // my own
+            throw new CompanyException(e.getMessage(),e); // my own
         }
     }
 
@@ -49,11 +50,7 @@ public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
     }
 
     @Override
-    public List<Job> searchByTitle(String txt) {
-        try {
+    public List<Job> searchByTitle(String txt) throws CompanyException {
             return super.executeQuery("select * from Jobs where txt = '?%'", new Object[]{txt.toLowerCase()});
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 }
