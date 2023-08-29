@@ -1,7 +1,8 @@
-package ba.unsa.etf.rpr.domain;
+package ba.unsa.etf.rpr;
 
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.dao.DepartmentDaoSQLImpl;
+import ba.unsa.etf.rpr.domain.LoggableUser;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
