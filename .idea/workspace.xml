@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="my exception for dal">
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="EmployeeManager exception handling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/EmployeeManager.java" afterDir="false" />
     </list>
@@ -114,13 +114,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00127" summary="loading tabs">
-      <created>1692305516926</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1692305516927</updated>
     </task>
     <task id="LOCAL-00128" summary="toString methods">
       <created>1692312899946</created>
@@ -458,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693298281643</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="EmployeeManager exception handling">
+      <created>1693299419158</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1693299419158</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -473,7 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="calling forms" />
     <MESSAGE value="add dept" />
     <MESSAGE value="edit dept" />
     <MESSAGE value="rm dept" />
@@ -498,7 +497,8 @@
     <MESSAGE value="my exception for job dao" />
     <MESSAGE value="my exception for employee dao" />
     <MESSAGE value="my exception for dal" />
-    <option name="LAST_COMMIT_MESSAGE" value="my exception for dal" />
+    <MESSAGE value="EmployeeManager exception handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="EmployeeManager exception handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

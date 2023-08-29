@@ -29,7 +29,7 @@ public class EmployeeManager{
             else
                 return sb.append(counter).toString();
         }catch(CompanyException | SQLException e){
-            throw new CompanyException("Connection lost");
+            throw new CompanyException(e.getMessage(), e);
         }
     }
 
@@ -42,7 +42,7 @@ public class EmployeeManager{
             System.out.println(e);
             DaoFactory.employeeDao().add(e);
         } catch(CompanyException ee){
-            throw new CompanyException("Connection lost");
+            throw new CompanyException(ee.getMessage(), ee);
         }
     }
 
@@ -51,7 +51,7 @@ public class EmployeeManager{
         try {
             DaoFactory.employeeDao().update(e);
         } catch(CompanyException ee){
-            throw new CompanyException("Connection lost");
+            throw new CompanyException(ee.getMessage(), ee);
         }
     }
 
@@ -60,7 +60,10 @@ public class EmployeeManager{
         try {
             DaoFactory.employeeDao().delete(id);
         }catch (CompanyException e){
-            // deleting manager
+            if (e.getMessage().contains("FOREIGN KEY")){
+                throw new CompanyException("Selected employee is the manager of another department.");
+            }
+            throw e;
         }
     }
 
@@ -69,7 +72,7 @@ public class EmployeeManager{
         try {
             return DaoFactory.employeeDao().getAll();
         }catch (Exception e){
-            throw new CompanyException("Connection lost");
+            throw new CompanyException(e.getMessage(), e);
         }
     }
     public List<Employee> getEmployeesFromDepartment(Department d) throws CompanyException {
@@ -87,21 +90,7 @@ public class EmployeeManager{
 
     public List<Employee> searchEmployees(String query) throws CompanyException {
 
-        List<Employee> emps = DaoFactory.employeeDao().searchByName(query);
-        return emps;
-        /*
-        System.out.println("dbkveeee" + emps.size());
-        if(query.equals("")){
-            return employees;
-        }
-        List<Employee> filtered = new ArrayList<>();
-        for(Employee e : employees){
-            if(e.getFirstName().toLowerCase().contains(query.toLowerCase()) ||
-                    e.getLastName().toLowerCase().contains(query.toLowerCase()) ||
-                    (e.getFirstName() + " " + e.getLastName()).toLowerCase().contains(query.toLowerCase()))
-                filtered.add(e);
+        return DaoFactory.employeeDao().searchByName(query);
 
-        }
-        return filtered;  */
     }
 }
