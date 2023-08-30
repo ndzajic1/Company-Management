@@ -1,4 +1,4 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.cell_value_factories;
 
 import ba.unsa.etf.rpr.domain.Employee;
 import javafx.beans.property.SimpleStringProperty;

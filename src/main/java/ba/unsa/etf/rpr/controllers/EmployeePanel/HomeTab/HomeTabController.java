@@ -1,7 +1,10 @@
-package ba.unsa.etf.rpr.controllers;
+package ba.unsa.etf.rpr.controllers.EmployeePanel.HomeTab;
 
+import ba.unsa.etf.rpr.controllers.ChangePasswordController;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
+import ba.unsa.etf.rpr.controllers.TitlesConfiguration;
 import ba.unsa.etf.rpr.domain.Employee;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +18,9 @@ import java.io.IOException;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * Home Tab component of main panel.
+ */
 public class HomeTabController {
 
     private Employee user;
@@ -46,13 +52,18 @@ public class HomeTabController {
         deptManager.setText(mngr.getFirstName() + " " + mngr.getLastName());
     }
 
+    /**
+     * Event handler when user selects option for changing the password. Opens window.
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    void changePassword(ActionEvent event) throws IOException {
+    void changePassword(ActionEvent event) throws IOException, CompanyException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ChangePassword.fxml"));
         loader.setController(new ChangePasswordController(user));
         Stage stage = new Stage();
         stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        stage.setTitle("Change Password");
+        stage.setTitle(TitlesConfiguration.getProperty("changePassword"));
         stage.initStyle(StageStyle.UTILITY);
         stage.show();
     }

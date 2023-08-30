@@ -3,7 +3,7 @@ package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
-import ba.unsa.etf.rpr.controllers.JobCellValueFactory;
+import ba.unsa.etf.rpr.controllers.cell_value_factories.JobCellValueFactory;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
 import ba.unsa.etf.rpr.exceptions.CompanyException;

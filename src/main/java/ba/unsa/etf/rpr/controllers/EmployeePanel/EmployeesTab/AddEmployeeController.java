@@ -22,6 +22,9 @@ import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
+/**
+ * Modal window for adding new employee controller.
+ */
 public class AddEmployeeController {
 
     private EmployeeManager employeeManager = new EmployeeManager();
@@ -52,6 +55,11 @@ public class AddEmployeeController {
     public  Spinner<Double> salary;
     private SimpleDoubleProperty salaryProperty;
 
+    /**
+     * Initialize properties in the constructor.
+     * @param mainController
+     * @throws CompanyException
+     */
     public AddEmployeeController(Object mainController) throws CompanyException {
         this.mainController = (EmployeesTabController) mainController;
         firstNameProperty = new SimpleStringProperty("");
@@ -101,8 +109,12 @@ public class AddEmployeeController {
         });
     }
 
+    /**
+     * Event handler, when button for confirming pressed.
+     * @param actionEvent
+     */
     @FXML
-    public void addEmployee(ActionEvent actionEvent) throws SQLException {
+    public void addEmployee(ActionEvent actionEvent) {
         try {
             Department d = dept.valueProperty().getValue();
             Job j = job.valueProperty().getValue();
@@ -129,6 +141,10 @@ public class AddEmployeeController {
         }
     }
 
+    /**
+     * Exit form.
+     * @param actionEvent
+     */
     @FXML
     public void cancel(ActionEvent actionEvent){
         Node n = (Node) actionEvent.getSource();

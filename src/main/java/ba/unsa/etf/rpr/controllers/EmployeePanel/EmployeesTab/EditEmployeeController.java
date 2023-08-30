@@ -22,6 +22,9 @@ import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
+/**
+ * Edit employee window controller.
+ */
 public class EditEmployeeController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
@@ -108,6 +111,11 @@ public class EditEmployeeController {
         });
     }
 
+    /**
+     * Event handler for confirming the update of data.
+     * @param actionEvent
+     * @throws SQLException
+     */
     @FXML
     public void editEmployee(ActionEvent actionEvent) throws SQLException {
         try {
@@ -134,6 +142,11 @@ public class EditEmployeeController {
         }
 
     }
+
+    /**
+     * Exit edit form.
+     * @param actionEvent
+     */
     @FXML
     public void cancel(ActionEvent actionEvent){
         Node n = (Node) actionEvent.getSource();

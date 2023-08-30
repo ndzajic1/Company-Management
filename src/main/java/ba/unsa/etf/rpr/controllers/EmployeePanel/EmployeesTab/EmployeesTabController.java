@@ -1,7 +1,8 @@
 package ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeesTab;
 
 import ba.unsa.etf.rpr.bll.EmployeeManager;
-import ba.unsa.etf.rpr.controllers.EmployeeCellValueFactory;
+import ba.unsa.etf.rpr.controllers.TitlesConfiguration;
+import ba.unsa.etf.rpr.controllers.cell_value_factories.EmployeeCellValueFactory;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.exceptions.CompanyException;
@@ -25,6 +26,9 @@ import java.util.Objects;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * Controller for Employees tab of main panel.
+ */
 public class EmployeesTabController {
 
     private EmployeeManager employeeManager = new EmployeeManager();
@@ -32,9 +36,17 @@ public class EmployeesTabController {
 
     private List<Employee> employeeList = new ArrayList<>();
 
+    /**
+     * @return default stored list for logged user
+     */
     public List<Employee> getEmployeeList(){
         return employeeList;
     }
+
+    /**
+     * loads default list for logged user in employeeList, depending on privileges
+     * @throws CompanyException
+     */
     public void setEmployeeList() throws SQLException, CompanyException {
         if(employee.isAdmin())
             employeeList = employeeManager.getAllEmployees();
@@ -113,31 +125,52 @@ public class EmployeesTabController {
 
     }
 
+    /**
+     * Event handler, opens form for adding new employee.
+     * @param event
+     * @throws CompanyException
+     */
     @FXML
     public void addEmployee(ActionEvent event) throws CompanyException {
         // open new window
-        openForm(event, new AddEmployeeController(this), "/fxml/EmployeePanel/EmployeesTab/AddEmployee.fxml", "Add employee");
+        openForm(event, new AddEmployeeController(this), "/fxml/EmployeePanel/EmployeesTab/AddEmployee.fxml", "addEmployee");
     }
 
+    /**
+     * Event handler, opens form for editing employee.
+     * @param event
+     * @throws CompanyException
+     */
     @FXML
    public void editEmployee(ActionEvent event) throws CompanyException {
         // open new window
-        openForm(event, new EditEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "Edit employee");
+        openForm(event, new EditEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/EditEmployee.fxml", "editEmployee");
     }
 
+    /**
+     * Event handler, opens form for confirming deletion of selected employee.
+     * @param event
+     */
     @FXML
     public void removeEmployee(ActionEvent event) {
         // open new window
-        openForm(event, new RemoveEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/RemoveEmployee.fxml", "Remove employee");
+        openForm(event, new RemoveEmployeeController(employeesTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/EmployeesTab/RemoveEmployee.fxml", "removeEmployee");
     }
 
+    /**
+     * General method for opening window
+     * @param actionEvent
+     * @param controller to be loaded
+     * @param fxmlFile to be loaded
+     * @param title to be set
+     */
     public void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             loader.setController(controller);
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-            stage.setTitle(title);
+            stage.setTitle(TitlesConfiguration.getProperty(title));
             stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
             stage.initStyle(StageStyle.UTILITY);
             stage.setResizable(false);
@@ -145,14 +178,18 @@ public class EmployeesTabController {
             stage.initModality(Modality.WINDOW_MODAL);
             stage.show();
 
-        }catch ( IOException e){
+        }catch (IOException | CompanyException e){
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
     }
 
+    /**
+     * Search of employees in the table handler.
+     * @param event
+     */
     @FXML
-    public void searchEmployees(ActionEvent event) throws SQLException {
+    public void searchEmployees(ActionEvent event) {
         try {
             String query = searchField.getText();
             if (query.equals(""))
@@ -165,17 +202,25 @@ public class EmployeesTabController {
         }
     }
 
-    public void refreshTable(List<Employee> employees) throws SQLException {
+    /**
+     * Update TableView with updated data.
+     * @param employees
+     */
+    public void refreshTable(List<Employee> employees) {
         employeesTable.setItems(FXCollections.observableArrayList(employees));
         employeesTable.refresh();
 
     }
 
-    public void returnFromModal() throws SQLException {
+    /**
+     * Refreshing data and list when returning from modal windoiw.
+     * @throws SQLException
+     */
+    public void returnFromModal() {
         try {
             setEmployeeList();
             refreshTable(getEmployeeList());
-        } catch (CompanyException e){
+        } catch (CompanyException | SQLException e){
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }

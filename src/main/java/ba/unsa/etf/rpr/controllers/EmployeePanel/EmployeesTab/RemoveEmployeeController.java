@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
+/**
+ * Confirm deletion window controller.
+ */
 public class RemoveEmployeeController {
 
     private Employee employee;
@@ -23,8 +26,12 @@ public class RemoveEmployeeController {
         this.mainController = (EmployeesTabController) mainController;
     }
 
+    /**
+     * Confirm deletion event handler.
+     * @param actionEvent
+     */
     @FXML
-    public void removeEmployee(ActionEvent actionEvent) throws SQLException {
+    public void removeEmployee(ActionEvent actionEvent) {
         try {
             employeeManager.deleteEmployee(employee.getId());
             mainController.returnFromModal();
@@ -36,7 +43,9 @@ public class RemoveEmployeeController {
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
     }
-
+    /**
+     * Exit form.
+     */
     @FXML
     public void cancel(ActionEvent actionEvent){
         Node n = (Node) actionEvent.getSource();

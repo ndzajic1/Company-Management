@@ -23,6 +23,9 @@ import java.util.Objects;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * Controller for opening login window.
+ */
 public class LoginController {
 
     private EmployeeManager employeeManager = new EmployeeManager();
@@ -38,7 +41,11 @@ public class LoginController {
         status.setText("");
     }
 
-    public void login(ActionEvent actionEvent) throws NoSuchAlgorithmException, SQLException {
+    /**
+     * Event handler when user submits his credentials.
+     * @param actionEvent
+     */
+    public void login(ActionEvent actionEvent) throws NoSuchAlgorithmException {
         try {
         String passwordHash = LoggableUser.hashedPassword(password.getText());
         Employee user = employeeManager.getEmployeeByUsername(username.getText());
@@ -55,12 +62,17 @@ public class LoginController {
     }
     }
 
-    void openPanel(ActionEvent actionEvent, Employee user) throws IOException {
+    /**
+     * Login is successful, main window opening.
+     * @param actionEvent
+     * @param user
+     */
+    void openPanel(ActionEvent actionEvent, Employee user) throws IOException, CompanyException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EmployeePanel/EmployeePanel.fxml"));
         loader.setController(new EmployeePanelController(user));
         Stage stage = new Stage();
         stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        stage.setTitle("Employee Panel");
+        stage.setTitle(TitlesConfiguration.getProperty("mainPanel"));
         stage.initStyle(StageStyle.UTILITY);
         stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
         stage.setResizable(false);

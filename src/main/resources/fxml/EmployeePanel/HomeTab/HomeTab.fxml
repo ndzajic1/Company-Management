@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-    <GridPane prefHeight="373.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.HomeTabController">
+    <GridPane prefHeight="373.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.EmployeePanel.HomeTab.HomeTabController">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.60003662109375" minWidth="10.0" prefWidth="105.60003662109375" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.60004882812507" minWidth="10.0" prefWidth="377.60004882812507" />
