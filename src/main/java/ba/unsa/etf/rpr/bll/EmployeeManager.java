@@ -28,7 +28,7 @@ public class EmployeeManager{
                 return sb.toString();
             else
                 return sb.append(counter).toString();
-        }catch(CompanyException | SQLException e){
+        }catch(CompanyException e){
             throw new CompanyException(e.getMessage(), e);
         }
     }
@@ -68,7 +68,7 @@ public class EmployeeManager{
     }
 
 
-    public List<Employee> getAllEmployees() throws SQLException, CompanyException {
+    public List<Employee> getAllEmployees() throws CompanyException {
         try {
             return DaoFactory.employeeDao().getAll();
         }catch (Exception e){
@@ -78,7 +78,7 @@ public class EmployeeManager{
     public List<Employee> getEmployeesFromDepartment(Department d) throws CompanyException {
         return DaoFactory.employeeDao().searchByDepartment(d);
     }
-    public Employee getEmployeeByUsername(String username) throws SQLException, CompanyException {
+    public Employee getEmployeeByUsername(String username) throws CompanyException {
         List<Employee> employees = getAllEmployees();
         System.out.println("ITSSS " + employees.size());
         for(Employee e : employees){
