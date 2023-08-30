@@ -18,8 +18,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 public class AppFX extends Application {
 
 
-    public static void main(String[] args) throws SQLException, IOException, NoSuchAlgorithmException {
-        System.out.println(LoggableUser.hashedPassword("12345678"));
+    public static void main(String[] args) {
         launch(args);
 
     }
