@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="DepartmentsTest">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/JobManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/JobManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JobsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JobsTest.java" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="JobsTest">
+      <change afterPath="$PROJECT_DIR$/rung.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,13 +163,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00138" summary="select emp binding">
-      <created>1692923196396</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1692923196396</updated>
     </task>
     <task id="LOCAL-00139" summary="edit controller">
       <created>1692925238962</created>
@@ -509,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693406690872</updated>
     </task>
-    <option name="localTasksCounter" value="187" />
+    <task id="LOCAL-00187" summary="JobsTest">
+      <created>1693407677526</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1693407677526</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -524,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add job controller" />
     <MESSAGE value="edit job controller" />
     <MESSAGE value="rm job controller" />
     <MESSAGE value=" job views" />
@@ -549,7 +546,8 @@
     <MESSAGE value="gui setup" />
     <MESSAGE value="EmployeesTest" />
     <MESSAGE value="DepartmentsTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="DepartmentsTest" />
+    <MESSAGE value="JobsTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="JobsTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
