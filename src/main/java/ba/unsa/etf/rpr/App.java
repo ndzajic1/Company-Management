@@ -179,7 +179,7 @@ public class App {
 
     private static void showEmployees() throws CompanyException {
         for(Employee e : employeeManager.getAllEmployees()){
-            System.out.println(e.getId() + "-" + e.getFirstName() + " " + e.getLastName() + ", " + e.getDepartment().getName() + "Department, " + e.getJob().getTitle());
+            System.out.println(e.getId() + "-" + e.getFirstName() + " " + e.getLastName() + ", " + e.getDepartment().getName() + " Department, " + e.getJob().getTitle());
         }
     }
 }
