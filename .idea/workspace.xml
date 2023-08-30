@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="JobsTest">
-      <change afterPath="$PROJECT_DIR$/rung.bat" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="run script">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/AppFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +86,7 @@
       </method>
     </configuration>
     <configuration name="AppFX" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.App" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.AppFX" />
       <module name="company-management" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-17\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
@@ -163,13 +166,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00139" summary="edit controller">
-      <created>1692925238962</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1692925238962</updated>
     </task>
     <task id="LOCAL-00140" summary="controllers set up">
       <created>1692925663966</created>
@@ -507,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693407677526</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="run script">
+      <created>1693409196238</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1693409196238</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -522,7 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="edit job controller" />
     <MESSAGE value="rm job controller" />
     <MESSAGE value=" job views" />
     <MESSAGE value="edit job tbc" />
@@ -547,7 +549,8 @@
     <MESSAGE value="EmployeesTest" />
     <MESSAGE value="DepartmentsTest" />
     <MESSAGE value="JobsTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="JobsTest" />
+    <MESSAGE value="run script" />
+    <option name="LAST_COMMIT_MESSAGE" value="run script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
