@@ -2,6 +2,9 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
+/**
+ * Java Bean for Job entity in the system.
+ */
 public class Job implements Idable {
     int id;
     String title;

@@ -1,9 +1,10 @@
 package ba.unsa.etf.rpr.domain;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Objects;
-
+/**
+ * Java Bean for Employee entity, referencing Department and Job entities.
+ */
 public class Employee extends LoggableUser implements Idable{
     private int id;
     private String firstName;

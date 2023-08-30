@@ -2,6 +2,9 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
+/**
+ * Java Bean for Department entity, referencing Employee entity via manager:Employee attribute.
+ */
 public class Department implements Idable {
     int id;
     String name;
