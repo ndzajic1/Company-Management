@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="EmployeesTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/DepartmentsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/JobsTest.java" afterDir="false" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="DepartmentsTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/DepartmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/DepartmentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/JobManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/bll/JobManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/JobsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JobsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <recent name="C:\Users\Nedim\IdeaProjects\company-management\src\main\resources\fxml\EmployeePanel\HomeTab" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DepartmentsTest">
+  <component name="RunManager" selected="JUnit.JobsTest">
     <configuration type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.App" />
       <module name="company-management" />
@@ -111,16 +110,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeesTest.addEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="company-management" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="EmployeesTest" />
-      <option name="METHOD_NAME" value="addEmployee" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EmployeesTest.editEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="company-management" />
       <option name="PACKAGE_NAME" value="" />
@@ -141,21 +130,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JobsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="company-management" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JobsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.AppFX" />
       <item itemvalue="JUnit.DepartmentsTest" />
       <item itemvalue="JUnit.EmployeesTest" />
       <item itemvalue="JUnit.EmployeesTest.editEmployee" />
       <item itemvalue="JUnit.EmployeesTest.getAllEmployees" />
-      <item itemvalue="JUnit.EmployeesTest.addEmployee" />
+      <item itemvalue="JUnit.JobsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JobsTest" />
         <item itemvalue="JUnit.DepartmentsTest" />
         <item itemvalue="JUnit.EmployeesTest" />
         <item itemvalue="JUnit.EmployeesTest.getAllEmployees" />
         <item itemvalue="JUnit.EmployeesTest.editEmployee" />
-        <item itemvalue="JUnit.EmployeesTest.addEmployee" />
       </list>
     </recent_temporary>
   </component>
@@ -167,13 +165,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00137" summary="fix add dao">
-      <created>1692494489905</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1692494489905</updated>
     </task>
     <task id="LOCAL-00138" summary="select emp binding">
       <created>1692923196396</created>
@@ -511,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693403557068</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="DepartmentsTest">
+      <created>1693406690872</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1693406690872</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="jobs tab setup opening forms" />
     <MESSAGE value="add job controller" />
     <MESSAGE value="edit job controller" />
     <MESSAGE value="rm job controller" />
@@ -551,7 +548,8 @@
     <MESSAGE value="job controller alerts" />
     <MESSAGE value="gui setup" />
     <MESSAGE value="EmployeesTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="EmployeesTest" />
+    <MESSAGE value="DepartmentsTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="DepartmentsTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

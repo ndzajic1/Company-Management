@@ -15,7 +15,7 @@ public class JobManager{
     }
 
 
-    public void addNewJob(Job j) throws SQLException, CompanyException {
+    public void addNewJob(Job j) throws CompanyException {
         validateJob(j);
         DaoFactory.jobDao().add(j);
     }
