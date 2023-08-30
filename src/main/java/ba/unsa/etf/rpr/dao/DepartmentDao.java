@@ -6,9 +6,14 @@ import ba.unsa.etf.rpr.exceptions.CompanyException;
 import java.util.List;
 
 /**
- * Interface to be implemented by DaoSQLImpl for the Departments table
+ * Interface for fetching Department objects.
  */
 public interface DepartmentDao extends Dao<Department>{
-
+     /**
+      * Searches for department with given name.
+      * @param name
+      * @return matched departments list
+      * @throws CompanyException
+      */
      List<Department> searchByName(String name) throws CompanyException;
 }

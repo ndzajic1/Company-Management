@@ -44,6 +44,7 @@ public abstract class LoggableUser {
     /**
      * Method for hashing the password with SHA-256 algorithm and preparing it for storing in the database.
      * @param password
+     * @return hashed password string
      */
     public static String hashedPassword(String password) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance(HASHING_ALGORITHM);

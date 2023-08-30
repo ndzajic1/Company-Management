@@ -6,41 +6,42 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Main db interface
+ * Main interface for accessing objects from database.
  * @param <T>
  */
 public interface Dao <T> {
 
     /**
-     * get entity from database based on ID
-     * @param id primary key of entity
-     * @return Entity from database
+     * Gets entity from db based on its primary key
+     * @param id
+     * @return entity from database
      */
     T getById(int id) throws  CompanyException;
 
     /**
-     * Saves entity into database
-     * @param item bean for saving to database
+     * Saves entity into db
+     * @param item object to be saved in db
      * @return saved item with id field populated
      */
     T add(T item) throws CompanyException;
 
     /**
-     * Fully updates entity in database based on id (primary) match.
-     * @param item - bean to be updated. id must be populated
-     * @return updated version of bean
+     * Updates entity in db with given id.
+     * @param item - object to be updated, id must be populated
+     * @return updated object
      */
     T update(T item) throws CompanyException;
 
     /**
-     * Hard delete of item from database with given id
+     * Delete object from database with given id
      * @param id - primary key of entity
      */
     void delete(int id) throws CompanyException;
 
     /**
-     * Lists all entities from database. WARNING: Very slow operation because it reads all records.
-     * @return List of entities from database
+     * Fetching all entity objects from db.
+     * @return list of entities from db
+     * @throws CompanyException
      */
     List<T> getAll() throws CompanyException;
 }
