@@ -2,11 +2,14 @@ package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 
 import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.domain.Job;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -30,7 +33,7 @@ public class EditJobController {
     private SimpleStringProperty maxSalaryProperty;
 
 
-    public EditJobController(Job j, Object o) throws SQLException {
+    public EditJobController(Job j, Object o) {
         this.job = j;
         mainController = (JobsTabController) o;
         titleProperty = new SimpleStringProperty(j.getTitle());
@@ -48,17 +51,21 @@ public class EditJobController {
 
     @FXML
     public void editJob(ActionEvent actionEvent) throws SQLException {
+        try {
+            job.setTitle(titleProperty.getValue());
+            job.setMinSalary(Double.parseDouble(minSalaryProperty.getValue()));
+            job.setMaxSalary(Double.parseDouble(maxSalaryProperty.getValue()));
 
-        job.setTitle(titleProperty.getValue());
-        job.setMinSalary(Double.parseDouble(minSalaryProperty.getValue()));
-        job.setMaxSalary(Double.parseDouble(maxSalaryProperty.getValue()));
+            jobManager.updateJob(job);
 
-        jobManager.updateJob(job);
+            mainController.refreshTable();
 
-        mainController.refreshTable();
-
-        Node n = (Node) actionEvent.getSource();
-        Stage currStage = (Stage) n.getScene().getWindow();
-        currStage.close();
+            Node n = (Node) actionEvent.getSource();
+            Stage currStage = (Stage) n.getScene().getWindow();
+            currStage.close();
+        } catch(CompanyException e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 }

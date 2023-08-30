@@ -6,6 +6,7 @@ import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.controllers.JobCellValueFactory;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -80,10 +81,15 @@ public class JobsTabController {
     }
 
     public void refreshTable() throws SQLException {
-        jobsList = jobManager.getAllJobs();
-        JobCellValueFactory.setEmployeesPerJobMap();
-        jobsTable.setItems(FXCollections.observableArrayList(jobsList));
-        jobsTable.refresh();
+        try {
+            jobsList = jobManager.getAllJobs();
+            JobCellValueFactory.setEmployeesPerJobMap();
+            jobsTable.setItems(FXCollections.observableArrayList(jobsList));
+            jobsTable.refresh();
+        } catch (CompanyException e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
+        }
     }
 
     public void addJob(ActionEvent actionEvent) throws SQLException {
