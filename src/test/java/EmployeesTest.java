@@ -1,24 +1,18 @@
-import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
-import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.exceptions.CompanyException;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import org.mockito.Mockito;
 
-import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.when;
 
+/**
+ * Testing Employee business logic, with mocked EmployeeManager instance.
+ */
 public class EmployeesTest {
     private final EmployeeManager employeeManager = Mockito.mock(EmployeeManager.class);
     private final List<Employee> employees = new ArrayList<>();

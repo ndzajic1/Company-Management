@@ -13,6 +13,9 @@ import java.time.LocalDate;
 import java.util.Locale;
 import java.util.Scanner;
 
+/**
+ * CLI User Interface.
+ */
 public class App {
 
     private static final Option showEmployees = new Option("se", "show-employees", false, "Shows all employees");
@@ -35,6 +38,10 @@ public class App {
     private static final DepartmentManager departmentManager = new DepartmentManager();
     private static final JobManager jobManager = new JobManager();
 
+    /**
+     * Main for CLI.
+     * @param args
+     */
     public static void main(String[] args){
         try {
             Options options = new Options();
@@ -107,6 +114,10 @@ public class App {
         }
     }
 
+    /**
+     * User entering parameters of Job object.
+     * @return cretaed Job instance
+     */
     private static Job enterJob() {
         Job j = new Job();
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
@@ -123,12 +134,21 @@ public class App {
         return j;
     }
 
+    /**
+     * Lists all jobs.
+     * @throws CompanyException
+     */
     private static void showJobs() throws CompanyException {
         for(Job j : jobManager.getAllJobs()){
             System.out.println(j.getId() + " - " + j.getTitle() + ", " + j.getMinSalary() + " - " + j.getMaxSalary());
         }
     }
 
+    /**
+     * User entering Department object attributes.
+     * @return Department
+     * @throws CompanyException
+     */
     private static Department enterDepartment() throws CompanyException {
         Department d = new Department();
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
@@ -146,12 +166,21 @@ public class App {
         return d;
     }
 
+    /**
+     * Lists all departments.
+     * @throws CompanyException
+     */
     private static void showDepartments() throws CompanyException {
         for (Department d : departmentManager.getAllDepts()){
             System.out.println(d.getId() + " - " + d.getName() + ", " + d.getLocation());
         }
     }
 
+    /**
+     * User entering Employee object attributes.
+     * @return created Employee object.
+     * @throws CompanyException
+     */
     private static Employee enterEmployee( ) throws CompanyException {
         Employee e = new Employee();
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
@@ -177,6 +206,10 @@ public class App {
         return e;
     }
 
+    /**
+     * Lists all employees in terminal.
+     * @throws CompanyException
+     */
     private static void showEmployees() throws CompanyException {
         for(Employee e : employeeManager.getAllEmployees()){
             System.out.println(e.getId() + "-" + e.getFirstName() + " " + e.getLastName() + ", " + e.getDepartment().getName() + " Department, " + e.getJob().getTitle());

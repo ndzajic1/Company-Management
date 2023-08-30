@@ -15,7 +15,11 @@ import java.util.Objects;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * GUI Main Class.
+ */
 public class AppFX extends Application {
+
 
 
     public static void main(String[] args) {

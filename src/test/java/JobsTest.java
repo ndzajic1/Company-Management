@@ -1,6 +1,4 @@
 import ba.unsa.etf.rpr.bll.JobManager;
-import ba.unsa.etf.rpr.domain.Employee;
-import ba.unsa.etf.rpr.domain.Job;
 import ba.unsa.etf.rpr.domain.Job;
 import ba.unsa.etf.rpr.exceptions.CompanyException;
 import org.junit.Before;
@@ -14,6 +12,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
+/**
+ * Testing Job business logic, with mocked JobManager instance.
+ */
 public class JobsTest {
 
         private final JobManager jobManager = Mockito.mock(JobManager.class);
