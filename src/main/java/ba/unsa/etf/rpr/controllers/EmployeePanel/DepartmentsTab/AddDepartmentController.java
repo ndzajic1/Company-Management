@@ -18,6 +18,9 @@ import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
+/**
+ * Add New Department form controller.
+ */
 public class AddDepartmentController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
@@ -37,7 +40,13 @@ public class AddDepartmentController {
     private ChoiceBox<Employee> managers;
     private ObservableList<Employee> managersList;
 
-    public AddDepartmentController(Object o) throws SQLException, CompanyException {
+
+    /**
+     * Initialize properties in the constructor.
+     * @param o
+     * @throws CompanyException
+     */
+    public AddDepartmentController(Object o) throws CompanyException {
         mainController = (DepartmentsTabController) o;
         deptProperty = new SimpleStringProperty("");
         locationProperty = new SimpleStringProperty("");
@@ -62,8 +71,12 @@ public class AddDepartmentController {
         });
     }
 
+    /**
+     * Event handler for saving new department.
+     * @param actionEvent
+     */
     @FXML
-    public void addDept(ActionEvent actionEvent) throws SQLException {
+    public void addDept(ActionEvent actionEvent)  {
         try {
             Employee mngr = managers.valueProperty().getValue();
             Department d = new Department();
@@ -78,12 +91,16 @@ public class AddDepartmentController {
             Stage currStage = (Stage) n.getScene().getWindow();
             currStage.close();
         }
-        catch(CompanyException e){
+        catch(CompanyException | SQLException e){
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
     }
 
+    /**
+     * Exit form.
+     * @param actionEvent
+     */
     @FXML
     public void cancel(ActionEvent actionEvent){
         Node n = (Node) actionEvent.getSource();

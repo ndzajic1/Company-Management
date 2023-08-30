@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="titles config">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/AppFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/AppFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/TitlesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/TitlesConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/titles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/titles.properties" afterDir="false" />
-    </list>
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="employee controllers javadoc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,13 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00153" summary="edit dept">
-      <created>1693075570581</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1693075570582</updated>
     </task>
     <task id="LOCAL-00154" summary="rm dept">
       <created>1693075674191</created>
@@ -514,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693432906392</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="employee controllers javadoc">
+      <created>1693435027252</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1693435027252</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -529,7 +523,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="EmployeeManager exception handling" />
     <MESSAGE value="EmployeeManager" />
     <MESSAGE value="DepartmentManager exception handling" />
     <MESSAGE value="JobManager exception handling" />
@@ -554,7 +547,8 @@
     <MESSAGE value="complete dao javadoc" />
     <MESSAGE value="bll javadoc" />
     <MESSAGE value="titles config" />
-    <option name="LAST_COMMIT_MESSAGE" value="titles config" />
+    <MESSAGE value="employee controllers javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="employee controllers javadoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

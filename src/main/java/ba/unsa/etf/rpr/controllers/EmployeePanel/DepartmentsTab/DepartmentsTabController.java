@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr.controllers.EmployeePanel.DepartmentsTab;
 
 import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
+import ba.unsa.etf.rpr.controllers.TitlesConfiguration;
 import ba.unsa.etf.rpr.controllers.cell_value_factories.DepartmentCellValueFactory;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
 import ba.unsa.etf.rpr.domain.Department;
@@ -24,6 +25,9 @@ import java.util.*;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * Departments tab component controller.
+ */
 public class DepartmentsTabController {
 
     private DepartmentManager departmentManager = new DepartmentManager();
@@ -82,29 +86,52 @@ public class DepartmentsTabController {
 
     }
 
+    /**
+     * Opening Add Department modal window.
+     * @param event
+     * @throws SQLException
+     * @throws CompanyException
+     */
     @FXML
     void addDept(ActionEvent event) throws SQLException, CompanyException {
-        openForm(event, new AddDepartmentController(this), "/fxml/EmployeePanel/DepartmentsTab/AddDepartment.fxml", "Add department" );
+        openForm(event, new AddDepartmentController(this), "/fxml/EmployeePanel/DepartmentsTab/AddDepartment.fxml", "addDepartment" );
     }
 
+    /**
+     * Opening Edit Department modal window.
+     * @param event
+     * @throws SQLException
+     * @throws CompanyException
+     */
     @FXML
     void editDept(ActionEvent event) throws SQLException, CompanyException {
-        openForm(event, new EditDepartmentController(departmentsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/DepartmentsTab/EditDepartment.fxml", "Edit department" );
+        openForm(event, new EditDepartmentController(departmentsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/DepartmentsTab/EditDepartment.fxml", "editDepartment" );
     }
 
+    /**
+     * Opening Remove Department modal window.
+     * @param event
+     */
     @FXML
     void removeDept(ActionEvent event) {
-        openForm(event, new RemoveDepartmentController(departmentsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/DepartmentsTab/RemoveDepartment.fxml", "Remove department" );
+        openForm(event, new RemoveDepartmentController(departmentsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/DepartmentsTab/RemoveDepartment.fxml", "removeDepartment" );
 
     }
 
+    /**
+     * General method for opening modal window.
+     * @param actionEvent
+     * @param controller
+     * @param fxmlFile
+     * @param title
+     */
     public void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             loader.setController(controller);
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-            stage.setTitle(title);
+            stage.setTitle(TitlesConfiguration.getProperty(title));
             stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
             stage.initStyle(StageStyle.UTILITY);
             stage.setResizable(false);

@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
+/**
+ * Confirm deletion of department window controller.
+ */
 public class RemoveDepartmentController {
     private Department department;
     private DepartmentManager departmentManager = new DepartmentManager();
@@ -21,8 +24,13 @@ public class RemoveDepartmentController {
         this.department = d;
         this.mainController = (DepartmentsTabController) o;
     }
+
+    /**
+     * Event handler when deletion is confirmed.
+     * @param actionEvent
+     */
     @FXML
-    public void removeDept(ActionEvent actionEvent) throws SQLException {
+    public void removeDept(ActionEvent actionEvent){
         try {
             departmentManager.deleteDept(department.getId());
             mainController.refreshTable();
@@ -30,11 +38,16 @@ public class RemoveDepartmentController {
             Stage currStage = (Stage) n.getScene().getWindow();
             currStage.close();
         }
-        catch(CompanyException e){
+        catch(CompanyException | SQLException e){
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
     }
+
+    /**
+     * Exit form.
+     * @param actionEvent
+     */
     @FXML
     public void cancel(ActionEvent actionEvent){
         Node n = (Node) actionEvent.getSource();

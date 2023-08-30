@@ -17,6 +17,9 @@ import javafx.util.StringConverter;
 
 import java.sql.SQLException;
 
+/**
+ * Edit Department form controller.
+ */
 public class EditDepartmentController {
     private EmployeeManager employeeManager = new EmployeeManager();
     private DepartmentManager departmentManager = new DepartmentManager();
@@ -63,8 +66,13 @@ public class EditDepartmentController {
         });
     }
 
+    /**
+     * Event handler for confirmation of user update.
+     * @param actionEvent
+     * @throws SQLException
+     */
     @FXML
-    public void editDept(ActionEvent actionEvent) throws SQLException {
+    public void editDept(ActionEvent actionEvent){
         try {
             Employee mngr = managers.valueProperty().getValue();
 
@@ -79,12 +87,16 @@ public class EditDepartmentController {
             Node n = (Node) actionEvent.getSource();
             Stage currStage = (Stage) n.getScene().getWindow();
             currStage.close();
-        } catch(CompanyException e){
+        } catch(CompanyException | SQLException e){
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
     }
 
+    /**
+     * Exit form.
+     * @param actionEvent
+     */
     @FXML
     public void cancel(ActionEvent actionEvent){
         Node n = (Node) actionEvent.getSource();
