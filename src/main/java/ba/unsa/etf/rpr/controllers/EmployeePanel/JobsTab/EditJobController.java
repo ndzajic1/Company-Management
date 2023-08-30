@@ -15,6 +15,9 @@ import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
+/**
+ * Controller for Edit job window.
+ */
 public class EditJobController {
     private JobManager jobManager = new JobManager();
     private JobsTabController mainController;
@@ -49,8 +52,12 @@ public class EditJobController {
         maxSalary.textProperty().bindBidirectional(maxSalaryProperty);
     }
 
+    /**
+     * Confirm new data.
+     * @param actionEvent
+     */
     @FXML
-    public void editJob(ActionEvent actionEvent) throws SQLException {
+    public void editJob(ActionEvent actionEvent) {
         try {
             job.setTitle(titleProperty.getValue());
             job.setMinSalary(Double.parseDouble(minSalaryProperty.getValue()));
@@ -69,6 +76,10 @@ public class EditJobController {
         }
     }
 
+    /**
+     * Exit form.
+     * @param actionEvent
+     */
     @FXML
     public void cancel(ActionEvent actionEvent){
         Node n = (Node) actionEvent.getSource();

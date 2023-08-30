@@ -16,6 +16,9 @@ import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
+/**
+ * Add new job window controller.
+ */
 public class AddJobController {
 
     private JobManager jobManager = new JobManager();
@@ -34,7 +37,10 @@ public class AddJobController {
     private TextField maxSalary;
     private SimpleStringProperty maxSalaryProperty;
 
-
+    /**
+     * Initialize properties here.
+     * @param o
+     */
     public AddJobController(Object o) {
         mainController = (JobsTabController) o;
         titleProperty = new SimpleStringProperty("");
@@ -50,6 +56,11 @@ public class AddJobController {
         maxSalary.textProperty().bindBidirectional(maxSalaryProperty);
     }
 
+    /**
+     * Event handler for confirming the creation of new job.
+     * @param actionEvent
+     * @throws SQLException
+     */
     @FXML
     public void addJob(ActionEvent actionEvent) throws SQLException {
         try {
@@ -72,6 +83,10 @@ public class AddJobController {
         }
     }
 
+    /**
+     * Exit form.
+     * @param actionEvent
+     */
     @FXML
     public void cancel(ActionEvent actionEvent){
         Node n = (Node) actionEvent.getSource();

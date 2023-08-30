@@ -3,6 +3,7 @@ package ba.unsa.etf.rpr.controllers.EmployeePanel.JobsTab;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.controllers.EmployeePanel.EmployeePanelController;
+import ba.unsa.etf.rpr.controllers.TitlesConfiguration;
 import ba.unsa.etf.rpr.controllers.cell_value_factories.JobCellValueFactory;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
@@ -25,6 +26,9 @@ import java.util.Objects;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
+/**
+ * Controller for Job tab component of the main panel.
+ */
 public class JobsTabController {
     
     private JobManager jobManager = new JobManager();
@@ -80,37 +84,63 @@ public class JobsTabController {
 
     }
 
-    public void refreshTable() throws SQLException {
+    /**
+     * Updating jobs table when returning from modal window.
+     */
+    @FXML
+    public void refreshTable()  {
         try {
             jobsList = jobManager.getAllJobs();
             JobCellValueFactory.setEmployeesPerJobMap();
             jobsTable.setItems(FXCollections.observableArrayList(jobsList));
             jobsTable.refresh();
-        } catch (CompanyException e){
+        } catch (CompanyException | SQLException e){
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
     }
 
-    public void addJob(ActionEvent actionEvent) throws SQLException {
-        openForm(actionEvent, new AddJobController(this), "/fxml/EmployeePanel/JobsTab/AddJob.fxml", "Add job" );
+    /**
+     * Opens form for adding new job.
+     * @param actionEvent
+     */
+    @FXML
+    public void addJob(ActionEvent actionEvent) {
+        openForm(actionEvent, new AddJobController(this), "/fxml/EmployeePanel/JobsTab/AddJob.fxml", "addJob" );
     }
 
-    public void editJob(ActionEvent actionEvent) throws SQLException {
-        openForm(actionEvent, new EditJobController(jobsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/JobsTab/EditJob.fxml", "Edit job" );
+    /**
+     * Opens form for ediitng job details.
+     * @param actionEvent
+     */
+    @FXML
+    public void editJob(ActionEvent actionEvent) {
+        openForm(actionEvent, new EditJobController(jobsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/JobsTab/EditJob.fxml", "editJob" );
     }
 
+    /**
+     * Opens form for confirming deletion of the job.
+     * @param actionEvent
+     */
+    @FXML
     public void removeJob(ActionEvent actionEvent) {
-        openForm(actionEvent, new RemoveJobController(jobsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/JobsTab/RemoveJob.fxml", "Remove job" );
+        openForm(actionEvent, new RemoveJobController(jobsTable.getSelectionModel().getSelectedItem(), this), "/fxml/EmployeePanel/JobsTab/RemoveJob.fxml", "removeJob" );
     }
 
+    /**
+     * General way of opening forms.
+     * @param actionEvent
+     * @param controller
+     * @param fxmlFile
+     * @param title
+     */
     public void openForm(ActionEvent actionEvent, Object controller, String fxmlFile, String title){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             loader.setController(controller);
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.load(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-            stage.setTitle(title);
+            stage.setTitle(TitlesConfiguration.getProperty(title));
             stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/img/logo.jpeg")).toExternalForm()));
             stage.initStyle(StageStyle.UTILITY);
             stage.setResizable(false);

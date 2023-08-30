@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
+/**
+ * Controller for window confirming the deletion
+ */
 public class RemoveJobController {
     private Job job;
     private JobManager jobManager = new JobManager();
@@ -23,6 +26,12 @@ public class RemoveJobController {
         this.mainController = (JobsTabController) o;
     }
 
+    /**
+     * Confirm deletion.
+     * @param actionEvent
+     * @throws SQLException
+     */
+    @FXML
     public void removeJob(ActionEvent actionEvent) throws SQLException {
         try {
             jobManager.deleteJob(job.getId());

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="employee controllers javadoc" />
+    <list default="true" id="6916dbca-d7c5-45d7-86bc-bb27eb5236d3" name="Changes" comment="dept controllers javadoc">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/AddJobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/AddJobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/EditJobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/EditJobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/JobsTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/JobsTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/RemoveJobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/EmployeePanel/JobsTab/RemoveJobController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,13 +169,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670805808223</updated>
-    </task>
-    <task id="LOCAL-00154" summary="rm dept">
-      <created>1693075674191</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1693075674191</updated>
     </task>
     <task id="LOCAL-00155" summary="dept building">
       <created>1693081252775</created>
@@ -508,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693435027252</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="dept controllers javadoc">
+      <created>1693435435436</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1693435435437</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -523,7 +528,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="EmployeeManager" />
     <MESSAGE value="DepartmentManager exception handling" />
     <MESSAGE value="JobManager exception handling" />
     <MESSAGE value="home controller alerts" />
@@ -548,7 +552,8 @@
     <MESSAGE value="bll javadoc" />
     <MESSAGE value="titles config" />
     <MESSAGE value="employee controllers javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="employee controllers javadoc" />
+    <MESSAGE value="dept controllers javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="dept controllers javadoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
