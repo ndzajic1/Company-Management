@@ -72,6 +72,12 @@ public class AddJobController {
         }
     }
 
+    @FXML
+    public void cancel(ActionEvent actionEvent){
+        Node n = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) n.getScene().getWindow();
+        currStage.close();
+    }
 
 }
 

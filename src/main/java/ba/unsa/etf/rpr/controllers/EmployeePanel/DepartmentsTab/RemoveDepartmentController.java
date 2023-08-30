@@ -35,4 +35,10 @@ public class RemoveDepartmentController {
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }
     }
+    @FXML
+    public void cancel(ActionEvent actionEvent){
+        Node n = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) n.getScene().getWindow();
+        currStage.close();
+    }
 }
