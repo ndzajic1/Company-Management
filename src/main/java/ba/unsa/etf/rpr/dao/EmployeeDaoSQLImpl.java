@@ -5,11 +5,14 @@ import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
 import ba.unsa.etf.rpr.exceptions.CompanyException;
 
+import java.sql.ResultSet;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-import java.security.NoSuchAlgorithmException;
-import java.sql.*;
-import java.util.*;
-
+/**
+ *  Accessing Employees objects in db.
+ */
 public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements EmployeeDao{
 
     private static EmployeeDaoSQLImpl instance = null;
@@ -17,6 +20,9 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         super("employees");
     }
 
+    /**
+     * @return instance
+     */
     public static EmployeeDaoSQLImpl getInstance() {
         if(instance != null)
             return instance;
@@ -24,6 +30,11 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         return instance;
     }
 
+    /**
+     * Get object from provided ResultSet object which is gotten by executing query.
+     * @param rs
+     * @throws CompanyException
+     */
     @Override
     public Employee row2object(ResultSet rs) throws CompanyException {
         try{
@@ -47,6 +58,10 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         }
     }
 
+    /**
+     * Convert object to suitable map for db operations.
+     * @param obj
+     */
     @Override
     public Map<String, Object> object2row(Employee obj) {
         Map<String, Object> row = new TreeMap<>();
@@ -62,6 +77,13 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
         row.put("admin", obj.isAdmin());
         return row;
     }
+
+    /**
+     * Search for employees in db by name, case insensitive search.
+     * @param name
+     * @return list
+     * @throws CompanyException
+     */
     @Override
     public List<Employee> searchByName(String name) throws CompanyException {
 
@@ -76,18 +98,35 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
 
     }
 
+    /**
+     * Get all employees from specific department.
+     * @param dept
+     * @return list
+     * @throws CompanyException
+     */
     @Override
     public List<Employee> searchByDepartment(Department dept) throws CompanyException {
             return super.executeQuery("select * from Employees where department_id = ?", new Object[]{dept.getId()});
 
     }
 
+    /**
+     * Get all employees with specific job.
+     * @param j
+     * @return
+     * @throws CompanyException
+     */
     @Override
     public List<Employee> searchByJob(Job j) throws CompanyException {
         return super.executeQuery("select * from Employees where job_id = ?", new Object[]{j.getId()});
 
     }
 
+    /**
+     * Get employee by primary key, but Department attribute is null.
+     * @param id
+     * @throws CompanyException
+     */
     @Override
     public Employee getByIdWithoutDepartment(int id) throws CompanyException {
             return super.executeQueryUnique("select id, first_name, last_name, hire_date, null as department_id, job_id, salary, username, password_hash, admin from Employees where id = ?", new Object[]{id});

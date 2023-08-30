@@ -10,6 +10,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ *
+ */
 public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
 
     private static JobDaoSQLImpl instance = null;
@@ -18,6 +21,9 @@ public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
         super("Jobs");
     }
 
+    /**
+     * @return instance
+     */
     public static JobDaoSQLImpl getInstance() {
         if(instance != null)
             return instance;
@@ -25,10 +31,12 @@ public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
         return instance;
     }
 
-    public static void removeInstance(){
-        if(instance != null)
-            instance = null;
-    }
+    /**
+     * Get Job from provided ResultSet object which is gotten by executing query.
+     * @param rs
+     * @return Job
+     * @throws CompanyException
+     */
     @Override
     public Job row2object(ResultSet rs) throws CompanyException {
         try{
@@ -39,6 +47,10 @@ public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
         }
     }
 
+    /**
+     * Convert object to suitable map for db operations.
+     * @param j
+     */
     @Override
     public Map<String, Object> object2row(Job j) {
         Map<String, Object> row = new TreeMap<>();
@@ -49,6 +61,12 @@ public class JobDaoSQLImpl extends AbstractDao<Job> implements JobDao{
         return row;
     }
 
+    /**
+     * Search for jobs by title.
+     * @param txt
+     * @return list of matched jobs
+     * @throws CompanyException
+     */
     @Override
     public List<Job> searchByTitle(String txt) throws CompanyException {
             return super.executeQuery("select * from Jobs where txt = '?%'", new Object[]{txt.toLowerCase()});
