@@ -27,7 +27,6 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
                 String username = p.getProperty("db.username");
                 String password = p.getProperty("db.password");
                 connection = DriverManager.getConnection(url, username, password);
-                //System.out.println("Connected");
             }
             catch (Exception e){
                 e.printStackTrace();
@@ -83,7 +82,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
     public T executeQueryUnique(String query, Object[] params) throws CompanyException {
         List<T> list = executeQuery(query, params);
-
+        System.out.println(query + " " + params[0].toString());
         if(list != null && list.size() == 1){
             return list.get(0);
         }

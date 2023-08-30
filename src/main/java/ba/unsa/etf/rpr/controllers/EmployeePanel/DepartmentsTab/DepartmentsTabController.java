@@ -60,7 +60,7 @@ public class DepartmentsTabController {
     }
 
     @FXML
-    void initialize() throws SQLException {
+    void initialize() throws SQLException, CompanyException {
         this.employee = EmployeePanelController.getUser();
 
         deptNameCol.setCellValueFactory(new DepartmentCellValueFactory("Department"));

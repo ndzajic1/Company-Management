@@ -61,7 +61,7 @@ public class JobsTabController {
 
     
     @FXML
-    void initialize() throws SQLException {
+    void initialize() throws SQLException, CompanyException {
         this.employee = EmployeePanelController.getUser();
         
         titleCol.setCellValueFactory(new JobCellValueFactory("Job Title"));

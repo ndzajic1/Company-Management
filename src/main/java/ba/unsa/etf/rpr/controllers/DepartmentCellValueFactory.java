@@ -4,6 +4,7 @@ import ba.unsa.etf.rpr.bll.DepartmentManager;
 import ba.unsa.etf.rpr.bll.EmployeeManager;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TableColumn;
@@ -21,14 +22,14 @@ public class DepartmentCellValueFactory<T> implements Callback<TableColumn.CellD
     private final String field;
     private static Map<Integer, Integer> employeesPerDept = null;
 
-    public DepartmentCellValueFactory(String e) throws SQLException {
+    public DepartmentCellValueFactory(String e) throws SQLException, CompanyException {
         field = e;
         if(employeesPerDept == null){
             setEmployeesPerDeptMap();
         }
     }
 
-    public static void setEmployeesPerDeptMap() throws SQLException {
+    public static void setEmployeesPerDeptMap() throws SQLException, CompanyException {
         employeesPerDept = new TreeMap<>();
         for(Department d : departmentManager.getAllDepts()){
             employeesPerDept.put(d.getId(),0);

@@ -63,7 +63,7 @@ public class EditJobController {
             Node n = (Node) actionEvent.getSource();
             Stage currStage = (Stage) n.getScene().getWindow();
             currStage.close();
-        } catch(CompanyException e){
+        } catch(NumberFormatException|CompanyException e){
             e.printStackTrace();
             new Alert(Alert.AlertType.NONE, e.getMessage(), ButtonType.OK).show();
         }

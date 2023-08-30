@@ -80,6 +80,7 @@ public class EmployeeManager{
     }
     public Employee getEmployeeByUsername(String username) throws SQLException, CompanyException {
         List<Employee> employees = getAllEmployees();
+        System.out.println("ITSSS " + employees.size());
         for(Employee e : employees){
             if(e.getUsername().equals(username)){
                 return e;

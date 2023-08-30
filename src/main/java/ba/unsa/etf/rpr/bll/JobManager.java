@@ -20,7 +20,7 @@ public class JobManager{
         DaoFactory.jobDao().add(j);
     }
 
-    private void validateJob(Job j) throws SQLException, CompanyException {
+    private void validateJob(Job j) throws CompanyException {
         if(j.getMinSalary() > j.getMaxSalary())
             throw new CompanyException("Check salaries again.");
         for(Job job : getAllJobs()){
@@ -31,7 +31,7 @@ public class JobManager{
 
 
     public void updateJob(Job j) throws CompanyException {
-
+        validateJob(j);
         DaoFactory.jobDao().update(j);
     }
 

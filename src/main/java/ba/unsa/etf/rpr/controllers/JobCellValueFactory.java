@@ -6,6 +6,7 @@ import ba.unsa.etf.rpr.bll.JobManager;
 import ba.unsa.etf.rpr.domain.Department;
 import ba.unsa.etf.rpr.domain.Employee;
 import ba.unsa.etf.rpr.domain.Job;
+import ba.unsa.etf.rpr.exceptions.CompanyException;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TableColumn;
@@ -23,14 +24,14 @@ public class JobCellValueFactory<T> implements Callback<TableColumn.CellDataFeat
     private String field;
     private static Map<Integer, Integer> employeesPerJob = null;
 
-    public JobCellValueFactory(String e) throws SQLException {
+    public JobCellValueFactory(String e) throws SQLException, CompanyException {
         this.field = e;
         if(employeesPerJob == null){
             setEmployeesPerJobMap();
         }
     }
 
-    public static void setEmployeesPerJobMap() throws SQLException {
+    public static void setEmployeesPerJobMap() throws SQLException, CompanyException {
         employeesPerJob = new TreeMap<>();
         for(Job d : jobManager.getAllJobs()){
             employeesPerJob.put(d.getId(),0);

@@ -31,10 +31,11 @@ public class EmployeeDaoSQLImpl extends AbstractDao<Employee> implements Employe
                     rs.getString("last_name"), rs.getDate("hire_date").toLocalDate(),
                     null, DaoFactory.jobDao().getById(rs.getInt("job_id")), rs.getDouble("salary"));
             try {
+                System.out.println("BROJJJJJJJJ" + rs.getInt("department_id"));
                 obj.setDepartment(DaoFactory.departmentDao().getById(rs.getInt("department_id")));
             }
             catch(Exception e){
-                throw new CompanyException(e.getMessage(),e);
+                //throw new CompanyException(e.getMessage(),e);
             }
             obj.setUsername(rs.getString("username"));
             obj.setPasswordHash(rs.getString("password_hash"));
