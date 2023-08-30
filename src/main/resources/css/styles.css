@@ -1,0 +1,28 @@
+#login {
+   -fx-background-color: lightskyblue;
+   -fx-border-style: dashed
+  }
+#addButton {
+    -fx-color: green;
+    -fx-border: bold;
+    background-color: black;
+    font-weight: bold;
+}
+#editButton {
+    -fx-color: blue;
+    -fx-border: bold;
+    background-color: black;
+    font-weight: bold;
+}
+#removeButton {
+    -fx-color: red;
+    -fx-border: bold;
+    background-color: black;
+    font-weight: bold;
+}
+#searchButton {
+    -fx-color: black;
+    -fx-border: bold;
+     background-color: white;
+     font-weight: bold;
+}

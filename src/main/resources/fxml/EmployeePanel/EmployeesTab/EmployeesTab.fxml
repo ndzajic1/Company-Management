@@ -22,9 +22,9 @@
         <children>
             <ButtonBar prefHeight="79.0" prefWidth="542.0" GridPane.rowIndex="2">
                 <buttons>
-                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#addEmployee" text="Add" />
-                    <Button fx:id="editButton" mnemonicParsing="false" onAction="#editEmployee" text="Edit" />
-                    <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeEmployee" text="Remove" />
+                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#addEmployee" styleClass="addButton" stylesheets="@../../../css/styles.css" text="Add" />
+                    <Button fx:id="editButton" mnemonicParsing="false" onAction="#editEmployee" stylesheets="@../../../css/styles.css" text="Edit" />
+                    <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeEmployee" stylesheets="@../../../css/styles.css" text="Remove" />
                 </buttons>
                 <GridPane.margin>
                     <Insets right="20.0" />
@@ -48,7 +48,7 @@
                     <Insets left="5.0" right="5.0" />
                 </GridPane.margin>
             </TableView>
-            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchEmployees" prefHeight="26.0" prefWidth="66.0" text="Search" GridPane.halignment="RIGHT">
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchEmployees" prefHeight="26.0" prefWidth="66.0" stylesheets="@../../../css/styles.css" text="Search" GridPane.halignment="RIGHT">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>

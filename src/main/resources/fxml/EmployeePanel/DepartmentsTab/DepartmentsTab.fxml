@@ -21,9 +21,9 @@
         <children>
             <ButtonBar prefHeight="66.0" prefWidth="658.0" GridPane.rowIndex="2">
                 <buttons>
-                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#addDept" text="Add" />
-                    <Button fx:id="editButton" mnemonicParsing="false" onAction="#editDept" text="Edit" />
-                    <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeDept" text="Remove" />
+                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#addDept" stylesheets="@../../../css/styles.css" text="Add" />
+                    <Button fx:id="editButton" mnemonicParsing="false" onAction="#editDept" stylesheets="@../../../css/styles.css" text="Edit" />
+                    <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeDept" stylesheets="@../../../css/styles.css" text="Remove" />
                 </buttons>
                 <GridPane.margin>
                     <Insets bottom="20.0" right="20.0" />

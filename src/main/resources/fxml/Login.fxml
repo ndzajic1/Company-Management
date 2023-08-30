@@ -36,7 +36,7 @@
          <children>
             <ButtonBar prefHeight="50.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <buttons>
-                  <Button fx:id="login" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login" stylesheets="@../css/login.css" text="Login" />
+                  <Button fx:id="login" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login" stylesheets="@../css/styles.css" text="Login" />
                </buttons>
                <GridPane.margin>
                   <Insets right="10.0" />
