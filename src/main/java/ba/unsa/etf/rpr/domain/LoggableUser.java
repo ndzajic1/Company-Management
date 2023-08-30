@@ -4,6 +4,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
+/**
+ * Abstract class, representing user logging in the application with provided credentials.
+ */
 public abstract class LoggableUser {
 
     private static String DEFAULT_PASSWORD = "12345678";
@@ -34,10 +37,14 @@ public abstract class LoggableUser {
         this.username = username;
     }
 
-    public final void setPasswordHash(String passwordHash) throws NoSuchAlgorithmException {
+    public final void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
     }
 
+    /**
+     * Method for hashing the password with SHA-256 algorithm and preparing it for storing in the database.
+     * @param password
+     */
     public static String hashedPassword(String password) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance(HASHING_ALGORITHM);
         byte[] hashed = md.digest(password.getBytes());
