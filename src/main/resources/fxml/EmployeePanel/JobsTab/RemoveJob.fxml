@@ -20,7 +20,7 @@
   </rowConstraints>
    <children>
       <Label prefHeight="18.0" prefWidth="292.0" text="   Are you sure you want to remove this job?" GridPane.columnSpan="3" GridPane.rowIndex="1" />
-      <Button cancelButton="true" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets left="30.0" />
          </GridPane.margin>
