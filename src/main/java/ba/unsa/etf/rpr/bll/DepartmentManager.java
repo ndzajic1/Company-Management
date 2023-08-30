@@ -23,12 +23,12 @@ public class DepartmentManager {
             Employee manager = d.getManager();
             manager.setDepartment(d);
             DaoFactory.employeeDao().update(manager);
-        } catch(CompanyException | SQLException e){
+        } catch(CompanyException e){
             throw new CompanyException(e.getMessage(), e);
         }
     }
 
-    private void validateDeptName(Department d) throws CompanyException, SQLException {
+    private void validateDeptName(Department d) throws CompanyException{
         for(Department dept : getAllDepts()){
             if(dept.getName().equals(d.getName()))
                 throw new CompanyException("Department with the same name already exists.");
