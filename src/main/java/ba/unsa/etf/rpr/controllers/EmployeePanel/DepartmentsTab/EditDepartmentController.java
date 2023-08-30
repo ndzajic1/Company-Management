@@ -69,7 +69,6 @@ public class EditDepartmentController {
     /**
      * Event handler for confirmation of user update.
      * @param actionEvent
-     * @throws SQLException
      */
     @FXML
     public void editDept(ActionEvent actionEvent){

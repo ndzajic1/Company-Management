@@ -65,7 +65,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     /**
      * Converts db result set to object.
      * @param rs
-     * @return converted object <T>
+     * @return converted object
      * @throws CompanyException
      */
     public abstract T row2object(ResultSet rs) throws CompanyException;

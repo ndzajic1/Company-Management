@@ -214,7 +214,6 @@ public class EmployeesTabController {
 
     /**
      * Refreshing data and list when returning from modal windoiw.
-     * @throws SQLException
      */
     public void returnFromModal() {
         try {
